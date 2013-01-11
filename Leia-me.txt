@@ -2,88 +2,69 @@
 //= Arquivo README do Cronus
 //===== Por: =================================================
 //= Equipe de desenvolvimento do Cronus
-//===== Vers�o Atual: ========================================
-//= 20130107
-//===== Descri��o: ===========================================
-//= Informa��es b�sicas e intru��es de instala��o.
+//===== Versão Atual: ========================================
+//= 20130111
+//===== Descrição: ===========================================
+//= Informações básicas e intruções de instalação.
 //============================================================
 
 ================================
-||           �ndice           ||
+||           Índice           ||
 ================================
-|| 1. O que � o Cronus?       ||
-|| 2. Pr�-requisitos          ||
-|| 3. Instala��o              ||
+|| 1. O que é o Cronus?       ||
+|| 2. Pré-requisitos          ||
+|| 3. Instalação              ||
 || 4. Solucionando problemas  ||
-|| 5. Links �teis             ||
-|| 6. Mais documenta��o       ||
+|| 5. Links úteis             ||
+|| 6. Mais documentação       ||
 ================================
 
 
 ============================
-|| 1. O que � o Cronus    ||
+|| 1. O que é o Cronus    ||
 ============================
-rAthena is a collaborative software development project revolving around the
-creation of a robust massively multiplayer online role playing game (MMORPG)
-server package. Written in C, the program is very versatile and provides NPCs,
-warps and modifications. The project is jointly managed by a group of volunteers
-located around the world as well as a tremendous community providing QA and
-support. rAthena is a continuation of the eAthena project.
+O Cronus-Emulator é um projeto de desenvolvimento coletivo de um emulador
+utilizado para a criação de servidores privados de um MMORPG chamado Ragnarök
+Online. O emulador em si é escrito em C, e conta com um pacote já pronto e
+trabalhado de NPCs, mobs, fórmulas e adaptações. O principal objetivo do projeto,
+desde sua idealização até hoje, é seguir fielmente as atualizações do Brazilian
+Ragnarök Online (O servidor brasileiro de RO, conhecido como bRO). Nossa
+equipe é constituída de contribuidores de todos os cantos do Brasil.
 
 
 
 ============================
-|| 2. Pr�-requisitos      ||
+|| 2. Pré-requisitos      ||
 ============================
-Before installing rAthena there are certain tools and applications you will need.
-This differs between the varying operating systems available, so the following
-is broken down into Windows and Linux prerequisites.
+Antes de instalar o emulador, você precisará de algumas ferramentas.
+Existem diferenças entre os métodos de instalação do emulador
+dependendo do sistema operacional. Abaixo estão listados os programas
+necessários para a instalação do Cronus-Emulator em Windows e Linux.
 
 Windows
-	* TortoiseSVN (http://tortoisesvn.net/downloads.html)
-	* MySQL (http://www.mysql.com/downloads/mysql/)
-	* MySQL Workbench (http://www.mysql.com/downloads/workbench/)
+        * Servidor MySQL. Uma lista dos mais utilizados abaixo:
+           - Wamp (http://www.wampserver.com/en/)
+           - Vertrigo (http://vertrigo.sourceforge.net/)
+           - Xampp (http://www.apachefriends.org/pt_br/xampp.html)
+        * TortoiseSVN caso você esteja utilizando o Svn.Cronus-Emulator.com (http://tortoisesvn.net/)
 	* MS Visual C++ (http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express)
 
-Linux (names of packages may require specific version numbers on certain distributions)
+Linux
 	* gcc
 	* make
 	* mysql
 	* mysql-devel
 	* mysql-server
 	* pcre-devel
-	* subversion
 	* zlib-devel
 
 
 
 ============================
-|| 3. Instala��o          ||
+|| 3. Instalação          ||
 ============================
-This section is a very brief set of installation instructions. For more concise guides
-relevant to your Operation System, please refer to the Wiki (links at the end of this file).
-
-Windows
-	* Install prerequisites
-	* Create a folder to download rAthena into (e.g. C:\rAthena)
-	* Right click this folder and select "SVN Checkout".
-	* Paste the SVN URL into the box: https://rathena.svn.sourceforge.net/svnroot/rathena/trunk/
-	* Open MySQL Workbench and create an instance to connect to your MySQL Server
-	* Create a database (rathena), a user (rathena), give permissions (GRANT SELECT,INSERT,UPDATE,DELETE)
-		and then login using the new user
-	* Use MySQL Workbench to run the .sql files in /sql-files/ on the new rathena database
-
-Linux
-	(For CentOS) Type: yum install gcc make mysql mysql-devel mysql-server pcre-devel subversion zlib-devel mysql-server-5.5
-	(For Debian) Type: apt-get install subversion make gcc libmysqlclient-dev zlib1g-dev libpcre3-dev mysql-server-5.5
-	* Type: mysql_secure_installation
-	* Start your MySQL server
-	* Setup a MySQL user: CREATE USER 'rathena'@'localhost' IDENTIFIED BY 'password';
-	* Assign permissions: GRANT SELECT,INSERT,UPDATE,DELETE ON `rathena\_rag`.* TO 'rathena'@'localhost';
-	* Type: svn checkout https://rathena.svn.sourceforge.net/svnroot/rathena/trunk/ ~/trunk
-	* Insert SQL files: mysql --user=root -p rathena_rag < trunk/sql-files/main.sql (and others)
-	* Type: cd trunk && ./configure && make clean && make sql
-	* When you're ready, type: ./athena-start start
+Por favor, dirija-se a seção de tutoriais em nosso fórum.
+http://forum.cronus-emulator.com/
 
 
 
@@ -131,7 +112,7 @@ Examples:
 
 
 ============================
-|| 5. Links �teis         ||
+|| 5. Links úteis         ||
 ============================
 The following list of links point to various help files within the SVN, articles or
 pages on the Wiki or topics within the rAthena forum.
@@ -153,7 +134,7 @@ pages on the Wiki or topics within the rAthena forum.
 
 
 ============================
-|| 6. Mais documenta��o   ||
+|| 6. Mais documentação   ||
 ============================
 rAthena has a large collection of help files and sample NPC scripts located in /doc/
 
