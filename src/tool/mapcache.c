@@ -258,12 +258,7 @@ int do_init(int argc, char** argv)
 	char name[MAP_NAME_LENGTH_EXT];
 
 	/* setup pre-defined, #define-dependant */
-	sprintf(map_cache_file,"db/%s/map_cache.dat",
-#ifdef RENEWAL
-			"re"
-#else
-			"pre-re"
-#endif
+	sprintf(map_cache_file,"db/map_cache.dat",
 			);
 
 	// Process the command-line arguments
