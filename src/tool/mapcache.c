@@ -258,8 +258,7 @@ int do_init(int argc, char** argv)
 	char name[MAP_NAME_LENGTH_EXT];
 
 	/* setup pre-defined, #define-dependant */
-	sprintf(map_cache_file,"db/map_cache.dat",
-			);
+	sprintf(map_cache_file,"db/map_cache.dat");
 
 	// Process the command-line arguments
 	process_args(argc, argv);
