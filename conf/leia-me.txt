@@ -1,0 +1,18 @@
+Para que serve a pasta import
+-------------------------------------------------------------------------------
+
+Esta pasta oferece um caminho para você mudar as configurações do servidor sem ter
+que atualizar os arquivos toda vez que atualizar o emulador. Você guarda suas mudanças
+e o resto é atualizado com o Cronus.
+
+Como isso funciona?
+-------------------------------------------------------------------------------
+
+Coloque apenas as configurações alteradas nos arquivos da pasta import.
+Por exemplo, se você quiser mudar um valor em /battle/exp.conf:
+
+	// Taxa de experiência de base ganha. (Nota 2)
+	base_exp_rate: 700
+	
+Você poderia copiar a configuração para /import/battle_conf.txt,
+eliminando qualquer problema com atualizações no futuro.
