@@ -74,8 +74,8 @@ Windows
 	* Use MySQL Workbench to run the .sql files in /sql-files/ on the new rathena database
 
 Linux
-	(For CentOS) Type: yum install gcc make mysql mysql-devel mysql-server pcre-devel subversion zlib-devel
-	(For Debian) Type: apt-get install subversion make gcc libmysqlclient-dev zlib1g-dev libpcre3-dev
+	(For CentOS) Type: yum install gcc make mysql mysql-devel mysql-server pcre-devel subversion zlib-devel mysql-server-5.5
+	(For Debian) Type: apt-get install subversion make gcc libmysqlclient-dev zlib1g-dev libpcre3-dev mysql-server-5.5
 	* Type: mysql_secure_installation
 	* Start your MySQL server
 	* Setup a MySQL user: CREATE USER 'rathena'@'localhost' IDENTIFIED BY 'password';
