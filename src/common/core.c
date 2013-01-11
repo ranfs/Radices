@@ -23,8 +23,6 @@
 #include "../common/winapi.h" // Console close event handling
 #endif
 
-#pragma setlocale("ptb")
-
 /// Called when a terminate signal is received.
 void (*shutdown_callback)(void) = NULL;
 
