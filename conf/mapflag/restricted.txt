@@ -93,7 +93,7 @@ arug_cas05	mapflag	restricted	4
 1@ma_b	mapflag	restricted	6
 
 // Inside Eclage ===========
-1@ecl	mapflag	restricted	6
+//1@ecl	mapflag	restricted	6
 
 //Towns
 alberta	mapflag	restricted	7

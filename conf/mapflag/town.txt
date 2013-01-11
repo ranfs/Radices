@@ -39,4 +39,4 @@ mora	mapflag	town
 dewata	mapflag	town
 malangdo	mapflag	town
 malaya	mapflag	town
-eclage	mapflag	town
+//eclage	mapflag	town

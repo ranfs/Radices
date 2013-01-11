@@ -177,7 +177,7 @@ nguild_prt	mapflag	noicewall
 1@ma_b	mapflag	noicewall
 
 // Inside Eclage ===========
-1@ecl	mapflag	noicewall
+//1@ecl	mapflag	noicewall
 
 // Poring War ====================
 poring_w01	mapflag	noicewall
