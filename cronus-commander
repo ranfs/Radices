@@ -1,4 +1,4 @@
-﻿#/bin/sh
+#/bin/sh
 # Atalho para funções Cronus-Commander - http://Cronus-Emulator.com [Raizen]
 # Removido mapcache (ele já será compilado automaticamente) [MaminhA]
 # Adicionado alvo para instalar dependências [MaminhA]
