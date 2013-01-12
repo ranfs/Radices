@@ -2,13 +2,14 @@
 # Atalho para funções Cronus-Commander - http://Cronus-Emulator.com [Raizen]
 # Removido mapcache (ele já será compilado automaticamente) [MaminhA]
 # Adicionado alvo para instalar dependências [MaminhA]
+# Adicionando sleep para prevenir acessos demasiados [MaminhA]
 case $1 in
 	'recompilar') chmod 777 configure ; ./configure ; make clean ; make all;;
 	'compilar') chmod 777 configure ; ./configure ; make clean ; make all;;
 	'atualizarsistema') yum update -y ; yum upgrade -y ; apt-get update -y ;;
 	'instalardeps') apt-get install make gcc libmysqlclient-dev zlib1g-dev libpcre3-dev ; yum install gcc make mysql mysql-devel mysql-server pcre-devel zlib-devel ;;
-	'versao') echo "A versão atual do cronus-commander é 1.3" ;;
-	'ligar') exec ./login-server_sql & exec ./char-server_sql & exec ./map-server_sql & ;;
+	'versao') echo "A versão atual do cronus-commander é 1.4" ;;
+	'ligar') exec ./login-server_sql & sleep 3 & exec ./char-server_sql & sleep 3 & exec ./map-server_sql & ;;
 	'desligar') killall map-server_sql char-server_sql login-server_sql ;;
 	'reiniciar') killall map-server_sql char-server_sql login-server_sql ; exec ./login-server_sql & exec ./char-server_sql & exec ./map-server_sql & ;;
 	'atualizaremulador') svn update ;;
