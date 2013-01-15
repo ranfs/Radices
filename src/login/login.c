@@ -1876,7 +1876,7 @@ int do_init(int argc, char** argv)
 		runflag = LOGINSERVER_ST_RUNNING;
 	}
 
-	ShowStatus("O login-server está "CL_GREEN"pronto"CL_RESET" e funcionando pela porta "CL_GREEN"%u"CL_RESET".\n\n", login_config.login_port);
+	ShowMessage("\033[1;32;44m""[Estado]""\033[1;37;44m"": O login-server está ""\033[1;32;44m""pronto""\033[1;37;44m"" e funcionando pela porta ""\033[1;32;44m""%u""\033[1;37;44m""."CL_CLL""CL_RESET"\n\n", login_config.login_port);
 	login_log(0, "login server", 100, "login server started");
 
 	return 0;

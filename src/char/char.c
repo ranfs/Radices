@@ -380,7 +380,7 @@ void set_all_offline(int id)
 	if (id < 0)
 		ShowNotice("Desligando todos os usuários.\n");
 	else
-		ShowNotice("Delisgando usuários do map-server %d.\n",id);
+		ShowNotice("Desligando usuários do map-server %d.\n",id);
 	online_char_db->foreach(online_char_db,char_db_kickoffline,id);
 
 	if (id >= 0 || login_fd <= 0 || session[login_fd]->flag.eof)
@@ -1851,7 +1851,7 @@ int mmo_char_send006b(int fd, struct char_session_data* sd)
 #endif
 
 	if (save_log)
-		ShowInfo("Loading Char Data ("CL_BOLD"%d"CL_RESET")\n",sd->account_id);
+		ShowInfo("Carregando dados de personagem ("CL_BOLD"%d"CL_RESET").\n",sd->account_id);
 
 	j = 24 + offset; // offset
 	WFIFOHEAD(fd,j + MAX_CHARS*MAX_CHAR_BUF);
@@ -4788,7 +4788,7 @@ int do_init(int argc, char **argv)
 
 	set_defaultparse(parse_char);
 	char_fd = make_listen_bind(bind_ip, char_port);
-	ShowStatus("O char-server está "CL_GREEN"pronto"CL_RESET" e funcionando pela porta %d.\n\n", char_port);
+	ShowMessage("\033[1;32;44m""[Estado]""\033[1;37;44m"": O char-server está ""\033[1;32;44m""pronto""\033[1;37;44m"" e funcionando pela porta ""\033[1;32;44m""%d""\033[1;37;44m""."CL_CLL""CL_RESET"\n\n", char_port);
 
 	if( runflag != CORE_ST_STOP )
 	{

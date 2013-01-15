@@ -3447,13 +3447,13 @@ int map_sql_init(void)
 
 int map_sql_close(void)
 {
-	ShowStatus("Close Map DB Connection....\n");
+	ShowStatus("Conexão à DB de mapas fechada....\n");
 	Sql_Free(mmysql_handle);
 	mmysql_handle = NULL;
 #ifndef BETA_THREAD_TEST
 	if (log_config.sql_logs)
 	{
-		ShowStatus("Close Log DB Connection....\n");
+		ShowStatus("Conexão à DB de logs fechada....\n");
 		Sql_Free(logmysql_handle);
 		logmysql_handle = NULL;
 	}
@@ -3555,7 +3555,7 @@ void do_final(void)
 	struct map_session_data* sd;
 	struct s_mapiterator* iter;
 
-	ShowStatus("Terminating...\n");
+	ShowStatus("Terminando...\n");
 
 	//Ladies and babies first.
 	iter = mapit_getallusers();
@@ -3572,7 +3572,7 @@ void do_final(void)
 		if (map[i].m >= 0)
 			map_foreachinmap(cleanup_sub, i, BL_ALL);
 	}
-	ShowStatus("Cleaned up %d maps."CL_CLL"\n", map_num);
+	ShowStatus("Limpos %d mapas."CL_CLL"\n", map_num);
 
 	id_db->foreach(id_db,cleanup_db_sub);
 	chrif_char_reset_offline();
@@ -3629,7 +3629,7 @@ void do_final(void)
 
     map_sql_close();
 
-	ShowStatus("Finished.\n");
+	ShowStatus("Finalizado.\n");
 }
 
 static int map_abort_sub(struct map_session_data* sd, va_list ap)
@@ -3714,7 +3714,7 @@ void do_shutdown(void)
 	if( runflag != MAPSERVER_ST_SHUTDOWN )
 	{
 		runflag = MAPSERVER_ST_SHUTDOWN;
-		ShowStatus("Shutting down...\n");
+		ShowStatus("Desligando...\n");
 		{
 			struct map_session_data* sd;
 			struct s_mapiterator* iter = mapit_getallusers();
@@ -3936,7 +3936,7 @@ int do_init(int argc, char *argv[])
 	if (battle_config.pk_mode)
 		ShowNotice("Server is running on '"CL_WHITE"PK Mode"CL_RESET"'.\n");
 
-	ShowStatus("Server is '"CL_GREEN"ready"CL_RESET"' and listening on port '"CL_WHITE"%d"CL_RESET"'.\n\n", map_port);
+	ShowMessage("\033[1;32;44m""[Estado]""\033[1;37;44m"": O map-server está ""\033[1;32;44m""pronto""\033[1;37;44m"" e funcionando pela porta ""\033[1;32;44m""%d""\033[1;37;44m""."CL_CLL""CL_RESET"\n\n", map_port);
 
 	if( runflag != CORE_ST_STOP )
 	{
