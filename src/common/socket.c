@@ -1334,7 +1334,7 @@ void socket_init(void)
 	add_timer_interval(gettick()+1000, connect_check_clear, 0, 0, 5*60*1000);
 #endif
 
-	ShowInfo("Server supports up to '"CL_WHITE"%u"CL_RESET"' concurrent connections.\n", rlim_cur);
+	ShowInfo("O servidor suporta até '"CL_WHITE"%u"CL_RESET"' conexões simultâneas.\n", rlim_cur);
 }
 
 

@@ -9456,7 +9456,7 @@ static void atcommand_config_read(const char* config_filename)
 		}
 	}
 
-	ShowStatus("Finalizada leitura de '"CL_WHITE"%d"CL_RESET"' pseudônimos de comandos em '"CL_WHITE"%s"CL_RESET"'.\n", num_aliases, config_filename);
+	ShowStatus("Finalizada leitura de "CL_WHITE"%d"CL_RESET" pseudônimos de comandos em "CL_WHITE"%s"CL_RESET".\n", num_aliases, config_filename);
 	return;
 }
 void atcommand_db_load_groups(int* group_ids) {

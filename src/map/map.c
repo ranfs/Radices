@@ -3015,20 +3015,20 @@ int map_readallmaps (void)
 	char map_cache_decode_buffer[MAX_MAP_SIZE];
 
 	if( enable_grf )
-		ShowStatus("Loading maps (using GRF files)...\n");
+		ShowStatus("Carregando mapas (usando arquivos GRF)...\n");
 	else {
 		char mapcachefilepath[254];
 		sprintf(mapcachefilepath,"%s/%s",db_path,"map_cache.dat");
-		ShowStatus("Loading maps (using %s as map cache)...\n", mapcachefilepath);
+		ShowStatus("Carregando mapas (usando %s como map_cache)...\n", mapcachefilepath);
 		if( (fp = fopen(mapcachefilepath, "rb")) == NULL ) {
-			ShowFatalError("Unable to open map cache file "CL_WHITE"%s"CL_RESET"\n", mapcachefilepath);
+			ShowFatalError("Incapaz de abrir arquivo "CL_WHITE"%s"CL_RESET"\n", mapcachefilepath);
 			exit(EXIT_FAILURE); //No use launching server if maps can't be read.
 		}
 
 		// Init mapcache data.. [Shinryo]
 		map_cache_buffer = map_init_mapcache(fp);
 		if(!map_cache_buffer) {
-			ShowFatalError("Failed to initialize mapcache data (%s)..\n", mapcachefilepath);
+			ShowFatalError("Falha em inicializar dados do map_cache (%s)..\n", mapcachefilepath);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -3038,7 +3038,7 @@ int map_readallmaps (void)
 
 		// show progress
 		if(enable_grf)
-			ShowStatus("Loading maps [%i/%i]: %s"CL_CLL"\r", i, map_num, map[i].name);
+			ShowStatus("Carregando mapas [%i/%i]: %s"CL_CLL"\r", i, map_num, map[i].name);
 
 		// try to load the map
 		if( !
@@ -3092,11 +3092,11 @@ int map_readallmaps (void)
 	}
 
 	// finished map loading
-	ShowInfo("Successfully loaded '"CL_WHITE"%d"CL_RESET"' maps."CL_CLL"\n",map_num);
+	ShowInfo("Sucesso no carregamento de "CL_WHITE"%d"CL_RESET" mapas."CL_CLL"\n",map_num);
 	instance_start = map_num; // Next Map Index will be instances
 
 	if (maps_removed)
-		ShowNotice("Maps removed: '"CL_WHITE"%d"CL_RESET"'\n",maps_removed);
+		ShowNotice("Mapas removidos: "CL_WHITE"%d"CL_RESET".\n",maps_removed);
 
 	return 0;
 }
@@ -3396,7 +3396,7 @@ int inter_config_read(char *cfgName)
 		else
 		if(strcmpi(w1,"use_sql_db")==0) {
 			db_use_sqldbs = config_switch(w2);
-			ShowStatus ("Using SQL dbs: %s\n",w2);
+			ShowStatus ("Usando DB SQL: %s\n",w2);
 		} else
 		if(strcmpi(w1,"log_db_ip")==0)
 			strcpy(log_db_ip, w2);
@@ -3433,10 +3433,10 @@ int map_sql_init(void)
 	// main db connection
 	mmysql_handle = Sql_Malloc();
 
-	ShowInfo("Connecting to the Map DB Server....\n");
+	ShowInfo("Conectando à DB do map-server....\n");
 	if( SQL_ERROR == Sql_Connect(mmysql_handle, map_server_id, map_server_pw, map_server_ip, map_server_port, map_server_db) )
 		exit(EXIT_FAILURE);
-	ShowStatus("connect success! (Map Server Connection)\n");
+	ShowStatus("Êxito na conexão!\n");
 
 	if( strlen(default_codepage) > 0 )
 		if ( SQL_ERROR == Sql_SetEncoding(mmysql_handle, default_codepage) )
@@ -3467,10 +3467,10 @@ int log_sql_init(void)
 	// log db connection
 	logmysql_handle = Sql_Malloc();
 
-	ShowInfo(""CL_WHITE"[SQL]"CL_RESET": Connecting to the Log Database "CL_WHITE"%s"CL_RESET" At "CL_WHITE"%s"CL_RESET"...\n",log_db_db,log_db_ip);
+	ShowSQL("Conectando à DB de log "CL_WHITE"%s"CL_RESET" em "CL_WHITE"%s"CL_RESET"...\n",log_db_db,log_db_ip);
 	if ( SQL_ERROR == Sql_Connect(logmysql_handle, log_db_id, log_db_pw, log_db_ip, log_db_port, log_db_db) )
 		exit(EXIT_FAILURE);
-	ShowStatus(""CL_WHITE"[SQL]"CL_RESET": Successfully '"CL_GREEN"connected"CL_RESET"' to Database '"CL_WHITE"%s"CL_RESET"'.\n", log_db_db);
+	ShowSQL(CL_GREEN"Sucesso"CL_RESET" na conexão à DB "CL_WHITE"%s"CL_RESET".\n", log_db_db);
 
 	if( strlen(default_codepage) > 0 )
 		if ( SQL_ERROR == Sql_SetEncoding(logmysql_handle, default_codepage) )
@@ -3855,14 +3855,14 @@ int do_init(int argc, char *argv[])
 		char ip_str[16];
 		ip2str(addr_[0], ip_str);
 
-		ShowWarning("Not all IP addresses in map_athena.conf configured, autodetecting...\n");
+		ShowWarning("Nem todos os endereços IP foram configurados no map_athena.conf, autodetectando...\n");
 
 		if (naddr_ == 0)
-			ShowError("Unable to determine your IP address...\n");
+			ShowError("Incapaz de determinar o seu endereço IP...\n");
 		else if (naddr_ > 1)
-			ShowNotice("Multiple interfaces detected...\n");
+			ShowNotice("Múltiplas interfaces detectadas...\n");
 
-		ShowInfo("Defaulting to %s as our IP address\n", ip_str);
+		ShowInfo("Definindo %s como o endereço IP.\n", ip_str);
 
 		if (!map_ip_set)
 			clif_setip(ip_str);

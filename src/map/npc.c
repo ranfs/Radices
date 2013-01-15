@@ -3720,13 +3720,13 @@ int npc_reload(void) {
 		ShowStatus("Loading NPC file: %s"CL_CLL"\r", nsl->name);
 		npc_parsesrcfile(nsl->name,false);
 	}
-	ShowInfo ("Done loading '"CL_WHITE"%d"CL_RESET"' NPCs:"CL_CLL"\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Warps\n"
+	ShowInfo ("Carregamento finalizado de '"CL_WHITE"%d"CL_RESET"' NPCs:"CL_CLL"\n"
+		"\t-'"CL_WHITE"%d"CL_RESET"' Portais\n"
 		"\t-'"CL_WHITE"%d"CL_RESET"' Shops\n"
 		"\t-'"CL_WHITE"%d"CL_RESET"' Scripts\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Spawn sets\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Mobs Cached\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Mobs Not Cached\n",
+		"\t-'"CL_WHITE"%d"CL_RESET"' Spawns\n"
+		"\t-'"CL_WHITE"%d"CL_RESET"' Monstros em cache\n"
+		"\t-'"CL_WHITE"%d"CL_RESET"' Monstros fora do cache\n",
 		npc_id - npc_new_min, npc_warp, npc_shop, npc_script, npc_mob, npc_cache_mob, npc_delay_mob);
 
 	do_final_instance();
@@ -3746,8 +3746,8 @@ int npc_reload(void) {
 
 	// Execute rest of the startup events if connected to char-server. [Lance]
 	if(!CheckForCharServer()){
-		ShowStatus("Event '"CL_WHITE"OnInterIfInit"CL_RESET"' executed with '"CL_WHITE"%d"CL_RESET"' NPCs.\n", npc_event_doall("OnInterIfInit"));
-		ShowStatus("Event '"CL_WHITE"OnInterIfInitOnce"CL_RESET"' executed with '"CL_WHITE"%d"CL_RESET"' NPCs.\n", npc_event_doall("OnInterIfInitOnce"));
+		ShowStatus("Evento "CL_WHITE"OnInterIfInit"CL_RESET" executado em "CL_WHITE"%d"CL_RESET" NPCs.\n", npc_event_doall("OnInterIfInit"));
+		ShowStatus("Evento "CL_WHITE"OnInterIfInitOnce"CL_RESET" executado em "CL_WHITE"%d"CL_RESET" NPCs.\n", npc_event_doall("OnInterIfInitOnce"));
 	}
 	return 0;
 }
