@@ -1,29 +1,29 @@
 #/bin/sh
-# Atalho para fun√ß√µes Cronus-Commander - http://Cronus-Emulator.com [Raizen]
-# Removido mapcache (ele j√° ser√° compilado automaticamente) [MaminhA]
-# Adicionado alvo para instalar depend√™ncias [MaminhA]
+# Atalho para funÁıes Cronus-Commander - http://Cronus-Emulator.com [Raizen]
+# Removido mapcache (ele j· ser· compilado automaticamente) [MaminhA]
+# Adicionado alvo para instalar dependÍncias [MaminhA]
 # Adicionando sleep para prevenir acessos demasiados [MaminhA]
+# Modificada funÁ„o de atualizaÁ„o do emulador [MaminhA]
 case $1 in
-	'recompilar') chmod 777 configure ; ./configure ; make clean ; make all;;
-	'compilar') chmod 777 configure ; ./configure ; make clean ; make all;;
+	'recompilar'|'compilar') chmod 777 configure ; ./configure ; make clean ; make all;;
 	'atualizarsistema') yum update -y ; yum upgrade -y ; apt-get update -y ;;
 	'instalardeps') apt-get install make gcc libmysqlclient-dev zlib1g-dev libpcre3-dev ; yum install gcc make mysql mysql-devel mysql-server pcre-devel zlib-devel ;;
-	'versao') echo "A vers√£o atual do cronus-commander √© 1.4" ;;
+	'versao') echo "A vers„o atual do cronus-commander È 1.5" ;;
 	'ligar') exec ./login-server_sql & sleep 3 & exec ./char-server_sql & sleep 3 & exec ./map-server_sql & ;;
 	'desligar') killall map-server_sql char-server_sql login-server_sql ;;
 	'reiniciar') killall map-server_sql char-server_sql login-server_sql ; exec ./login-server_sql & exec ./char-server_sql & exec ./map-server_sql & ;;
-	'atualizaremulador') svn update ;;
-	'tutorial') echo "As fun√ß√µes existentes atualmente neste script
-s√£o unicamente para ajudar o usu√°rio na utiliza√ß√£o de comandos via
+	'atualizaremulador') git pull ;;
+	'tutorial') echo "As funÁıes existentes atualmente neste script
+s„o unicamente para ajudar o usu·rio na utilizaÁ„o de comandos via
 shell.
-Para utilizar este script, basta que, atrav√©s do ssh, acesse seu emulador 
+Para utilizar este script, basta que, atravÈs do ssh, acesse seu emulador 
 e digite:
 ./cronus-commander PARAMETRO_DE_USO
-Para ver os par√¢metros dispon√≠veis digite:
+Para ver os par‚metros disponÌveis digite:
 ./cronus-commander comandos
-Caso tenha qualquer d√∫vida sobre este sistema, abra um t√≥pico de suporte 
+Caso tenha qualquer d˙vida sobre este sistema, abra um tÛpico de suporte 
 em http://forum.cronus-emulator.com/";;
-	*) echo "Os par√¢metros v√°lidos s√£o: 
+	*) echo "Os par‚metros v·lidos s„o: 
 ligar | desligar | reiniciar | compilar | recompilar | versao | atualizarsistema | atualizaremulador | instalardeps." 
 ;;
 esac
