@@ -24,6 +24,6 @@ Para ver os parâmetros disponíveis digite:
 Caso tenha qualquer dúvida sobre este sistema, abra um tópico de suporte 
 em http://forum.cronus-emulator.com/";;
 	*) echo "Os parâmetros válidos são: 
-ligar | desligar | reiniciar | compilar | recompilar | versao | atualizarsistema | atualizaremulador | instalardeps." 
+tutorial | ligar | desligar | reiniciar | compilar | recompilar | versao | atualizarsistema | atualizaremulador | instalardeps." 
 ;;
 esac
