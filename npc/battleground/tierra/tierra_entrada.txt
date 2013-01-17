@@ -1,17 +1,18 @@
-//===== rAthena Script ======================================= 
-// BattleGround System - Tierra Gorge Entrance NPCs
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= BattleGround System - Tierra Gorge 2
+//===== Por: =================================================
 //= L0ne_W0lf
-//===== Current Version: ===================================== 
-//= 1.0
-//===== Compatible With: ===================================== 
-//= rAthena 1.0
-//===== Description: ========================================= 
+//===== Versão Atual: ========================================
+//= 1.2
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= [AEGIS Conversion]
 //= Tierra Gorge Battleground Entrance NPCs
-//===== Additional Comments: ================================= 
+//===== Comentários Adicionais: ==============================
 //= 1.0 First Version.
 //= 1.1 Fixed silly copy paste errors. (bugreport:4401)
+//= 1.2 Pequena Otimização. [meyk]
 //============================================================
 
 // First Tierra Gorge Officers - Guillaume
@@ -39,40 +40,32 @@ bat_room,124,178,5	script	Tierra Gorge Officer#01a	418,{
 				mes "[Guillaume Army Officer]";
 				mes "I'm very pleased that you want to join us and fight the Croix Army, but I'm sorry: I can't send a rookie like you to die on the cruel battlefield.";
 			}
-			else {
-				set .@chk_urtime,checkquest(2069,PLAYTIME);
-				if ((.@chk_urtime == 0)|| (.@chk_urtime == 1)) {
-					mes "[Guillaume Army Officer]";
-					mes "You seem to have just returned from the battlefield.";
-					mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
-				}
-				else {
-					if (.@chk_urtime == 2)
-						erasequest 2069;
-					set .@mapcount,getmapusers("bat_a01");
-					if (.@mapcount > 0) {
-						mes "[Guillaume Army Officer]";
-						mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Croixs already.";
-						mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-					}
-					else {
-						if ($@TierraBG1) {
-							mes "[Guillaume Army Officer]";
-							mes "An elite corps is already standing by to be dispatched to the battlefield.";
-							mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-						}
-						else {
-							mes "[Guillaume Army Officer]";
-							mes "You definitely seem to be ready for battle!";
-							mes "Go show the Croixs what fear truly means!";
-							mes "Today, our cry of victory shall echo all over the battlefield!";
-							close2;
-							warp "bat_room",57,223;
-							end;
-						}
-					}
-				}
+			set .@chk_urtime,checkquest(2069,PLAYTIME);
+			if ((.@chk_urtime == 0)|| (.@chk_urtime == 1)) {
+				mes "[Guillaume Army Officer]";
+				mes "You seem to have just returned from the battlefield.";
+				mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
 			}
+			if (.@chk_urtime == 2)
+				erasequest 2069;
+			set .@mapcount,getmapusers("bat_a01");
+			if (.@mapcount > 0) {
+				mes "[Guillaume Army Officer]";
+				mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Croixs already.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			if ($@TierraBG1) {
+				mes "[Guillaume Army Officer]";
+				mes "An elite corps is already standing by to be dispatched to the battlefield.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			mes "[Guillaume Army Officer]";
+			mes "You definitely seem to be ready for battle!";
+			mes "Go show the Croixs what fear truly means!";
+			mes "Today, our cry of victory shall echo all over the battlefield!";
+			close2;
+			warp "bat_room",57,223;
+			end;
 		}
 		break;
 	case 2:
@@ -106,40 +99,32 @@ bat_room,140,178,5	script	Tierra Gorge Officer#02a	418,{
 				mes "[Guillaume Army Officer]";
 				mes "I'm very pleased that you want to join us and fight the Croix Army, but I'm sorry: I can't send a rookie like you to die on the cruel battlefield.";
 			}
-			else {
-				set .@chk_urtime,checkquest(2069,PLAYTIME);
-				if (.@chk_urtime == 1) {
-					mes "[Guillaume Army Officer]";
-					mes "You seem to have just returned from the battlefield.";
-					mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
-				}
-				else {
-					if (.@chk_urtime == 2)
-						erasequest 2069;
-					set .@mapcount,getmapusers("bat_a02");
-					if (.@mapcount > 0) {
-						mes "[Guillaume Army Officer]";
-						mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Croixs already.";
-						mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-					}
-					else {
-						if ($@TierraBG2) {
-							mes "[Guillaume Army Officer]";
-							mes "An elite corps is already standing by to be dispatched to the battlefield.";
-							mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-						}
-						else {
-							mes "[Guillaume Army Officer]";
-							mes "You definitely seem to be ready for battle!";
-							mes "Go show the Croixs what fear truly means!";
-							mes "Today, our cry of victory shall echo all over the battlefield!";
-							close2;
-							warp "bat_room",114,223;
-							end;
-						}
-					}
-				}
+			set .@chk_urtime,checkquest(2069,PLAYTIME);
+			if (.@chk_urtime == 1) {
+				mes "[Guillaume Army Officer]";
+				mes "You seem to have just returned from the battlefield.";
+				mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
 			}
+			if (.@chk_urtime == 2)
+				erasequest 2069;
+			set .@mapcount,getmapusers("bat_a02");
+			if (.@mapcount > 0) {
+				mes "[Guillaume Army Officer]";
+				mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Croixs already.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			if ($@TierraBG2) {
+				mes "[Guillaume Army Officer]";
+				mes "An elite corps is already standing by to be dispatched to the battlefield.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			mes "[Guillaume Army Officer]";
+			mes "You definitely seem to be ready for battle!";
+			mes "Go show the Croixs what fear truly means!";
+			mes "Today, our cry of victory shall echo all over the battlefield!";
+			close2;
+			warp "bat_room",114,223;
+			end;
 		}
 		break;
 	case 2:
@@ -271,40 +256,32 @@ bat_room,125,121,1	script	Tierra Gorge Officer#01b	414,{
 				mes "[Croix Army Officer]";
 				mes "I'm very pleased that you want to join us and fight the Guillaume Army, but I'm sorry: I can't send a rookie like you to die on the cruel battlefield.";
 			}
-			else {
-				set .@chk_urtime,checkquest(2069,PLAYTIME);
-				if ((.@chk_urtime == 0)|| (.@chk_urtime == 1)) {
-					mes "[Croix Army Officer]";
-					mes "You seem to have just returned from the battlefield.";
-					mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
-				}
-				else {
-					if (.@chk_urtime == 2)
-						erasequest 2069;
-					set .@mapcount,getmapusers("bat_a02");
-					if (.@mapcount > 0) {
-						mes "[Croix Army Officer]";
-						mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Guillaume already.";
-						mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-					}
-					else {
-						if ($@TierraBG1) {
-							mes "[Croix Army Officer]";
-							mes "An elite corps is already standing by to be dispatched to the battlefield.";
-							mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-						}
-						else {
-							mes "[Croix Army Officer]";
-							mes "You definitely seem to be ready for battle!";
-							mes "Go show the Guillaumes what fear truly means!";
-							mes "Today, our cry of victory shall echo all over the battlefield!";
-							close2;
-							warp "bat_room",57,207;
-							end;
-						}
-					}
-				}
+			set .@chk_urtime,checkquest(2069,PLAYTIME);
+			if ((.@chk_urtime == 0)|| (.@chk_urtime == 1)) {
+				mes "[Croix Army Officer]";
+				mes "You seem to have just returned from the battlefield.";
+				mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
 			}
+			if (.@chk_urtime == 2)
+				erasequest 2069;
+			set .@mapcount,getmapusers("bat_a02");
+			if (.@mapcount > 0) {
+				mes "[Croix Army Officer]";
+				mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Guillaume already.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			if ($@TierraBG1) {
+				mes "[Croix Army Officer]";
+				mes "An elite corps is already standing by to be dispatched to the battlefield.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			mes "[Croix Army Officer]";
+			mes "You definitely seem to be ready for battle!";
+			mes "Go show the Guillaumes what fear truly means!";
+			mes "Today, our cry of victory shall echo all over the battlefield!";
+			close2;
+			warp "bat_room",57,207;
+			end;
 		}
 		break;
 	case 2:
@@ -338,40 +315,32 @@ bat_room,140,121,1	script	Tierra Gorge Officer#02b	414,{
 				mes "[Croix Army Officer]";
 				mes "I'm very pleased that you want to join us and fight the Guillaume Army, but I'm sorry: I can't send a rookie like you to die on the cruel battlefield.";
 			}
-			else {
-				set .@chk_urtime,checkquest(2069,PLAYTIME);
-				if (.@chk_urtime == 1) {
-					mes "[Croix Army Officer]";
-					mes "You seem to have just returned from the battlefield.";
-					mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
-				}
-				else {
-					if (.@chk_urtime == 2)
-						erasequest 2069;
-					set .@mapcount,getmapusers("bat_a02");
-					if (.@mapcount > 0) {
-						mes "[Croix Army Officer]";
-						mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Guillaume already.";
-						mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-					}
-					else {
-						if ($@TierraBG2) {
-							mes "[Croix Army Officer]";
-							mes "An elite corps is already standing by to be dispatched to the battlefield.";
-							mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
-						}
-						else {
-							mes "[Croix Army Officer]";
-							mes "You definitely seem to be ready for battle!";
-							mes "Go show the Guillaumes what fear truly means!";
-							mes "Today, our cry of victory shall echo all over the battlefield!";
-							close2;
-							warp "bat_room",114,207;
-							end;
-						}
-					}
-				}
+			set .@chk_urtime,checkquest(2069,PLAYTIME);
+			if (.@chk_urtime == 1) {
+				mes "[Croix Army Officer]";
+				mes "You seem to have just returned from the battlefield.";
+				mes "It's too early for you to go back. Go rest, and leave the enemies to us!";
 			}
+			if (.@chk_urtime == 2)
+				erasequest 2069;
+			set .@mapcount,getmapusers("bat_a02");
+			if (.@mapcount > 0) {
+				mes "[Croix Army Officer]";
+				mes "I've received a report informing me that an elite corps has been dispatched to the battlefield fighting the Guillaume already.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			if ($@TierraBG2) {
+				mes "[Croix Army Officer]";
+				mes "An elite corps is already standing by to be dispatched to the battlefield.";
+				mes "Why don't you go wait for a while? I suggest you sharpen your weapons and prepare your supplies until then.";
+			}
+			mes "[Croix Army Officer]";
+			mes "You definitely seem to be ready for battle!";
+			mes "Go show the Guillaumes what fear truly means!";
+			mes "Today, our cry of victory shall echo all over the battlefield!";
+			close2;
+			warp "bat_room",114,207;
+			end;
 		}
 		break;
 	case 2:
