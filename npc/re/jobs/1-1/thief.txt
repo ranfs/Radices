@@ -1,16 +1,18 @@
-//===== rAthena Script ======================================= 
+//===== Cronus Script ========================================
 //= Renewal Thief Job Quest
-//===== By: ================================================== 
+//===== Por: =================================================
 //= Kisuka
-//===== Current Version: ===================================== 
-//= 1.0
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
+//===== Versão Atual: ========================================
+//= 1.1
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= Job Change to Thief Class
-//===== Additional Comments: ================================= 
+//===== Comentários Adicionais: ==============================
 //= 1.0 First Version. [Kisuka]
-//============================================================ 
+//= 1.1 Pequena Otimização. [meyk]
+//============================================================
+
 moc_prydb1,39,129,2	script	Thief Guide#thief	69,{
 	if (Upper == 1) {
 		if (ADVJOB == Job_Assassin_Cross || ADVJOB == Job_Stalker) {
@@ -38,23 +40,21 @@ moc_prydb1,39,129,2	script	Thief Guide#thief	69,{
 				mes "[Thief Guide]";
 				mes "Since you've become a Thief, live as a Thief. Now, go for it! Next~";
 				close;
-			}else{
-				mes "[Thief Guide]";
-				if (sex)
-					mes "Hey, dude.";
-				else
-					mes "Hey, baby~";
-				close;
 			}
-		}else{
 			mes "[Thief Guide]";
 			if (sex)
 				mes "Hey, dude.";
 			else
-				mes "Hey, baby.";
-			mes "...Hey! You look too goody-goody to want to be a Thief!! Now scram, I'm busy. Next!";
+				mes "Hey, baby~";
 			close;
 		}
+		mes "[Thief Guide]";
+		if (sex)
+			mes "Hey, dude.";
+		else
+			mes "Hey, baby.";
+		mes "...Hey! You look too goody-goody to want to be a Thief!! Now scram, I'm busy. Next!";
+		close;
 	}
 	if(q_job_thief == 1) {
 		mes "[Thief Guildsman]";
@@ -70,26 +70,24 @@ moc_prydb1,39,129,2	script	Thief Guide#thief	69,{
 			mes "[Thief Guildsman]";
 			mes "Hey~ if you have any trouble, get it out to me anytime, huh?";
 			close;
-		}else{
-			if(Sex) {
-				mes "[Thief Guildsman]";
-				mes "What the heck...?";
-				mes "Huh.. you are a "+jobname(Class)+" blockhead...!";
-				next;
-				mes "[Thief Guildsman]";
-				mes "Hey, brother.";
-				mes "Why are you here? Go back to your place~ go back~~";
-				close;
-			}else{
-				mes "[Thief Guildsman]";
-				mes "What the heck...?";
-				next;
-				mes "[Thief Guildsman]";
-				mes "Hey, lady.";
-				mes "Why are you here? Go back to your place~ go back~~";
-				close;
-			}
 		}
+		if(Sex) {
+			mes "[Thief Guildsman]";
+			mes "What the heck...?";
+			mes "Huh.. you are a "+jobname(Class)+" blockhead...!";
+			next;
+			mes "[Thief Guildsman]";
+			mes "Hey, brother.";
+			mes "Why are you here? Go back to your place~ go back~~";
+			close;
+		}
+		mes "[Thief Guildsman]";
+		mes "What the heck...?";
+		next;
+		mes "[Thief Guildsman]";
+		mes "Hey, lady.";
+		mes "Why are you here? Go back to your place~ go back~~";
+		close;
 	}
 	mes "[Thief Guildsman]";
 	mes "Ehh... Seems like a beloved "+(Sex?"son":"daughter")+" of a rich family, but why are you here in this dirty place?";
