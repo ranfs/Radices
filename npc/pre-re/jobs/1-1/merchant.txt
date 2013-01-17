@@ -64,13 +64,11 @@ alberta_in,53,43,6	script	Merchant#mer	86,{
 			mes "Ah~ How nostalgic. Just like old times! Alright, do your best!";
 			close;
 		}
-		else {
-			mes "[Chief Mahnsoo]";
-			mes "^333333*Sigh*^000000";
-			mes "I'm so bored...";
-			mes "When will I hear from my lovely Blossom?";
-			close;
-		}
+		mes "[Chief Mahnsoo]";
+		mes "^333333*Sigh*^000000";
+		mes "I'm so bored...";
+		mes "When will I hear from my lovely Blossom?";
+		close;
 	}
 	if (BaseJob == Job_Merchant) {
 		mes "[Chief Mahnsoo]";
@@ -124,8 +122,7 @@ alberta_in,53,43,6	script	Merchant#mer	86,{
 			mes "The only thing to take care of is your Membership Fee.";
 			mes "Are you ready?";
 			next;
-			switch(select("Pay the rest of the 500 Zeny:Quit")) {
-			case 1:
+			if(select("Pay the rest of the 500 Zeny:Quit") == 1 ) {
 				mes "[Chief Mahnsoo]";
 				if (Zeny < 500) {
 					mes "Hmmm...";
@@ -141,12 +138,11 @@ alberta_in,53,43,6	script	Merchant#mer	86,{
 				mes "membership";
 				mes "is paid in full.";
 				break;
-			case 2:
-				mes "[Chief Mahnsoo]";
-				mes "I suppose you need some time to gather some zeny to pay your membership fee. Please come";
-				mes "back as soon as you're ready.";
-				close;
 			}
+			mes "[Chief Mahnsoo]";
+			mes "I suppose you need some time to gather some zeny to pay your membership fee. Please come";
+			mes "back as soon as you're ready.";
+			close;
 		}
 		next;
 		mes "[Chief Mahnsoo]";
@@ -1035,41 +1031,39 @@ prontera,248,42,0	script	Kafra Employee#mer	116,{
 		cutin "",255;
 		end;
 	}
-	else {
-		mes "[Kafra Employee]";
-		mes "Welcome to the";
-		mes "Kafra Corportation,";
-		mes "where the service is";
-		mes "always on your side~";
-		next;
-		mes "[Kafra Employee]";
-		mes "As you can see, the";
-		mes "Swordman Assocation";
-		mes "has moved to Izlude, a";
-		mes "satellite city of Prontera.";
-		mes "Currently, we offer a Teleport";
-		mes "Service to Izlude for 600 zeny.";
-		next;
-		if (select("Use:Cancel") == 1) {
-			if (Zeny < 600) {
-				mes "[Kafra Employee]";
-				mes "I'm sorry, but you";
-				mes "don't have enough zeny";
-				mes "for this Teleport Service.";
-				close2;
-				cutin "",255;
-				end;
-			}
-			set zeny,zeny-600;
-			set RESRVPTS, RESRVPTS + 37;
+	mes "[Kafra Employee]";
+	mes "Welcome to the";
+	mes "Kafra Corportation,";
+	mes "where the service is";
+	mes "always on your side~";
+	next;
+	mes "[Kafra Employee]";
+	mes "As you can see, the";
+	mes "Swordman Assocation";
+	mes "has moved to Izlude, a";
+	mes "satellite city of Prontera.";
+	mes "Currently, we offer a Teleport";
+	mes "Service to Izlude for 600 zeny.";
+	next;
+	if (select("Use:Cancel") == 1) {
+		if (Zeny < 600) {
+			mes "[Kafra Employee]";
+			mes "I'm sorry, but you";
+			mes "don't have enough zeny";
+			mes "for this Teleport Service.";
+			close2;
 			cutin "",255;
-			warp "izlude",94,103;
 			end;
 		}
-		close2;
+		set zeny,zeny-600;
+		set RESRVPTS, RESRVPTS + 37;
 		cutin "",255;
+		warp "izlude",94,103;
 		end;
 	}
+	close2;
+	cutin "",255;
+	end;
 }
 
 //izlu2dun,106,58,4	script	Kafra Employee#mer	116,{
