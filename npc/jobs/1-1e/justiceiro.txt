@@ -190,24 +190,22 @@ que_ng,152,167,3	script	Master Miller	901,{
 			}
 			close;
 		}
-	}else{
-		if (Class == Job_Gunslinger) {
-			mes "[Master Miller]";
-			mes "Oh! Long time, no see,";
-			mes "friend. How have you been?";
-			mes "I hope you've been keeping";
-			mes "you Gun well maintained.";
-			mes "Take care of it, and it'll take";
-			mes "care of you. Remember it.";
-			close;
-		}else{
-			mes "[Master Miller]";
-			mes "If you don't have";
-			mes "any business with me,";
-			mes "then please go on your way.";
-			close;
-		}
 	}
+	if (Class == Job_Gunslinger) {
+		mes "[Master Miller]";
+		mes "Oh! Long time, no see,";
+		mes "friend. How have you been?";
+		mes "I hope you've been keeping";
+		mes "you Gun well maintained.";
+		mes "Take care of it, and it'll take";
+		mes "care of you. Remember it.";
+		close;
+	}
+	mes "[Master Miller]";
+	mes "If you don't have";
+	mes "any business with me,";
+	mes "then please go on your way.";
+	close;
 }
 
 payon,184,65,3	script	Wise Bull Horn	866,{
@@ -414,10 +412,8 @@ payon,184,65,3	script	Wise Bull Horn	866,{
 		mes "your powers as a Gunslinger to protect what is good and just.";
 		close;
 	}
-	else {
-		mes "[Wise Bull Horn]";
-		mes "Zzzzzz~";
-		mes "^333333*Phew*^000000";
-		close;
-	}
+	mes "[Wise Bull Horn]";
+	mes "Zzzzzz~";
+	mes "^333333*Phew*^000000";
+	close;
 }
