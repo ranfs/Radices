@@ -53,24 +53,22 @@ alberta,30,65,3	script	Akagi	730,{
 					warp "amatsu",178,176;
 					end;
 			}
-		}else{
-			mes "[Akagi]";
-			mes "Hm? I cannot be";
-			mes "of any service to";
-			mes "you until you grow";
-			mes "a little stronger...";
-			close;
 		}
-	}else{
 		mes "[Akagi]";
-		mes "Hmm...";
-		mes "You and I...";
-		mes "We are fairly equal in";
-		mes "terms of combat ability.";
-		mes "Perhaps we can spar";
-		mes "together sometime.";
+		mes "Hm? I cannot be";
+		mes "of any service to";
+		mes "you until you grow";
+		mes "a little stronger...";
 		close;
 	}
+	mes "[Akagi]";
+	mes "Hmm...";
+	mes "You and I...";
+	mes "We are fairly equal in";
+	mes "terms of combat ability.";
+	mes "Perhaps we can spar";
+	mes "together sometime.";
+	close;
 }
 
 que_ng,30,65,3	script	Cougar#nq	730,{
@@ -340,37 +338,33 @@ que_ng,30,65,3	script	Cougar#nq	730,{
 			completequest 6018;
 			close;
 		}
-		else {
-			mes "[Cougar]";
-			mes "How have you been?";
-			mes "Train hard: you want";
-			mes "to be able to vanish";
-			mes "without a trace. If you";
-			mes "can do that, you'll get";
-			mes "the respect of any Ninja~";
-			close;
-		}
-	}else{
-		if (Class == Job_Ninja) {
-			mes "[Cougar]";
-			mes "How have you been?";
-			mes "Train hard: you want";
-			mes "to be able to vanish";
-			mes "without a trace. If you";
-			mes "can do that, you'll get";
-			mes "the respect of any Ninja~";
-			close;
-		}else{
-			mes "[Cougar]";
-			mes "What...?";
-			mes "How were you able";
-			mes "to find me hidden";
-			mes "in the shadows?!";
-			mes "You must be more than";
-			mes "a common adventurer, eh?";
-			close;
-		}
+		mes "[Cougar]";
+		mes "How have you been?";
+		mes "Train hard: you want";
+		mes "to be able to vanish";
+		mes "without a trace. If you";
+		mes "can do that, you'll get";
+		mes "the respect of any Ninja~";
+		close;
 	}
+	if (Class == Job_Ninja) {
+		mes "[Cougar]";
+		mes "How have you been?";
+		mes "Train hard: you want";
+		mes "to be able to vanish";
+		mes "without a trace. If you";
+		mes "can do that, you'll get";
+		mes "the respect of any Ninja~";
+		close;
+	}
+	mes "[Cougar]";
+	mes "What...?";
+	mes "How were you able";
+	mes "to find me hidden";
+	mes "in the shadows?!";
+	mes "You must be more than";
+	mes "a common adventurer, eh?";
+	close;
 }
 
 einbroch,184,194,3	script	Suspicious Man#nq	 	881,{
@@ -575,14 +569,12 @@ einbroch,184,194,3	script	Suspicious Man#nq	 	881,{
 		mes "to blend into the shadows.";
 		close;
 	}
-	else {
-		mes "[Tourist]";
-		mes "I've traveled to many";
-		mes "countries, but I've never";
-		mes "been on a building as high";
-		mes "as Einbroch Tower. All the";
-		mes "buildings in my hometown";
-		mes "are tiny in comparison...";
-		close;
-	}
+	mes "[Tourist]";
+	mes "I've traveled to many";
+	mes "countries, but I've never";
+	mes "been on a building as high";
+	mes "as Einbroch Tower. All the";
+	mes "buildings in my hometown";
+	mes "are tiny in comparison...";
+	close;
 }
