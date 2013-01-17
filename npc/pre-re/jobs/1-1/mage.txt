@@ -1,15 +1,15 @@
-//===== rAthena Script ======================================= 
+//===== Cronus Script ========================================
 //= Mage Job Quest
-//===== By: ================================================== 
+//===== Por: =================================================
 //= kobra_k88; L0ne_W0lf
-//===== Current Version: ===================================== 
-//= 1.9
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
+//===== Versão Atual: ========================================
+//= 2.0
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= [Official Conversion]
 //= Job quest for Mage classes
-//===== Additional Comments: ================================= 
+//===== Comentários Adicionais: ==============================
 //= 1.0 Fully working.
 //= 1.1 Fixed input ingridients bug [Lupus]
 //= 1.2 Added instant job change for High Novice [Lupus]
@@ -22,7 +22,8 @@
 //= 1.7a Fixed a "If" in the quest. (bugreport:489) [Samuray22]
 //= 1.8 Added Quest Log commands. [L0ne_W0lf]
 //= 1.9 Fixed an issue with completequest by adding checkquest. [Kisuka]
-//============================================================ 
+//= 2.0 Pequena Otimização. [meyk]
+//============================================================
 
 geffen_in,164,124,4	script	Mage Guildsman	123,{
 	if (Upper == 1) {
@@ -52,20 +53,16 @@ geffen_in,164,124,4	script	Mage Guildsman	123,{
 				mes "Wow, for some reason, you look way better than you did before. Anyway, I believe you will do a better job being a Mage as well.";
 				close;
 			}
-			else {
-				mes "[Mage Guildsman]";
-				mes "Is there anything more I can help you with? If not, why don't you go test your skills? The world is waiting for you~!";
-				close;
-			}
-		}
-		else {
 			mes "[Mage Guildsman]";
-			mes "What, are you interested in the Mage guild? I didn't want to tell you this, but you don't belong here.";
-			next;
-			mes "[Mage Guildsman]";
-			mes "I am not sure why you're still standing in front of me, but I can tell that you're not meant to be a Mage.";
+			mes "Is there anything more I can help you with? If not, why don't you go test your skills? The world is waiting for you~!";
 			close;
 		}
+		mes "[Mage Guildsman]";
+		mes "What, are you interested in the Mage guild? I didn't want to tell you this, but you don't belong here.";
+		next;
+		mes "[Mage Guildsman]";
+		mes "I am not sure why you're still standing in front of me, but I can tell that you're not meant to be a Mage.";
+		close;
 	}
 	mes "[Mage Guildsman]";
 	mes "Yo. What's up?";

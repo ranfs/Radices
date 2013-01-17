@@ -1,15 +1,15 @@
-//===== rAthena Script ======================================= 
+//===== Cronus Script ========================================
 //= Ep 10+ Novice Training Grounds
-//===== By: ================================================== 
+//===== Por: =================================================
 //= Dr.Evil & MasterOfMuppets
-//===== Current Version: ===================================== 
-//= 2.4
-//===== Compatible With: ===================================== 
-//= rAthena SVN 3422+(Requires jA Script System)
-//===== Description: ========================================= 
+//===== Versão Atual: ========================================
+//= 2.5
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= [Official Conversion]
 //= Novice Training Grounds
-//===== Additional Comments: ================================= 
+//===== Comentários Adicionais: ==============================
 //= 1.7D Added confirm character name thing on receptionist. [Kisuka]
 //= 1.8 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
 //=     NPCs are not backwards compatable, and will remove
@@ -23,6 +23,7 @@
 //= 2.3 Added fix to Hanson from GM-windsor- and Saithis. [L0ne_W0lf]
 //= 2.3a Correct a wrong variable name. (bugreport:2293) [Samuray22]
 //= 2.4 Corrected an error in Hanson. (bugreport:2374) [L0ne_W0lf]
+//= 2.5 Pequena Otimização. [meyk]
 //============================================================ 
 
 // Bulletin Board
@@ -263,90 +264,88 @@ new_1-1,53,114,4	script	Shion#nv1	727,{
 		mes "Everything you'll learn here in the Training Grounds will benefit your gameplay. So just think positive, okay?";
 		close;
 	}
-	else {
+	mes "[Shion]";
+	mes "Hello there~";
+	mes "Welcome to the";
+	mes "Training Grounds!";
+	next;
+	mes "[Shion]";
+	mes "Let's see.";
+	mes "Your name is...";
+	mes "" + strcharinfo(0) + ".";
+	next;
+	mes "[Shion]";
+	mes "My name is Shion.";
+	mes "Yes, this is the first time we've met, of course. Hahahaha~!";
+	next;
+	mes "[Shion]";
+	mes "Now that we've met, is there anything I can help you with?";
+	mes "I'm here for your questions~";
+	next;
+	switch(select("Where should I go?:About Basic Interfaces.:Who the crap are you?")) {
+	case 1:
 		mes "[Shion]";
-		mes "Hello there~";
-		mes "Welcome to the";
-		mes "Training Grounds!";
+		mes "Do you see the bridge to your";
+		mes "right side? Just cross the bridge and you'll arrive at a castle. All you have to do is walk inside!";
 		next;
 		mes "[Shion]";
-		mes "Let's see.";
-		mes "Your name is...";
-		mes "" + strcharinfo(0) + ".";
+		mes "The entrance of the castle";
+		mes "is a ^4D4DFFspinning white light^000000. These portals are what allow you to move from one zone to another.";
 		next;
 		mes "[Shion]";
-		mes "My name is Shion.";
-		mes "Yes, this is the first time we've met, of course. Hahahaha~!";
+		mes "Do you know how to move?";
+		mes "Left click on a spot, and you'll walk over to that spot. Piece of cake, huh?";
 		next;
 		mes "[Shion]";
-		mes "Now that we've met, is there anything I can help you with?";
-		mes "I'm here for your questions~";
+		mes "So go for it!";
+		mes "Basically, you must enter the castle in order to start your adventures.";
 		next;
-		switch(select("Where should I go?:About Basic Interfaces.:Who the crap are you?")) {
-		case 1:
-			mes "[Shion]";
-			mes "Do you see the bridge to your";
-			mes "right side? Just cross the bridge and you'll arrive at a castle. All you have to do is walk inside!";
-			next;
-			mes "[Shion]";
-			mes "The entrance of the castle";
-			mes "is a ^4D4DFFspinning white light^000000. These portals are what allow you to move from one zone to another.";
-			next;
-			mes "[Shion]";
-			mes "Do you know how to move?";
-			mes "Left click on a spot, and you'll walk over to that spot. Piece of cake, huh?";
-			next;
-			mes "[Shion]";
-			mes "So go for it!";
-			mes "Basically, you must enter the castle in order to start your adventures.";
-			next;
-			mes "[Shion]";
-			mes "There are soldiers";
-			mes "at the entrance, so don't";
-			mes "worry about getting lost.";
-			mes "Take care now~!";
-			set nov_1st_cos,1;
-			close;
-		case 2:
-			mes "[Shion]";
-			mes "Basic Interfaces...";
-			mes "Do you know what Click, Double-click and Drag mean?";
-			next;
-			mes "[Shion]";
-			mes "When you press the";
-			mes "left Mouse button once,";
-			mes "that is a click. When you press the mouse button twice in a row, that's a double-click.";
-			next;
-			mes "[Shion]";
-			mes "Dragging is when you move your Mouse while holding down the";
-			mes "Mouse button after clicking on something.";
-			next;
-			mes "[Shion]";
-			mes "Before we start talking about";
-			mes "the Basic Interfaces, you should remember these terms, just because we'll be using them frequently.";
-			next;
-			mes "[Shion]";
-			mes "Inside the castle, there is a Basic Interfaces Tutor who can teach you the basics more clearly, okay? Enter the castle to start your training.";
-			next;
-			mes "[Shion]";
-			mes "The entrance";
-			mes "of the castle is";
-			mes "a ^4D4DFFspinning white light^000000.";
-			next;
-			mes "[Shion]";
-			mes "There are soldiers";
-			mes "at the entrance, so don't";
-			mes "worry about getting lost.";
-			mes "Take care now~!";
-			set nov_1st_cos,1;
-			close;
-		case 3:
-			mes "[Shion]";
-			mes "Me? I'm Shion!";
-			mes "But that's a rude way of asking! I'm volunteering my time and effort here, so you've got to show me a little bit of respect at least!";
-			set nov_1st_cos,2;
-			close;
-		}
+		mes "[Shion]";
+		mes "There are soldiers";
+		mes "at the entrance, so don't";
+		mes "worry about getting lost.";
+		mes "Take care now~!";
+		set nov_1st_cos,1;
+		close;
+	case 2:
+		mes "[Shion]";
+		mes "Basic Interfaces...";
+		mes "Do you know what Click, Double-click and Drag mean?";
+		next;
+		mes "[Shion]";
+		mes "When you press the";
+		mes "left Mouse button once,";
+		mes "that is a click. When you press the mouse button twice in a row, that's a double-click.";
+		next;
+		mes "[Shion]";
+		mes "Dragging is when you move your Mouse while holding down the";
+		mes "Mouse button after clicking on something.";
+		next;
+		mes "[Shion]";
+		mes "Before we start talking about";
+		mes "the Basic Interfaces, you should remember these terms, just because we'll be using them frequently.";
+		next;
+		mes "[Shion]";
+		mes "Inside the castle, there is a Basic Interfaces Tutor who can teach you the basics more clearly, okay? Enter the castle to start your training.";
+		next;
+		mes "[Shion]";
+		mes "The entrance";
+		mes "of the castle is";
+		mes "a ^4D4DFFspinning white light^000000.";
+		next;
+		mes "[Shion]";
+		mes "There are soldiers";
+		mes "at the entrance, so don't";
+		mes "worry about getting lost.";
+		mes "Take care now~!";
+		set nov_1st_cos,1;
+		close;
+	case 3:
+		mes "[Shion]";
+		mes "Me? I'm Shion!";
+		mes "But that's a rude way of asking! I'm volunteering my time and effort here, so you've got to show me a little bit of respect at least!";
+		set nov_1st_cos,2;
+		close;
 	}
 }
 
@@ -573,14 +572,12 @@ new_1-2,99,105,3	script	Interfaces Tutor#nv1	751,{
 				mes "when you're ready.";
 				close;
 			}
-			else {
-				mes "[Kris]";
-				mes "Godspeed,";
-				mes "young Novice.";
-				close2;
-				warp "new_1-2",28,178;
-				end;
-			}
+			mes "[Kris]";
+			mes "Godspeed,";
+			mes "young Novice.";
+			close2;
+			warp "new_1-2",28,178;
+			end;
 		case 3:
 			emotion e_swt2;
 			close;
@@ -613,14 +610,12 @@ new_1-2,99,105,3	script	Interfaces Tutor#nv1	751,{
 				mes "when you're ready.";
 				close;
 			}
-			else {
-				mes "[Kris]";
-				mes "Godspeed,";
-				mes "young Novice.";
-				close2;
-				warp "new_1-2",28,178;
-				end;
-			}
+			mes "[Kris]";
+			mes "Godspeed,";
+			mes "young Novice.";
+			close2;
+			warp "new_1-2",28,178;
+			end;
 		case 3:
 			emotion e_swt2;
 			close;
@@ -898,20 +893,18 @@ new_1-2,115,111,3	script	Item Tutor#nv	726,{
 			mes "You've learned everything else,";
 			mes "so I guess the only thing left is Field Combat Training. Did you want to attend that class now?";
 			next;
-			switch(select("Yes.:Oh, w-wait.")) {
-			case 1:
+			if(select("Yes.:Oh, w-wait.") == 1 ) {
 				mes "[Alice]";
 				mes "Make sure you keep the items I've given you handy, and that you equip all of your armor, alright? Now, take care.";
 				close2;
 				warp "new_1-2",28,178;
 				end;
-			case 2:
-				mes "[Alice]";
-				mes "Okay, no problem.";
-				mes "Come to me when you";
-				mes "need any help.";
-				close;
 			}
+			mes "[Alice]";
+			mes "Okay, no problem.";
+			mes "Come to me when you";
+			mes "need any help.";
+			close;
 		case 2:
 			mes "[Alice]";
 			mes "Ah, I see.";
@@ -1133,8 +1126,7 @@ new_1-2,115,111,3	script	Item Tutor#nv	726,{
 			mes "[Alice]";
 			mes "Are you sure you really want to go into Field Combat Training? Have you spoken to every tutor? You better do that beforehand.";
 			next;
-			switch(select("No, no! Send me to the actual fight class!:Oh, wait!")) {
-			case 1:
+			if(select("No, no! Send me to the actual fight class!:Oh, wait!") == 1 ) {
 				mes "[Alice]";
 				mes "What an enthusiastic Novice you are! Okay, I'll send you to the folks in charge of Field Combat Training. Make sure that you listen carefully to the trainers.";
 				next;
@@ -1144,11 +1136,10 @@ new_1-2,115,111,3	script	Item Tutor#nv	726,{
 				close2;
 				warp "new_1-2",28,178;
 				end;
-			case 2:
-				mes "[Alice]";
-				mes "Now, that's a good decision. You won't get any many chances to get free stuff and experience in the future. You better make the most of this opportunity while you can!";
-				close;
 			}
+			mes "[Alice]";
+			mes "Now, that's a good decision. You won't get any many chances to get free stuff and experience in the future. You better make the most of this opportunity while you can!";
+			close;
 		case 3:
 			mes "[Alice]";
 			mes "If you want to go to a town, ask the Kafra Employee to the right. Alright then, take care~";
@@ -1210,8 +1201,7 @@ new_1-2,115,111,3	script	Item Tutor#nv	726,{
 			mes "[Alice]";
 			mes "Are you sure you really want to go into Field Combat Training? Have you spoken to every tutor? You better do that beforehand.";
 			next;
-			switch(select("I want Field Combat Training~!:Oh, wait!")) {
-			case 1:
+			if(select("I want Field Combat Training~!:Oh, wait!") == 1 ) {
 				mes "[Alice]";
 				mes "What an enthusiastic Novice you are! Okay, I'll send you to the folks in charge of Field Combat Training. Make sure that you listen carefully to the trainers.";
 				next;
@@ -1221,11 +1211,10 @@ new_1-2,115,111,3	script	Item Tutor#nv	726,{
 				close2;
 				warp "new_1-2",28,178;
 				end;
-			case 2:
-				mes "[Alice]";
-				mes "Now, that's a good decision. You won't get any many chances to get free stuff and experience in the future. You better make the most of this opportunity while you can!";
-				close;
 			}
+			mes "[Alice]";
+			mes "Now, that's a good decision. You won't get any many chances to get free stuff and experience in the future. You better make the most of this opportunity while you can!";
+			close;
 		case 3:
 			mes "[Alice]";
 			mes "If you want to go to a town, ask the Kafra Employee to the right. Alright then, take care~";
@@ -1410,124 +1399,121 @@ new_1-2,118,108,3	script	Kafra Employee#nv1	117,{
 			end;
 		}
 	}
-	else {
-		mes "[Kafra Employee]";
-		mes "Let me introduce you";
-		mes "to the Kafra Services.";
-		mes "In the menu, please choose";
-		mes "the service you'd like to";
-		mes "learn more about.";
-		next;
-		while(1) {
-			switch(select("Save service:Storage service:Teleport service:Cart rental service:Cancel")) {
-			case 1:
-				mes "[Kafra Employee]";
-				mes "When you talk to a Kafra Employee and ask for the Save Service, the location of where you will revive, after being defeated in battle, will be changed.";
-				next;
-				mes "[Kafra Employee]";
-				mes "Your Respawn Point is always the last place where you have saved. Using a Butterfly Wing will return you to the place where you";
-				mes "last saved.";
-				next;
-				mes "[Kafra Employoee]";
-				mes "The Save Service";
-				mes "is also provided by";
-				mes "the Kafra Corporation";
-				mes "free of charge~!";
-				if (nov_1st_cos < 20) {
-					set nov_1st_cos,20;
-					switch (BaseLevel) {
-					case 1: getexp 10,0; break;
-					case 2: getexp 17,0; break;
-					case 3: getexp 26,0; break;
-					case 4: getexp 37,0; break;
-					case 5: getexp 78,0; break;
-					case 6: getexp 115,0; break;
-					case 7: getexp 155,0; break;
-					}
+	mes "[Kafra Employee]";
+	mes "Let me introduce you";
+	mes "to the Kafra Services.";
+	mes "In the menu, please choose";
+	mes "the service you'd like to";
+	mes "learn more about.";
+	next;
+	while(1) {
+		switch(select("Save service:Storage service:Teleport service:Cart rental service:Cancel")) {
+		case 1:
+			mes "[Kafra Employee]";
+			mes "When you talk to a Kafra Employee and ask for the Save Service, the location of where you will revive, after being defeated in battle, will be changed.";
+			next;
+			mes "[Kafra Employee]";
+			mes "Your Respawn Point is always the last place where you have saved. Using a Butterfly Wing will return you to the place where you";
+			mes "last saved.";
+			next;
+			mes "[Kafra Employoee]";
+			mes "The Save Service";
+			mes "is also provided by";
+			mes "the Kafra Corporation";
+			mes "free of charge~!";
+			if (nov_1st_cos < 20) {
+				set nov_1st_cos,20;
+				switch (BaseLevel) {
+				case 1: getexp 10,0; break;
+				case 2: getexp 17,0; break;
+				case 3: getexp 26,0; break;
+				case 4: getexp 37,0; break;
+				case 5: getexp 78,0; break;
+				case 6: getexp 115,0; break;
+				case 7: getexp 155,0; break;
 				}
-				next;
-				break;
-			case 2:
-				mes "[Kafra Employee]";
-				mes "The Kafra Corporation is the world's largest company with a long and distinguished history on the Rune-Midgard continent.";
-				next;
-				mes "[Kafra Employee]";
-				mes "You can store and retrieve";
-				mes "your items in any town at your convenience. This Storage is shared by every character on one account.";
-				next;
-				mes "[Kafra Employee]";
-				mes "It's unreasonable to carry all of your items with you when you don't need them right away. Please use our Storage and keep your items safe and secure.";
-				next;
-				mes "[Kafra Employee]";
-				mes "Our convenient Storage Service";
-				mes "is provided to our customers for a small fee which is different from town to town.";
-				next;
-				mes "[Kafra Employee]";
-				mes "However, you must be";
-				mes "at least ^3355FFBasic Skill Level 6^000000";
-				mes "to use the Storage.";
-				next;
-				mes "[Kafra Employee]";
-				mes "There are 3 different item sections of the Storage into which items are organized: Consumable, Equipment and Etc.";
-				next;
-				mes "[Kafra Employee]";
-				mes "There are a maximum of 300 Inventory Slots in Kafra Storage, meaning you can have up to 300 different kinds of items in Storage.";
-				next;
-				mes "[Kafra Employee]";
-				mes "Remember though, that in the case of Equipment, each item takes up one Inventory Slot. The maximum number of items that can be placed in Kafra Storage is 30,000.";
-				if (nov_3_archer < 20) {
-					if (JobLevel < 7) {
-						set nov_3_archer,20;
-						switch (JobLevel) {
-						case 1: getexp 0,10; break;
-						case 2: getexp 0,18; break;
-						case 3: getexp 0,28; break;
-						case 4: getexp 0,40; break;
-						case 5: getexp 0,91; break;
-						case 6: getexp 0,151; break;
-						}
-					}
-				}
-				next;
-				break;
-			case 3:
-				mes "[Kafra Employee]";
-				mes "The Kafra Corporation";
-				mes "provides our valued customers with a convenient Teleport Service which greatly cuts down on your";
-				mes "traveling time.";
-				next;
-				mes "[Kafra Employee]";
-				mes "Our Teleport Service is safe and comfortable, and will allow you to fully explore the various lands of the Rune-Midgard continent.";
-				next;
-				mes "[Kafra Employee]";
-				mes "We thank our valued customers for their great support and continue to provide them with the best";
-				mes "of service.";
-				next;
-				break;
-			case 4:
-				mes "[Kafra Employee]";
-				mes "The Kafra Corporation";
-				mes "provides a Cart Rental Service to Merchants, as well as Blacksmiths and Alchemists.";
-				next;
-				mes "[Kafra Employee]";
-				mes "The flamboyantly mysterious";
-				mes "^CE6300Super Novice^000000 can use Carts, but we officially don't have a contract with that class. Still, somehow...";
-				next;
-				mes "[Kafra Employee]";
-				mes "Anyway, Merchants, Blacksmiths and Alchemists must also learn the ^3355FFPush Cart^000000 skill in order to be able to rent a cart.";
-				next;
-				mes "[Kafra Employee]";
-				mes "The Cart Rental service";
-				mes "charge will differ from";
-				mes "town to town.";
-				next;
-				break;
-			case 5:
-				mes "[Kafra Employee]";
-				mes "Thank you.";
-				close;
 			}
-
+			next;
+			break;
+		case 2:
+			mes "[Kafra Employee]";
+			mes "The Kafra Corporation is the world's largest company with a long and distinguished history on the Rune-Midgard continent.";
+			next;
+			mes "[Kafra Employee]";
+			mes "You can store and retrieve";
+			mes "your items in any town at your convenience. This Storage is shared by every character on one account.";
+			next;
+			mes "[Kafra Employee]";
+			mes "It's unreasonable to carry all of your items with you when you don't need them right away. Please use our Storage and keep your items safe and secure.";
+			next;
+			mes "[Kafra Employee]";
+			mes "Our convenient Storage Service";
+			mes "is provided to our customers for a small fee which is different from town to town.";
+			next;
+			mes "[Kafra Employee]";
+			mes "However, you must be";
+			mes "at least ^3355FFBasic Skill Level 6^000000";
+			mes "to use the Storage.";
+			next;
+			mes "[Kafra Employee]";
+			mes "There are 3 different item sections of the Storage into which items are organized: Consumable, Equipment and Etc.";
+			next;
+			mes "[Kafra Employee]";
+			mes "There are a maximum of 300 Inventory Slots in Kafra Storage, meaning you can have up to 300 different kinds of items in Storage.";
+			next;
+			mes "[Kafra Employee]";
+			mes "Remember though, that in the case of Equipment, each item takes up one Inventory Slot. The maximum number of items that can be placed in Kafra Storage is 30,000.";
+			if (nov_3_archer < 20) {
+				if (JobLevel < 7) {
+					set nov_3_archer,20;
+					switch (JobLevel) {
+					case 1: getexp 0,10; break;
+					case 2: getexp 0,18; break;
+					case 3: getexp 0,28; break;
+					case 4: getexp 0,40; break;
+					case 5: getexp 0,91; break;
+					case 6: getexp 0,151; break;
+					}
+				}
+			}
+			next;
+			break;
+		case 3:
+			mes "[Kafra Employee]";
+			mes "The Kafra Corporation";
+			mes "provides our valued customers with a convenient Teleport Service which greatly cuts down on your";
+			mes "traveling time.";
+			next;
+			mes "[Kafra Employee]";
+			mes "Our Teleport Service is safe and comfortable, and will allow you to fully explore the various lands of the Rune-Midgard continent.";
+			next;
+			mes "[Kafra Employee]";
+			mes "We thank our valued customers for their great support and continue to provide them with the best";
+			mes "of service.";
+			next;
+			break;
+		case 4:
+			mes "[Kafra Employee]";
+			mes "The Kafra Corporation";
+			mes "provides a Cart Rental Service to Merchants, as well as Blacksmiths and Alchemists.";
+			next;
+			mes "[Kafra Employee]";
+			mes "The flamboyantly mysterious";
+			mes "^CE6300Super Novice^000000 can use Carts, but we officially don't have a contract with that class. Still, somehow...";
+			next;
+			mes "[Kafra Employee]";
+			mes "Anyway, Merchants, Blacksmiths and Alchemists must also learn the ^3355FFPush Cart^000000 skill in order to be able to rent a cart.";
+			next;
+			mes "[Kafra Employee]";
+			mes "The Cart Rental service";
+			mes "charge will differ from";
+			mes "town to town.";
+			next;
+			break;
+		case 5:
+			mes "[Kafra Employee]";
+			mes "Thank you.";
+			close;
 		}
 	}
 }
@@ -2351,103 +2337,101 @@ new_1-2,17,182,5	script	Helper#nv	84,{
 			close;
 		}
 	}
-	else {
-		mes "[Elmeen]";
-		mes "Which subject";
-		mes "shall I expain?";
-		next;
-		while(1) {
-			switch(select("Monsters:Experience:Items:Quit.")) {
-			case 1:
-				mes "[Elmeen]";
-				mes "There are many aggressive monsters that will attack you first before you even approach them. ";
-				next;
-				mes "[Elmeen]";
-				mes "There are also a few monsters that will cooperate with others of their kind. Attack one of them, and the whole pack of them will swarm around you, seeking revenge.";
-				next;
-				mes "[Elmeen]";
-				mes "Every monster can be specified by their types, sizes and properties. For example, there are Demi-human, Brute, Holy and Demon property monsters out there.";
-				next;
-				mes "[Elmeen]";
-				mes "When you're aware of what property a monster is, you can use that knowledge to help you in battle.";
-				next;
-				mes "[Elmeen]";
-				mes "If you manage to get cards for that increase your damage upon certain monster properties, or reduce damage from specific monster properties, you'll have a much easier time in battle.";
-				next;
-				mes "[Elmeen]";
-				mes "Monsters are separated by their size: small, medium and large. There are a few cards that allow you to do more damage to a specific monster size.";
-				next;
-				mes "[Elmeen]";
-				mes "Also, each weapon has its strengths and weaknesses. The size of the weapon will affect the damage it will deal to monsters.";
-				next;
-				mes "[Elmeen]";
-				mes "For example, Dagger class weapons do 100 % damage on small sized monsters but only inflict 50 % on large monsters.";
-				next;
-				mes "[Elmeen]";
-				mes "Common monster properties include Water, Wind, Earth, Fire, Shadow, Ghost and Holy. If you attack a monster with an opposing property, you can inflict additional damage~";
-				next;
-				mes "[Elmeen]";
-				mes "But if you attack a monster with";
-				mes "a skill or weapon that inflicts damage of the same property as the monster, the damage will be greatly reduced, or completely negated. You might even heal the monster!";
-				next;
-				mes "[Elmeen]";
-				mes "In the case of Ghost property monsters, normal weapons cannot do any harm. However, a weapon with any other property will be able to deal out some damage.";
-				next;
-				break;
-			case 2:
-				mes "[Elmeen]";
-				mes "Basically, a character who deals the most damage on a monster receives the most experience points from the monster.";
-				next;
-				mes "[Elmeen]";
-				mes "Therefore, you receive a certain percentage of experience points in proportion to the damage you've inflicted on the monster, compared to its total HP.";
-				next;
-				mes "[Elmeen]";
-				mes "Let's say, there is a character named 'Z.' Z does 65 damage on a monster that has 100 total HP and gives 1000 experience points when it's dead. So, Z will receive 650 experience points.";
-				next;
-				mes "[Elmeen]";
-				mes "However, this rule applies differently following certain situations.";
-				next;
-				mes "[Elmeen]";
-				mes "If there are two people who both did 65 damage on the same monster, the experience points that each will receive differs, depending on the monster's remaining HP.";
-				next;
-				mes "[Elmeen]";
-				mes "For instance, somebody does damage to a monster while you're already hitting it, and he did the same amount of damage you did.";
-				next;
-				mes "[Elmeen]";
-				mes "In this case, you will receive 2//3 of the whole experience points that monster can give you, the other one will receive 1//3.";
-				next;
-				mes "[Elmeen]";
-				mes "However, attacking a monster that somebody already started to hit is not suggested in Ragnarok Online. That action is regarded as ill-mannered behavior.";
-				next;
-				mes "[Elmeen]";
-				mes "For party play, the party master can set the experience distribution to the equally share option.";
-				next;
-				mes "[Elmeen]";
-				mes "With this method, party members can share their experience according to the their character levels, and the number of members in the party.";
-				next;
-				mes "[Elmeen]";
-				mes "Also, there is the experience benefit for party play which allows you to gain more experience points than playing solo. You can take advantage of this system for faster leveling.";
-				next;
-				break;
-			case 3:
-				mes "[Elmeen]";
-				mes "When you kill monsters,";
-				mes "you can obtain items by chance. Furthermore, certain characters can use the 'Steal' skill in order to steal items from monsters.";
-				next;
-				mes "[Elmeen]";
-				mes "Don't you worry about the Steal skill causing you to not find any items after you kill them. Using the Steal skill does not at all affect the item drop rate for monsters once they're killed.";
-				next;
-				mes "[Elmeen]";
-				mes "When a group of people kill a monster, the person who did the most damage receives priority in picking up item drops.";
-				next;
-				break;
-			case 4:
-				mes "[Elmeen]";
-				mes "Feel free to";
-				mes "ask me if you";
-				mes "have any questions.";
-				close;
-			}
+	mes "[Elmeen]";
+	mes "Which subject";
+	mes "shall I expain?";
+	next;
+	while(1) {
+		switch(select("Monsters:Experience:Items:Quit.")) {
+		case 1:
+			mes "[Elmeen]";
+			mes "There are many aggressive monsters that will attack you first before you even approach them. ";
+			next;
+			mes "[Elmeen]";
+			mes "There are also a few monsters that will cooperate with others of their kind. Attack one of them, and the whole pack of them will swarm around you, seeking revenge.";
+			next;
+			mes "[Elmeen]";
+			mes "Every monster can be specified by their types, sizes and properties. For example, there are Demi-human, Brute, Holy and Demon property monsters out there.";
+			next;
+			mes "[Elmeen]";
+			mes "When you're aware of what property a monster is, you can use that knowledge to help you in battle.";
+			next;
+			mes "[Elmeen]";
+			mes "If you manage to get cards for that increase your damage upon certain monster properties, or reduce damage from specific monster properties, you'll have a much easier time in battle.";
+			next;
+			mes "[Elmeen]";
+			mes "Monsters are separated by their size: small, medium and large. There are a few cards that allow you to do more damage to a specific monster size.";
+			next;
+			mes "[Elmeen]";
+			mes "Also, each weapon has its strengths and weaknesses. The size of the weapon will affect the damage it will deal to monsters.";
+			next;
+			mes "[Elmeen]";
+			mes "For example, Dagger class weapons do 100 % damage on small sized monsters but only inflict 50 % on large monsters.";
+			next;
+			mes "[Elmeen]";
+			mes "Common monster properties include Water, Wind, Earth, Fire, Shadow, Ghost and Holy. If you attack a monster with an opposing property, you can inflict additional damage~";
+			next;
+			mes "[Elmeen]";
+			mes "But if you attack a monster with";
+			mes "a skill or weapon that inflicts damage of the same property as the monster, the damage will be greatly reduced, or completely negated. You might even heal the monster!";
+			next;
+			mes "[Elmeen]";
+			mes "In the case of Ghost property monsters, normal weapons cannot do any harm. However, a weapon with any other property will be able to deal out some damage.";
+			next;
+			break;
+		case 2:
+			mes "[Elmeen]";
+			mes "Basically, a character who deals the most damage on a monster receives the most experience points from the monster.";
+			next;
+			mes "[Elmeen]";
+			mes "Therefore, you receive a certain percentage of experience points in proportion to the damage you've inflicted on the monster, compared to its total HP.";
+			next;
+			mes "[Elmeen]";
+			mes "Let's say, there is a character named 'Z.' Z does 65 damage on a monster that has 100 total HP and gives 1000 experience points when it's dead. So, Z will receive 650 experience points.";
+			next;
+			mes "[Elmeen]";
+			mes "However, this rule applies differently following certain situations.";
+			next;
+			mes "[Elmeen]";
+			mes "If there are two people who both did 65 damage on the same monster, the experience points that each will receive differs, depending on the monster's remaining HP.";
+			next;
+			mes "[Elmeen]";
+			mes "For instance, somebody does damage to a monster while you're already hitting it, and he did the same amount of damage you did.";
+			next;
+			mes "[Elmeen]";
+			mes "In this case, you will receive 2//3 of the whole experience points that monster can give you, the other one will receive 1//3.";
+			next;
+			mes "[Elmeen]";
+			mes "However, attacking a monster that somebody already started to hit is not suggested in Ragnarok Online. That action is regarded as ill-mannered behavior.";
+			next;
+			mes "[Elmeen]";
+			mes "For party play, the party master can set the experience distribution to the equally share option.";
+			next;
+			mes "[Elmeen]";
+			mes "With this method, party members can share their experience according to the their character levels, and the number of members in the party.";
+			next;
+			mes "[Elmeen]";
+			mes "Also, there is the experience benefit for party play which allows you to gain more experience points than playing solo. You can take advantage of this system for faster leveling.";
+			next;
+			break;
+		case 3:
+			mes "[Elmeen]";
+			mes "When you kill monsters,";
+			mes "you can obtain items by chance. Furthermore, certain characters can use the 'Steal' skill in order to steal items from monsters.";
+			next;
+			mes "[Elmeen]";
+			mes "Don't you worry about the Steal skill causing you to not find any items after you kill them. Using the Steal skill does not at all affect the item drop rate for monsters once they're killed.";
+			next;
+			mes "[Elmeen]";
+			mes "When a group of people kill a monster, the person who did the most damage receives priority in picking up item drops.";
+			next;
+			break;
+		case 4:
+			mes "[Elmeen]";
+			mes "Feel free to";
+			mes "ask me if you";
+			mes "have any questions.";
+			close;
 		}
 	}
 }
@@ -2600,8 +2584,7 @@ new_1-2,38,182,3	script	Entrance Guard#nv	92,{
 		mes "[Muriel]";
 		mes "Do you wish to try again?";
 		next;
-		switch(select("Yes:Can I have more time?")) {
-		case 1:
+		if(select("Yes:Can I have more time?") == 1 ) {
 			mes "[Muriel]";
 			mes "I will restore";
 			mes "your HP. Please";
@@ -2610,12 +2593,11 @@ new_1-2,38,182,3	script	Entrance Guard#nv	92,{
 			close2;
 			warp "new_1-3",96,21;
 			end;
-		case 2:
-			mes "[Muriel]";
-			mes "No problem.";
-			mes "If you're not sure if you can pass the test or not, why don't you go talk to the Helper to the left one more time? Please come back when you're ready.";
-			close;
 		}
+		mes "[Muriel]";
+		mes "No problem.";
+		mes "If you're not sure if you can pass the test or not, why don't you go talk to the Helper to the left one more time? Please come back when you're ready.";
+		close;
 	}
 }
 
@@ -2706,8 +2688,7 @@ new_1-3,96,174,3	script	Test Examiner#nv1::NovKeyman	85,{
 	mes "Would you like to move";
 	mes "to the next course?";
 	next;
-	switch(select("Yes:No")) {
-	case 1:
+	if(select("Yes:No") == 1 ) {
 		mes "[Keyman]";
 		mes "I hope you will be";
 		mes "a good fighter in the";
@@ -2716,12 +2697,11 @@ new_1-3,96,174,3	script	Test Examiner#nv1::NovKeyman	85,{
 		warp "new_1-4",99,10;
 		return
 		end;
-	case 2:
-		mes "[Keyman]";
-		mes "I see...";
-		mes "It can't hurt to practice until you're more comfortable with the basics of battle.";
-		close;
 	}
+	mes "[Keyman]";
+	mes "I see...";
+	mes "It can't hurt to practice until you're more comfortable with the basics of battle.";
+	close;
 }
 
 new_2-3,96,174,3	duplicate(NovKeyman)	Test Examiner#nv2	85
@@ -3133,157 +3113,99 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				if (.@swordman_p > .@merchant_p) {
 					if (.@swordman_p > .@thief_p) {
 						if (.@swordman_p > .@archer_p) {
-							if (.@swordman_p > .@acolyte_p) {
+							if (.@swordman_p > .@acolyte_p)
 								set .@job_c,1;
-							}
-							else {
-								set .@job_c,6;
-							}
+							else
+							set .@job_c,6;
 						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
+						if (.@archer_p > .@acolyte_p)
+							set .@job_c,5;
+						else
+							set .@job_c,6;
 					}
-					else {
-						if (.@thief_p > .@archer_p) {
-							if (.@thief_p > .@acolyte_p) {
-								set .@job_c,4;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
+					if (.@thief_p > .@archer_p) {
+						if (.@thief_p > .@acolyte_p)
+							set .@job_c,4;
+						else
+							set .@job_c,6;
 					}
+					if (.@archer_p > .@acolyte_p)
+						set .@job_c,5;
+					else
+						set .@job_c,6;
 				}
-				else {
-					if (.@merchant_p > .@thief_p) {
-						if (.@merchant_p > .@archer_p) {
-							if (.@merchant_p > .@acolyte_p) {
-								set .@job_c,3;
-							}
-							else {
-								set .@job_c,6;
-							}
+				if (.@merchant_p > .@thief_p) {
+					if (.@merchant_p > .@archer_p) {
+						if (.@merchant_p > .@acolyte_p) {
+							set .@job_c,3;
 						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
+						set .@job_c,6;
 					}
-					else {
-						if (.@thief_p > .@archer_p) {
-							if (.@thief_p > .@acolyte_p) {
-								set .@job_c,4;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
-					}
+					if (.@archer_p > .@acolyte_p)
+						set .@job_c,5;
+					else
+						set .@job_c,6;
 				}
+				if (.@thief_p > .@archer_p) {
+					if (.@thief_p > .@acolyte_p)
+						set .@job_c,4;
+					else
+					set .@job_c,6;
+				}
+				if (.@archer_p > .@acolyte_p)
+					set .@job_c,5;
+				else
+					set .@job_c,6;
 			}
 			else {
 				if (.@magician_p > .@merchant_p) {
 					if (.@magician_p > .@thief_p) {
 						if (.@magician_p > .@archer_p) {
-							if (.@magician_p > .@acolyte_p) {
+							if (.@magician_p > .@acolyte_p)
 								set .@job_c,2;
-							}
-							else {
+							else
 								set .@job_c,6;
-							}
 						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
+						if (.@archer_p > .@acolyte_p)
+							set .@job_c,5;
+						else
+							set .@job_c,6;
 					}
 					else {
 						if (.@thief_p > .@archer_p) {
-							if (.@thief_p > .@acolyte_p) {
+							if (.@thief_p > .@acolyte_p)
 								set .@job_c,4;
-							}
-							else {
+							else
 								set .@job_c,6;
-							}
 						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
+						if (.@archer_p > .@acolyte_p)
+							set .@job_c,5;
+						else
+							set .@job_c,6;
 					}
 				}
-				else {
-					if (.@merchant_p > .@thief_p) {
-						if (.@merchant_p > .@archer_p) {
-							if (.@merchant_p > .@acolyte_p) {
-								set .@job_c,3;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
+				if (.@merchant_p > .@thief_p) {
+					if (.@merchant_p > .@archer_p) {
+						if (.@merchant_p > .@acolyte_p)
+							set .@job_c,3;
+						else
+							set .@job_c,6;
 					}
-					else {
-						if (.@thief_p > .@archer_p) {
-							if (.@thief_p > .@acolyte_p) {
-								set .@job_c,4;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
-						else {
-							if (.@archer_p > .@acolyte_p) {
-								set .@job_c,5;
-							}
-							else {
-								set .@job_c,6;
-							}
-						}
-					}
+					if (.@archer_p > .@acolyte_p)
+						set .@job_c,5;
+					else
+						set .@job_c,6;
 				}
+				if (.@thief_p > .@archer_p) {
+					if (.@thief_p > .@acolyte_p)
+						set .@job_c,4;
+					else
+						set .@job_c,6;
+				}
+				if (.@archer_p > .@acolyte_p)
+					set .@job_c,5;
+				else
+					set .@job_c,6;
 			}
 			if (.@job_c == 1) {
 				mes "[Hanson]";
@@ -3300,8 +3222,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				mes "[Hanson]";
 				mes "So would you like to accept our recommendation, or would you like to choose a job on your own?";
 				next;
-				switch(select("Swordman!:My own choice!")) {
-				case 1:
+				if(select("Swordman!:My own choice!") == 1 ) {
 					mes "[Hanson]";
 					mes "That's a great choice!";
 					mes "After you receive all the supplies, I will teleport you to the Swordman Association.";
@@ -3352,10 +3273,9 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					savepoint "izlude",93,104;
 					warp "izlude_in",74,167;
 					end;
-				case 2:
-					callsub S_UserJobchoice,"Swordsman";
-					end;
 				}
+				callsub S_UserJobchoice,"Swordsman";
+				end;
 			}
 			else if (.@job_c == 2) {
 				mes "[Hanson]";
@@ -3367,8 +3287,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				mes "[Hanson]";
 				mes "So, would you like to accept our recommendation or would you like to choose a job on your own?";
 				next;
-				switch(select("Mage!:My own choice!")) {
-				case 1:
+				if(select("Mage!:My own choice!") == 1 ) {
 					mes "[Hanson]";
 					mes "That's a great choice!";
 					mes "After you receive all the supplies, I'll teleport you to the Mage town.";
@@ -3425,10 +3344,9 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					savepoint "geffen",119,37;
 					warp "geffen_in",163,98;
 					end;
-				case 2:
-					callsub S_UserJobchoice,"Mage";
-					end;
 				}
+				callsub S_UserJobchoice,"Mage";
+				end;
 			}
 			else if (.@job_c == 3) {
 				mes "[Hanson]";
@@ -3440,8 +3358,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				mes "[Hanson]";
 				mes "So, would you like to accept our recommendation or would you like to choose a job on your own?";
 				next;
-				switch(select("Merchant!:My own choice!")) {
-				case 1:
+				if(select("Merchant!:My own choice!") == 1 ) {
 					mes "[Hanson]";
 					mes "That's a great choice!";
 					mes "After you receive all the supplies, I will teleport you to the merchant town.";
@@ -3496,10 +3413,9 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					savepoint "alberta",30,232;
 					warp "alberta_in",62,44;
 					end;
-				case 2:
-					callsub S_UserJobchoice,"Merchant";
-					end;
 				}
+				callsub S_UserJobchoice,"Merchant";
+				end;
 			}
 			else if (.@job_c == 4) {
 				mes "[Hanson]";
@@ -3518,8 +3434,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				mes "[Hanson]";
 				mes "So, would you like to accept our recommendation or would you like to choose a job on your own?";
 				next;
-				switch(select("Thief!:My own choice!")) {
-				case 1:
+				if(select("Thief!:My own choice!") == 1 ) {
 					mes "[Hanson]";
 					mes "That's a great choice!";
 					mes "After you receive all the supplies, I'll teleport you to the Thief town.";
@@ -3564,10 +3479,9 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					savepoint "morocc",150,99;
 					warp "moc_ruins",155,44;
 					end;
-				case 2:
-					callsub S_UserJobchoice,"Thief";
-					end;
 				}
+				callsub S_UserJobchoice,"Thief";
+				end;
 			}
 			else if (.@job_c == 5) {
 				mes "[Hanson]";
@@ -3579,8 +3493,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				mes "[Hanson]";
 				mes "So, would you like to accept our recommendation or would you like to choose a job on your own?";
 				next;
-				switch(select("Archer!:My own choice!")) {
-				case 1:
+				if(select("Archer!:My own choice!") == 1 ) {
 					mes "[Hanson]";
 					mes "That's a great choice!";
 					mes "After you receive all the supplies, I'll teleport you to the Archer town.";
@@ -3633,10 +3546,9 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					savepoint "payon",70,100;
 					warp "payon_in02",64,65;
 					end;
-				case 2:
-					callsub S_UserJobchoice,"Archer";
-					end;
 				}
+				callsub S_UserJobchoice,"Archer";
+				end;
 			}
 			else if (.@job_c == 6) {
 				mes "[Hanson]";
@@ -3651,8 +3563,7 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 				mes "[Hanson]";
 				mes "So, would you like to accept our recommendation or would you like to choose a job on your own?";
 				next;
-				switch(select("Acolyte!:My own choice!")) {
-				case 1:
+				if(select("Acolyte!:My own choice!") == 1 ) {
 					mes "[Hanson]";
 					mes "That's a great choice!";
 					mes "After you receive all the supplies, I'll teleport you behind the Sanctuary.";
@@ -3705,10 +3616,9 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 					savepoint "prontera",117,72;
 					warp "prt_church",172,19;
 					end;
-				case 2:
-					callsub S_UserJobchoice,"Acolyte";
-					end;
 				}
+				callsub S_UserJobchoice,"Acolyte";
+				end;
 			}
 		case 2:
 			mes "[Hanson]";
@@ -3815,25 +3725,23 @@ new_1-4,100,29,1	script	Hanson#nv	46,{
 		}
 		end;
 	}
-	else {
-		mes "[Hanson]";
-		mes "Hello, you";
-		mes "must be "+ strcharinfo(0) +".";
-		next;
-		mes "[Hanson]";
-		mes "I am Hanson,";
-		mes "the person in";
-		mes "charge of the";
-		mes "personality test.";
-		next;
-		mes "[Hanson]";
-		mes "Please speak";
-		mes "to Bruce for";
-		mes "'Class Explanation'";
-		mes "before we begin your";
-		mes "test. Thank you.";
-		close;
-	}
+	mes "[Hanson]";
+	mes "Hello, you";
+	mes "must be "+ strcharinfo(0) +".";
+	next;
+	mes "[Hanson]";
+	mes "I am Hanson,";
+	mes "the person in";
+	mes "charge of the";
+	mes "personality test.";
+	next;
+	mes "[Hanson]";
+	mes "Please speak";
+	mes "to Bruce for";
+	mes "'Class Explanation'";
+	mes "before we begin your";
+	mes "test. Thank you.";
+	close;
 
 S_UserJobchoice:
 	mes "[Hanson]";
@@ -4104,152 +4012,149 @@ new_1-4,91,22,4	script	Bruce#nv	57,{
 			mes "out there, young Novice.";
 			close;
 		}
-		else {
-			mes "[Bruce]";
-			mes "You've gone";
-			mes "through quite";
-			mes "a bit of trouble";
-			mes "to finish all the";
-			mes "training courses.";
-			next;
-			mes "[Bruce]";
-			mes "Hello there,";
-			mes "^A62A2A" + strcharinfo(0) + "'^000000,";
-			mes "pleased to meet you.";
-			mes "I am Bruce of the";
-			mes "Rune-Midgarts Kingdom.";
-			next;
-			mes "[Bruce]";
-			mes "My duty is to assist you by teaching information about each First Job Class, so that you can decide which job you want to be.";
-			next;
-			mes "[Bruce]";
-			mes "The First Job Classes are";
-			mes "^0000FFSwordman, Mage, Archer, Merchant, Thief and Acolyte^000000.";
-			next;
-			mes "[Bruce]";
-			mes "So...";
-			mes "Which job did";
-			mes "you have in mind?";
-			next;
-			while(1) {
-				switch(select("Swordman:Mage:Archer:Merchant:Thief:Acolyte:End conversation.")) {
-				case 1:
-					mes "[Bruce]";
-					mes "As the name implies, the";
-					mes "Swordman is an expert in wielding Swords. They can also use Spear weapons, but typically you don't see Spear wielding Swordmen";
-					mes "very often.";
-					next;
-					mes "[Bruce]";
-					mes "Swordmen possess strong physical strength, allowing them to equip heavy armor and weapons. Most weapon classes, except for bows and rods, can be equipped by the Swordman class.";
-					next;
-					mes "[Bruce]";
-					mes "The only weakness of the Swordman class is that they cannot use magic spells. However, this can be compensated by using weapons with an elemental attribute.";
-					next;
-					mes "[Bruce]";
-					mes "One of the greatest benefits of being a Swordman is having an enormous amount of HP, meaning they can more easily withstand damage from their enemies.";
-					next;
-					mes "[Bruce]";
-					mes "After learning some strong attack skills, the Swordman is almost unbeatable in a melee fight.";
-					next;
-					mes "[Bruce]";
-					mes "In Ragnarok Online, Swordman generally takes the position of tanker, protecting characters of other classes from being attacked or hurt.";
-					next;
-					mes "[Bruce]";
-					mes "A Swordman is the ideal character to take the position of party leader. When advancing to the Second Job Class, Swordmen can change their jobs to ^8E2323Knights^000000 or ^8E2323Crusaders^000000.";
-					set nov_3_swordman,20;
-					next;
-					break;
-				case 2:
-					mes "[Bruce]";
-					mes "The Mage class specializes in using the forces of Fire, Water, Earth and Lightning to attack their enemies.";
-					next;
-					mes "[Bruce]";
-					mes "However, due to their weak physical strength, they are only allowed to equip Rods and Knives as weapons, and wear light armor for defense.";
-					next;
-					mes "[Bruce]";
-					mes "Despite their physical weakness, they are able to do massive damage with their powerful spells. This fact alone attracts many people to join this class.";
-					next;
-					mes "[Bruce]";
-					mes "In Ragnarok Online, the Mage takes a heavily offensive role in parties and is depended upon to deal great damage to enemies.";
-					next;
-					mes "[Bruce]";
-					mes "When advancing to the Second Job Class, Mages can change their jobs to ^8E2323Wizards^000000 or ^8E2323Sages^000000.";
-					set nov_3_swordman,20;
-					next;
-					break;
-				case 3:
-					mes "[Bruce]";
-					mes "The Archer class are experts in using Bow weapons, and are useful in parties for their long range attacks.";
-					next;
-					mes "[Bruce]";
-					mes "Despite being physically weaker, Archers possess high accuracy with powerful long range bows. This allows them to attack and kill monsters from a safe distance.";
-					next;
-					mes "[Bruce]";
-					mes "In Ragnarok Online, Archers have relatively little HP, but their long range attacks allow them to easily dispatch enemies before the enemy gets close enough to hurt them.";
-					next;
-					mes "[Bruce]";
-					mes "When advancing to the Second Job Class, every Archer may advance to the ^8E2323Hunter^000000 class. Alternatively, male Archers may advance to become ^8E2323Bards^000000, and female Archers may become ^8E2323Dancers^000000.";
-					set nov_3_swordman,20;
-					next;
-					break;
-				case 4:
-					mes "[Bruce]";
-					mes "The Merchant class specializes in commerce. Due to the strong influence of the Merchant Guild, the Merchant class is attractive to those who wish to focus on earning Zeny.";
-					next;
-					mes "[Bruce]";
-					mes "In Ragnarok Online, the Merchant class possesses various economic abilities. Merchants can learn to sell items to NPCs for higher prices, as well as receive discounts from NPCs.";
-					next;
-					mes "[Bruce]";
-					mes "In addition, Merchants may rent";
-					mes "a Cart that greatly expands their carrying capacity and allows them to open shops with their own items and prices.";
-					next;
-					mes "[Bruce]";
-					mes "When advancing to the Second Job Class, Merchants can change their jobs to ^8E2323Blacksmiths^000000 or ^8E2323Alchemists^000000.";
-					set nov_3_swordman,20;
-					next;
-					break;
-				case 5:
-					mes "[Bruce]";
-					mes "Thieves are experts at using Dagger class weapons. They strike quickly and easily evade attacks from their enemies.";
-					next;
-					mes "[Bruce]";
-					mes "Thieves can learn skills that allow them to hide from their enemies, or steal items from monsters. They are also feared for their use of poison, which slowly weakens";
-					mes "their enemies.";
-					next;
-					mes "[Bruce]";
-					mes "When advancing to the Second Job Class, Thieves can change their jobs to ^8E2323Assassins^000000 or ^8E2323Rogues^000000.";
-					set nov_3_swordman,20;
-					next;
-					break;
-				case 6:
-					mes "[Bruce]";
-					mes "In Ragnarok Online, Acolytes act as messengers of God in Rune-Midgard. They possess skills that support their allies, as well as the life saving Heal ability.";
-					next;
-					mes "[Bruce]";
-					mes "The Acolyte's support abilities make them a welcome addition to any party. In difficult situations, the Acolyte's skills will ensure the survival of the party, allowing other members to focus on offense.";
-					next;
-					mes "[Bruce]";
-					mes "When advancing to the Second Job Class, Acolytes can change their jobs to ^8E2323Priests^000000 or ^8E2323Monks^000000.";
-					mes "";
-					set nov_3_swordman,20;
-					next;
-					break;
-				case 7:
-					mes "[Bruce]";
-					mes "For more information,";
-					mes "please visit the official";
-					mes "Ragnarok Online website:";
-					mes " ";
-					mes "^0000FFiro.ragnarokonline.com^000000.";
-					next;
-					mes "[Bruce]";
-					mes "Hanson is waiting";
-					mes "for you now. Good luck";
-					mes "out there, young Novice.";
-					close;
-				}
+		mes "[Bruce]";
+		mes "You've gone";
+		mes "through quite";
+		mes "a bit of trouble";
+		mes "to finish all the";
+		mes "training courses.";
+		next;
+		mes "[Bruce]";
+		mes "Hello there,";
+		mes "^A62A2A" + strcharinfo(0) + "'^000000,";
+		mes "pleased to meet you.";
+		mes "I am Bruce of the";
+		mes "Rune-Midgarts Kingdom.";
+		next;
+		mes "[Bruce]";
+		mes "My duty is to assist you by teaching information about each First Job Class, so that you can decide which job you want to be.";
+		next;
+		mes "[Bruce]";
+		mes "The First Job Classes are";
+		mes "^0000FFSwordman, Mage, Archer, Merchant, Thief and Acolyte^000000.";
+		next;
+		mes "[Bruce]";
+		mes "So...";
+		mes "Which job did";
+		mes "you have in mind?";
+		next;
+		while(1) {
+			switch(select("Swordman:Mage:Archer:Merchant:Thief:Acolyte:End conversation.")) {
+			case 1:
+				mes "[Bruce]";
+				mes "As the name implies, the";
+				mes "Swordman is an expert in wielding Swords. They can also use Spear weapons, but typically you don't see Spear wielding Swordmen";
+				mes "very often.";
+				next;
+				mes "[Bruce]";
+				mes "Swordmen possess strong physical strength, allowing them to equip heavy armor and weapons. Most weapon classes, except for bows and rods, can be equipped by the Swordman class.";
+				next;
+				mes "[Bruce]";
+				mes "The only weakness of the Swordman class is that they cannot use magic spells. However, this can be compensated by using weapons with an elemental attribute.";
+				next;
+				mes "[Bruce]";
+				mes "One of the greatest benefits of being a Swordman is having an enormous amount of HP, meaning they can more easily withstand damage from their enemies.";
+				next;
+				mes "[Bruce]";
+				mes "After learning some strong attack skills, the Swordman is almost unbeatable in a melee fight.";
+				next;
+				mes "[Bruce]";
+				mes "In Ragnarok Online, Swordman generally takes the position of tanker, protecting characters of other classes from being attacked or hurt.";
+				next;
+				mes "[Bruce]";
+				mes "A Swordman is the ideal character to take the position of party leader. When advancing to the Second Job Class, Swordmen can change their jobs to ^8E2323Knights^000000 or ^8E2323Crusaders^000000.";
+				set nov_3_swordman,20;
+				next;
+				break;
+			case 2:
+				mes "[Bruce]";
+				mes "The Mage class specializes in using the forces of Fire, Water, Earth and Lightning to attack their enemies.";
+				next;
+				mes "[Bruce]";
+				mes "However, due to their weak physical strength, they are only allowed to equip Rods and Knives as weapons, and wear light armor for defense.";
+				next;
+				mes "[Bruce]";
+				mes "Despite their physical weakness, they are able to do massive damage with their powerful spells. This fact alone attracts many people to join this class.";
+				next;
+				mes "[Bruce]";
+				mes "In Ragnarok Online, the Mage takes a heavily offensive role in parties and is depended upon to deal great damage to enemies.";
+				next;
+				mes "[Bruce]";
+				mes "When advancing to the Second Job Class, Mages can change their jobs to ^8E2323Wizards^000000 or ^8E2323Sages^000000.";
+				set nov_3_swordman,20;
+				next;
+				break;
+			case 3:
+				mes "[Bruce]";
+				mes "The Archer class are experts in using Bow weapons, and are useful in parties for their long range attacks.";
+				next;
+				mes "[Bruce]";
+				mes "Despite being physically weaker, Archers possess high accuracy with powerful long range bows. This allows them to attack and kill monsters from a safe distance.";
+				next;
+				mes "[Bruce]";
+				mes "In Ragnarok Online, Archers have relatively little HP, but their long range attacks allow them to easily dispatch enemies before the enemy gets close enough to hurt them.";
+				next;
+				mes "[Bruce]";
+				mes "When advancing to the Second Job Class, every Archer may advance to the ^8E2323Hunter^000000 class. Alternatively, male Archers may advance to become ^8E2323Bards^000000, and female Archers may become ^8E2323Dancers^000000.";
+				set nov_3_swordman,20;
+				next;
+				break;
+			case 4:
+				mes "[Bruce]";
+				mes "The Merchant class specializes in commerce. Due to the strong influence of the Merchant Guild, the Merchant class is attractive to those who wish to focus on earning Zeny.";
+				next;
+				mes "[Bruce]";
+				mes "In Ragnarok Online, the Merchant class possesses various economic abilities. Merchants can learn to sell items to NPCs for higher prices, as well as receive discounts from NPCs.";
+				next;
+				mes "[Bruce]";
+				mes "In addition, Merchants may rent";
+				mes "a Cart that greatly expands their carrying capacity and allows them to open shops with their own items and prices.";
+				next;
+				mes "[Bruce]";
+				mes "When advancing to the Second Job Class, Merchants can change their jobs to ^8E2323Blacksmiths^000000 or ^8E2323Alchemists^000000.";
+				set nov_3_swordman,20;
+				next;
+				break;
+			case 5:
+				mes "[Bruce]";
+				mes "Thieves are experts at using Dagger class weapons. They strike quickly and easily evade attacks from their enemies.";
+				next;
+				mes "[Bruce]";
+				mes "Thieves can learn skills that allow them to hide from their enemies, or steal items from monsters. They are also feared for their use of poison, which slowly weakens";
+				mes "their enemies.";
+				next;
+				mes "[Bruce]";
+				mes "When advancing to the Second Job Class, Thieves can change their jobs to ^8E2323Assassins^000000 or ^8E2323Rogues^000000.";
+				set nov_3_swordman,20;
+				next;
+				break;
+			case 6:
+				mes "[Bruce]";
+				mes "In Ragnarok Online, Acolytes act as messengers of God in Rune-Midgard. They possess skills that support their allies, as well as the life saving Heal ability.";
+				next;
+				mes "[Bruce]";
+				mes "The Acolyte's support abilities make them a welcome addition to any party. In difficult situations, the Acolyte's skills will ensure the survival of the party, allowing other members to focus on offense.";
+				next;
+				mes "[Bruce]";
+				mes "When advancing to the Second Job Class, Acolytes can change their jobs to ^8E2323Priests^000000 or ^8E2323Monks^000000.";
+				mes "";
+				set nov_3_swordman,20;
+				next;
+				break;
+			case 7:
+				mes "[Bruce]";
+				mes "For more information,";
+				mes "please visit the official";
+				mes "Ragnarok Online website:";
+				mes " ";
+				mes "^0000FFiro.ragnarokonline.com^000000.";
+				next;
+				mes "[Bruce]";
+				mes "Hanson is waiting";
+				mes "for you now. Good luck";
+				mes "out there, young Novice.";
+				close;
 			}
-
 		}
 	}
 }

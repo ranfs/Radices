@@ -1,15 +1,15 @@
-//===== rAthena Script ======================================= 
+//===== Cronus Script ========================================
 //= Acolyte Job Quest
-//===== By: ================================================== 
+//===== Por: =================================================
 //= kobra_k88; L0ne_W0lf
-//===== Current Version: ===================================== 
-//= 2.2
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
+//===== Versão Atual: ========================================
+//= 2.3
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= [Official Conversion]
 //= Job quest for Acolyte classes
-//===== Additional Comments: ================================= 
+//===== Comentários Adicionais: ==============================
 //= 1.0 Fully working.
 //= 1.1 Added function calls for Priest Quest.
 //= 1.2 Fixed Marthilda, Yosuke bugs. [Lupus]
@@ -28,7 +28,8 @@
 //= 2.0 Fixed High Acolytesnot being given holy light. [L0ne_W0lf]
 //= 2.1 Added Quest Log commands. [L0ne_W0lf]
 //= 2.2 Fixed an issue with completequest by adding checkquest. [Kisuka]
-//============================================================ 
+//= 2.3 Pequena Otimização. [meyk]
+//============================================================
 
 prt_church,184,41,4	script	Cleric#aco	60,{
 	if (Upper == 1) {
@@ -63,20 +64,16 @@ prt_church,184,41,4	script	Cleric#aco	60,{
 				mes "Now, venture forth and seek those who need your help. May God light your path.";
 				close;
 			}
-			else {
-				mes "[Father Mareusis]";
-				mes "Now, venture forth to seek people who need your help. May God enlighten your way.";
-				close;
-			}
-		}
-		else {
 			mes "[Father Mareusis]";
-			mes "I sense that you have endured a past life experience. You must have learned many things before entering Valhalla.";
-			next;
-			mes "[Father Mareusis]";
-			mes "However, I can tell that you are not suited to be an Acolyte. Please remember who you were in your past life and find your path.";
+			mes "Now, venture forth to seek people who need your help. May God enlighten your way.";
 			close;
 		}
+		mes "[Father Mareusis]";
+		mes "I sense that you have endured a past life experience. You must have learned many things before entering Valhalla.";
+		next;
+		mes "[Father Mareusis]";
+		mes "However, I can tell that you are not suited to be an Acolyte. Please remember who you were in your past life and find your path.";
+		close;
 	}
 	mes "[Father Mareusis]";
 	mes "What is it that you seek?";
@@ -283,26 +280,22 @@ prt_fild03,365,255,2	script	Ascetic#aco	89,{
 				set job_acolyte_q,6;
 				end;
 			}
-			else {
-				mes "Oh...";
-				mes "Are you one of the";
-				mes "Acolyte applicants...?";
-				mes "Let's see...";
-				next;
-				mes "[Father Rubalkabara]";
-				mes "Your name is " + strcharinfo(0) + "?";
-				mes "I don't think your name";
-				mes "is on my list. Hmmm...";
-				next;
-				mes "[Father Rubalkabara]";
-				mes "Why don't you go back to the Prontera Sanctuary and check again?";
-				close;
-			}
-		}
-		else {
-			mes "Huh? What brings you here? This is a very dangerous place for a Novice like yourself!";
+			mes "Oh...";
+			mes "Are you one of the";
+			mes "Acolyte applicants...?";
+			mes "Let's see...";
+			next;
+			mes "[Father Rubalkabara]";
+			mes "Your name is " + strcharinfo(0) + "?";
+			mes "I don't think your name";
+			mes "is on my list. Hmmm...";
+			next;
+			mes "[Father Rubalkabara]";
+			mes "Why don't you go back to the Prontera Sanctuary and check again?";
 			close;
 		}
+		mes "Huh? What brings you here? This is a very dangerous place for a Novice like yourself!";
+		close;
 	}
 	else if (BaseJob == Job_Acolyte) callfunc "F_FatherRub";
 	else {
@@ -313,14 +306,12 @@ prt_fild03,365,255,2	script	Ascetic#aco	89,{
 			mes "Welcome to the Deep. Feel free to sit and contemplate God's message with me. This place is beautiful, even if danger accompanies its sense of serenity...";
 			close;
 		}
-		else {
-			mes "Oh ho...";
-			mes "Have you come into the Deep here for training? Or are you just a Wanderer?";
-			next;
-			mes "[Father Rubalkabara]";
-			mes "Whoever you are, please take care of yourself. The monsters in here are shockingly strong, contrary to their cute appearance.";
-			close;
-		}
+		mes "Oh ho...";
+		mes "Have you come into the Deep here for training? Or are you just a Wanderer?";
+		next;
+		mes "[Father Rubalkabara]";
+		mes "Whoever you are, please take care of yourself. The monsters in here are shockingly strong, contrary to their cute appearance.";
+		close;
 	}
 }
 
@@ -351,30 +342,26 @@ moc_fild07,41,355,4	script	Ascetic#2aco	95,{
 				set job_acolyte_q,7;
 				end;
 			}
-			else {
-				mes "Ah...!";
-				mes "You must be one";
-				mes "of the Acolyte applicants.";
-				mes "I sincerely welcome you.";
-				next;
-				mes "[Mother Mathilda]";
-				mes "Now, what is your name?";
-				mes "" + strcharinfo(0) + "? Let's see...";
-				next;
-				mes "[Mother Mathilda]";
-				mes "Hmm...";
-				mes "It seems your name";
-				mes "is not on my list...";
-				next;
-				mes "[Mother Mathilda]";
-				mes "Perhaps you should return to the Prontera Sanctuary and check the destination for your penance trial once again.";
-				close;
-			}
-		}
-		else {
-			mes "...";
+			mes "Ah...!";
+			mes "You must be one";
+			mes "of the Acolyte applicants.";
+			mes "I sincerely welcome you.";
+			next;
+			mes "[Mother Mathilda]";
+			mes "Now, what is your name?";
+			mes "" + strcharinfo(0) + "? Let's see...";
+			next;
+			mes "[Mother Mathilda]";
+			mes "Hmm...";
+			mes "It seems your name";
+			mes "is not on my list...";
+			next;
+			mes "[Mother Mathilda]";
+			mes "Perhaps you should return to the Prontera Sanctuary and check the destination for your penance trial once again.";
 			close;
 		}
+		mes "...";
+		close;
 	}
 	else if (BaseJob == Job_Acolyte) callfunc "F_MotherMart";
 	else {
@@ -385,11 +372,9 @@ moc_fild07,41,355,4	script	Ascetic#2aco	95,{
 			mes "How is your practice coming along? I certainly hope you're enjoying living in the grace of God.";
 			close;
 		}
-		else {
-			mes "May God";
-			mes "be with you...";
-			close;
-		}
+		mes "May God";
+		mes "be with you...";
+		close;
 	}
 }
 
@@ -428,28 +413,24 @@ prt_fild00,208,218,6	script	Ascetic#3aco	98,{
 				set job_acolyte_q,8;
 				end;
 			}
-			else {
-				mes "Hey.";
-				mes "You look like an Acolyte Applicant. Am I right?";
-				next;
-				mes "[Father Yosuke]";
-				mes "Not bad at all, you've made it all the way here from Prontera. So what's your name, kid?";
-				next;
-				mes "[Father Yosuke]";
-				mes "" + strcharinfo(0) + ", huh? Why isn't your name on my list?";
-				next;
-				mes "[Father Yosuke]";
-				mes "You probably made a mistake. Go back to the Santuary, and check with the Bishop.";
-				close;
-			}
-		}
-		else {
-			mes "You...";
-			mes "Novice.";
-			mes "There something";
-			mes "you wanna tell me?";
+			mes "Hey.";
+			mes "You look like an Acolyte Applicant. Am I right?";
+			next;
+			mes "[Father Yosuke]";
+			mes "Not bad at all, you've made it all the way here from Prontera. So what's your name, kid?";
+			next;
+			mes "[Father Yosuke]";
+			mes "" + strcharinfo(0) + ", huh? Why isn't your name on my list?";
+			next;
+			mes "[Father Yosuke]";
+			mes "You probably made a mistake. Go back to the Santuary, and check with the Bishop.";
 			close;
 		}
+		mes "You...";
+		mes "Novice.";
+		mes "There something";
+		mes "you wanna tell me?";
+		close;
 	}
 	else if (BaseJob == Job_Acolyte) callfunc "F_FatherYos";
 	else {
@@ -460,11 +441,9 @@ prt_fild00,208,218,6	script	Ascetic#3aco	98,{
 			mes "If you like, come sit here with me and meditate the great truths. God's majesty is truly inspiring...";
 			close;
 		}
-		else {
-			mes "Do you have anything to say? Because unfortunately for you,";
-			mes "I don't any replies.";
-			close;
-		}
+		mes "Do you have anything to say? Because unfortunately for you,";
+		mes "I don't any replies.";
+		close;
 	}
 }
 
