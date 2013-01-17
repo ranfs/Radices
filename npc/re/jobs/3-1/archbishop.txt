@@ -1,16 +1,16 @@
-//===== rAthena Script =======================================
+//===== Cronus Script ========================================
 //= Arch Bishop Job Quest
-//===== By: ==================================================
+//===== Por: =================================================
 //= L0ne_W0lf
 //= Credits: Gepard
-//===== Current Version: =====================================
-//= 1.7a
-//===== Compatible With: =====================================
-//= rAthena SVN
-//===== Description: =========================================
+//===== Versão Atual: ========================================
+//= 1.8
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= [Official Conversion]
 //= Job change Quest from Priest / High Priest -> Arch Bishop.
-//===== Additional Comments: =================================
+//===== Comentários Adicionais: ==============================
 //= 1.0 First version.
 //= 1.1 Fixed class checks for arch bishops.
 //= 1.2 Fixed Job tags typos.
@@ -22,6 +22,7 @@
 //= 1.6 Fixed bugs where players unable to continue the quest. [Joseph]
 //= 1.7 Updated script, many bugs fixed. [Euphy]
 //= 1.7a Moved warps to separate file. [Euphy]
+//= 1.8 Pequena Otimização. [meyk]
 //============================================================
 
 prt_church,103,88,3	script	Praying Minister#arch	60,{
@@ -733,20 +734,18 @@ odin_tem02,281,275,3	script	Valkyrie Illusion#arch	403,{
 	if ((job_arch > 4) && (job_arch < 100)) {
 		mes "You can see Valkyrie who has a despairing face.";
 		next;
-		switch(select("Touch Valkyrie's Illusion.:Turn away.")) {
-		case 1:
+		if(select("Touch Valkyrie's Illusion.:Turn away.") == 1) {
 			mes "You lose your consciousness while getting a closer view of Valkyrie's Illusion.";
 			close2;
 			specialeffect2 EF_CLOAKING;
 			warp "job3_arch01",29,29;
 			hideonnpc "Valkyrie Illusion#arch";
 			end;
-		case 2:
-			mes "Out of fear, you turn away from Valkyrie's illusion.";
-			close2;
-			hideonnpc "Valkyrie Illusion#arch";
-			end;
 		}
+		mes "Out of fear, you turn away from Valkyrie's illusion.";
+		close2;
+		hideonnpc "Valkyrie Illusion#arch";
+		end;
 	}
 	end;
 OnInit:
