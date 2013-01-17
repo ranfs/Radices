@@ -1,12 +1,12 @@
-//===== rAthena Script =======================================
+//===== Cronus Script ========================================
 //= Arrow Quiver Event
-//===== By: ==================================================
+//===== Por: =================================================
 //= Muad_Dib (Prometheus Project); L0ne_W0lf
-//===== Current Version: =====================================
-//= 1.2
-//===== Compatible With: =====================================
-//= rAthena SVN
-//===== Description: =========================================
+//===== Versão Atual: ========================================
+//= 1.3
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= [Aegis COnversion]
 //= Turns arrows into Arrow Quivers.
 // Breakdown of Subroutine "S_BuyQuiver"
@@ -14,7 +14,7 @@
 // arg(1): How many of each 'getarg(0)' arrow per quiver
 // arg(2): The cost of making a 'getarg(0)' quiver.
 // arg(3): The quiver given by the NPC. (item ID)
-//===== Additional Comments: =================================
+//===== Comentários Adicionais: ==============================
 //= 07/06/05 : Added 1st Version. [Muad_Dib]
 //= Converted to rAthena format by Dr.Evil
 //= added prize to quest - 500 Zeny
@@ -22,6 +22,7 @@
 //= 1.1 Added Holy Arrow Quivers [Playtester]
 //= 1.2 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
 //=	Removed "Holy Arrows" from the list.
+//= 1.3 Otimização. [meyk]
 //============================================================
 
 payon_in01,5,134,5	script	Inventor Jaax	89,{
@@ -120,12 +121,10 @@ S_BuyQuiver:
 					mes "be alright.";
 					close;
 				}
-				else {
-					mes "[Inventor Jaax]";
-					mes "I'm sorry, but you don't have enough Zeny. I can't just give these away after working years";
-					mes "to develop this revolutionary technology!";
-					close;
-				}
+				mes "[Inventor Jaax]";
+				mes "I'm sorry, but you don't have enough Zeny. I can't just give these away after working years";
+				mes "to develop this revolutionary technology!";
+				close;
 			}
 			mes "[Inventor Jaax]";
 			mes "You changed your mind?";
@@ -150,15 +149,13 @@ S_BuyQuiver:
 				mes "be alright.";
 				close;
 			}
-			else {
-				mes "[Inventor Jaax]";
-				mes "You don't even";
-				mes "have "+getarg(2)+" Zeny?";
-				mes "I'm so sorry. I had no";
-				mes "idea that you were so...";
-				mes "^333333Destitute^000000.";
-				close;
-			}
+			mes "[Inventor Jaax]";
+			mes "You don't even";
+			mes "have "+getarg(2)+" Zeny?";
+			mes "I'm so sorry. I had no";
+			mes "idea that you were so...";
+			mes "^333333Destitute^000000.";
+			close;
 		case 3:
 			mes "[Inventor Jaax]";
 			mes "What...?";
@@ -166,13 +163,11 @@ S_BuyQuiver:
 			close;
 		}
 	}
-	else {
-		mes "[Inventor Jaax]";
-		mes "You can carry a maximum of 500 Arrows within this quiver. It was made using my secret method,";
-		mes "so the total weight of the Arrows and Quiver is less than carrying the Arrows alone.";
-		next;
-		mes "[Inventor Jaax]";
-		mes "It's a miracle of science! One that you can experience for yourself if you bring me at least 500 Arrows and 500 Zeny for each Quiver.";
-		close;
-	}
+	mes "[Inventor Jaax]";
+	mes "You can carry a maximum of 500 Arrows within this quiver. It was made using my secret method,";
+	mes "so the total weight of the Arrows and Quiver is less than carrying the Arrows alone.";
+	next;
+	mes "[Inventor Jaax]";
+	mes "It's a miracle of science! One that you can experience for yourself if you bring me at least 500 Arrows and 500 Zeny for each Quiver.";
+	close;
 }
