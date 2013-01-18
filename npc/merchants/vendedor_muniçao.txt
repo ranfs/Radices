@@ -99,27 +99,25 @@ function	script	Bullet_Trade	{
 			mes "available. Try putting some of";
 			mes "your things into Kafra Storage.";
 			close;
-		}else{
-			mes "[Tony]";
-			mes "Great, everything seems";
-			mes "to be in order. Let me take";
-			mes "these materials, and here are";
-			mes "your bullets. It's a pleasure";
-			mes "to do business with you~";
-			delitem 1010,.@amount;
-			delitem 1011,.@amount;
-			delitem getarg(0),.@amount * getarg(1);
-			getitem getarg(2),.@amount * 30;
-			close;
 		}
-	}else{
 		mes "[Tony]";
-		mes "Huh. It looks like you";
-		mes "don't have enough materials";
-		mes "for that many bullets. Well,";
-		mes "it's no problem. Just come";
-		mes "back after gathering everything";
-		mes "that you need, okay?";
+		mes "Great, everything seems";
+		mes "to be in order. Let me take";
+		mes "these materials, and here are";
+		mes "your bullets. It's a pleasure";
+		mes "to do business with you~";
+		delitem 1010,.@amount;
+		delitem 1011,.@amount;
+		delitem getarg(0),.@amount * getarg(1);
+		getitem getarg(2),.@amount * 30;
 		close;
 	}
+	mes "[Tony]";
+	mes "Huh. It looks like you";
+	mes "don't have enough materials";
+	mes "for that many bullets. Well,";
+	mes "it's no problem. Just come";
+	mes "back after gathering everything";
+	mes "that you need, okay?";
+	close;
 }
