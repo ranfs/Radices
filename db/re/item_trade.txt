@@ -1870,3 +1870,31 @@
 13425,499,100	// Tourist Sword
 15007,467,100	// Time Keeper Robe
 16006,499,100	// Tourist Mace
+
+// Cartas Seladas
+4489,457,100	// Carta Selada de Pharaoh 
+4490,457,100	// Carta Selada de Moonlight Flower 
+4491,457,100	// Carta Selada de Sniper 
+4492,457,100	// Carta Selada de Orc Hero 
+4493,457,100	// Carta Selada de Tao Gunka 
+4494,457,100	// Carta Selada de Turtle General 
+4495,457,100	// Carta Selada de Amon Ra 
+4496,457,100	// Carta Selada de Drake 
+4497,457,100	// Carta Selada de Stormy Knight 
+4498,457,100	// Carta Selada de Lady Tanee 
+4499,457,100	// Carta Selada de Samurai Spector 
+4500,457,100	// Carta Selada de Orc Lord 
+4501,457,100	// Carta Selada de High Priest 
+4502,457,100	// Carta Selada de MasterSmith 
+4503,457,100	// Carta Selada de Vesper 
+4504,457,100	// Carta Selada de Eddga 
+4535,457,100	// Carta Selada de Randgris 
+4536,457,100	// Carta Selada de Atroce 
+4537,457,100	// Carta Selada de Phreeoni 
+4538,457,100	// Carta Selada de White Lady 
+4539,457,100	// Carta Selada de Fallen Bishop Hibram 
+4540,457,100	// Carta Selada de Lord of The Dead 
+4541,457,100	// Carta Selada de High Wizard 
+4542,457,100	// Carta Selada de Detale 
+4543,457,100	// Carta Selada de Hatii 
+4544,457,100	// Carta Selada de Evil Snake Lord 
