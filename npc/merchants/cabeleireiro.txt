@@ -1278,6 +1278,7 @@ lhz_in02,91,155,5	script	Assistant Beautician#li	862,{
 			mes "You're... You're right.";
 			close;
 		}
+	}
 	case 3:
 		mes "[Assistant Beautician]";
 		mes "Prince Shammi?";

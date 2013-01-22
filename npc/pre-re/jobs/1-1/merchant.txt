@@ -137,7 +137,6 @@ alberta_in,53,43,6	script	Merchant#mer	86,{
 				mes "Now your";
 				mes "membership";
 				mes "is paid in full.";
-				break;
 			}
 			mes "[Chief Mahnsoo]";
 			mes "I suppose you need some time to gather some zeny to pay your membership fee. Please come";
