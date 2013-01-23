@@ -1,18 +1,18 @@
-//===== rAthena Script ======================================= 
-//= Treasure Room Protection
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Protetor da Sala do Tesouro
+//===== Por: =================================================
 //= Masao
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.1
-//===== Compatible With: ===================================== 
-//= rAthena
-//===== Description: ========================================= 
-//= Warps every Player out of the Treasure Room except for the
-//= Guildleader.
-//===== Additional Comments: ================================= 
-//= 1.0 Converted from the official script.
-//= 1.1 Reverted back and optimized. [Daegaladh]
-//============================================================ 
+//===== Compatibilidade: =====================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= Teleporta todos os jogadores para fora da Sala do Tesouro
+//= exeto o Líder do Clã
+//===== Revisões: ============================================
+//= 1.0 Convertido do script oficial.
+//= 1.1 Revertido e otimizado. [Daegaladh]
+//============================================================
 
 -	script	Gld_Trea_Protect::Gld_Trea_Protect	-1,{
 

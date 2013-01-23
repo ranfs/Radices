@@ -1,17 +1,17 @@
-//===== rAthena Script =======================================
-//= War of Emperium (Al De Baran)
-//===== By: ==================================================
+//===== Cronus Script ========================================
+//= Guerra do Emperium (Al De Baran)
+//===== Por: =================================================
 //= L0ne_W0lf
-//===== Current Version: =====================================
+//===== Versão Atual: ========================================
 //= 1.2
-//===== Compatible With: =====================================
-//= rAthena SVN
-//===== Description: =========================================
-//= NPCs that relate to Al De Baran Guild Castle 1
-//===== Additional Comments: =================================
-//= 1.0 First Version. No longer uses functions. [L0ne_W0lf]
-//= 1.1 Removed dialog from interior flags. [L0ne_W0lf]
-//= 1.2 Partially rewrote Script. [Masao]
+//===== Compatibilidade: =====================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= NPCs referentes ao 1º castelo de Al de Baran
+//===== Revisões: ============================================
+//= 1.0 Versão Inicial. [L0ne_W0lf]
+//= 1.1 Removido dialogo das bandeiras do interior do castelo. [L0ne_W0lf]
+//= 1.2 Script parcialmente reescrito. [Masao]
 //============================================================
 
 // Guild Flags (Outside Castle)

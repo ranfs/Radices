@@ -1,19 +1,19 @@
-//===== rAthena Script =======================================
-//= War of Emperium (Prontera)
-//===== By: ==================================================
+//===== Cronus Script ========================================
+//= Guerra do Emperium (Prontera)
+//===== Por: =================================================
 //= L0ne_W0lf
-//===== Current Version: =====================================
+//===== Versão Atual: ========================================
 //= 1.4
-//===== Compatible With: =====================================
-//= rAthena SVN
-//===== Description: =========================================
-//= NPCs that relate to Prontera Guild Castle 3
-//===== Additional Comments: =================================
-//= 1.0 First Version. No longer uses functions. [L0ne_W0lf]
-//= 1.1 Corrected flag-in spawn point. [L0ne_W0lf]
-//= 1.2 Corrected treasure room switch coordinates. [L0ne_W0lf]
-//= 1.3 Removed dialog from interior flags. [L0ne_W0lf]
-//= 1.4 Partially rewrote Script. [Masao]
+//===== Compatibilidade: =====================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= NPCs referentes ao 3º castelo de Prontera
+//===== Revisões: ============================================
+//= 1.0 Versão Inicial. [L0ne_W0lf]
+//= 1.1 Bandeira do ponto inicial corrigida. [L0ne_W0lf]
+//= 1.2 Removido dialogo das bandeiras do interior do castelo. [L0ne_W0lf]
+//= 1.3 Coordenadas da sala do tesouro corrigidas. [L0ne_W0lf]
+//= 1.4 Script parcialmente reescrito. [Masao]
 //============================================================
 
 // Guild Flags (Outside Castle)
