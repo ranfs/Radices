@@ -100,7 +100,7 @@ prontera,143,203,2	duplicate(InsideFlagsPR3)	Fadhgridh#15	722
 
 // Kafra Employee
 //============================================================
-prtg_cas03,181,215,4	duplicate(guildkafra)	Kafra Staff#prtg_cas03	117
+prtg_cas03,181,215,4	duplicate(guildkafra)	Kafra Recep.#prtg_cas03	117
 
 // Steward
 //============================================================

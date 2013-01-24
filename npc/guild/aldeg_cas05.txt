@@ -3,7 +3,7 @@
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
-//= 1.2
+//= 1.3
 //===== Compatibilidade: =====================================
 //= Cronus GIT
 //===== Descrição: ===========================================
@@ -134,7 +134,7 @@ aldebaran,128,97,4	duplicate(InsideFlagsA5)	Acrux#19	722
 
 // Kafra Employee
 //============================================================
-aldeg_cas05,31,190,0	duplicate(guildkafra)	Kafra Recepcionista#aldeg_cas05	117
+aldeg_cas05,31,190,0	duplicate(guildkafra)	Kafra Recep.#aldeg_cas05	117
 
 // Steward
 //============================================================

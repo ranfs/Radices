@@ -3,7 +3,7 @@
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
-//= 1.2
+//= 1.3
 //===== Compatibilidade: =====================================
 //= Cronus GIT
 //===== Descrição: ===========================================
@@ -127,7 +127,7 @@ geffen,112,129,1	duplicate(InsideFlagsG2)	Trapesac#12	722
 
 // Kafra Employee
 //============================================================
-gefg_cas02,23,66,3	duplicate(guildkafra)	Kafra Assistente#gefg_cas02	117
+gefg_cas02,23,66,3	duplicate(guildkafra)	Kafra Recep.#gefg_cas02	117
 
 // Steward
 //============================================================

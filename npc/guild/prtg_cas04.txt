@@ -100,7 +100,7 @@ prontera,167,203,6	duplicate(InsideFlagsPR4)	Skoegul#15	722
 
 // Kafra Employee
 //============================================================
-prtg_cas04,258,247,4	duplicate(guildkafra)	Kafra Staff#prtg_cas04	117
+prtg_cas04,258,247,4	duplicate(guildkafra)	Kafra Recep.#prtg_cas04	117
 
 // Steward
 //============================================================

@@ -96,7 +96,7 @@ payon,166,177,3	duplicate(InsideFlagsPA1)	Bright Arbor#12	722
 
 // Kafra Employee
 //============================================================
-payg_cas01,128,58,3	duplicate(guildkafra)	Kafra Staff#payg_cas01	117
+payg_cas01,128,58,3	duplicate(guildkafra)	Kafra Recep.#payg_cas01	117
 
 // Steward
 //============================================================

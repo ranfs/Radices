@@ -138,7 +138,7 @@ aldebaran,152,97,4	duplicate(InsideFlagsA1)	Sirius#23	722
 
 // Kafra Employee
 //============================================================
-aldeg_cas01,218,170,0	duplicate(guildkafra)	Kafra Recepcionista#aldeg_cas01	117
+aldeg_cas01,218,170,0	duplicate(guildkafra)	Kafra Recep.#aldeg_cas01	117
 
 // Steward
 //============================================================

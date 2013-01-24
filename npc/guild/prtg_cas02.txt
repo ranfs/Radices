@@ -102,7 +102,7 @@ prontera,146,194,3	duplicate(InsideFlagsPR2)	Swanhild#17	722
 
 // Kafra Employee
 //============================================================
-prtg_cas02,71,36,4	duplicate(guildkafra)	Kafra Staff#prtg_cas02	117
+prtg_cas02,71,36,4	duplicate(guildkafra)	Kafra Recep.#prtg_cas02	117
 
 // Steward
 //============================================================
