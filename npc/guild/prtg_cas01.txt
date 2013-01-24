@@ -3,7 +3,7 @@
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
-//= 1.4
+//= 1.5
 //===== Compatibilidade: =====================================
 //= Cronus GIT
 //===== Descrição: ===========================================
@@ -14,6 +14,7 @@
 //= 1.2 Removido dialogo das bandeiras do interior do castelo. [L0ne_W0lf]
 //= 1.3 Coordenadas da sala do tesouro corrigidas. [L0ne_W0lf]
 //= 1.4 Script parcialmente reescrito. [Masao]
+//= 1.5 Refeito conforme o bRO. [MaminhA]
 //============================================================
 
 // Guild Flags (Outside Castle)
@@ -23,25 +24,26 @@
 	set .@GID, GetCastleData("prtg_cas01",1);
 
 	if (.@GID == 0) {
-		mes "[ Edict of the Divine Rune-Midgarts Kingdom ]";
+		mes "[Decreto do Reino de Rune Midgard]";
 		mes " ";
-		mes "1. Follow the ordinance of The Divine Rune-Midgarts Kingdom, ";
-		mes "We declare that";
-		mes "there is no formal master of this castle.";
+		mes "1. Conforme o Pacto do Reino de Rune Midgard";
+		mes "e o Feudo de Luina,";
+		mes "declaro que este Castelo";
+		mes "não possui um Senhor.";
 		mes " ";
-		mes "2. To the one who can ";
-		mes "overcome all trials";
-		mes "and destroy the Emperium,";
-		mes "the king will endow the one with";
-		mes "ownership of this castle.";
+		mes "2. Ao Clã que for bravo o bastante";
+		mes "e, superarando os terríveis desafios,";
+		mes "quebrar o Emperium,";
+		mes "será dada a posse deste Castelo";
+		mes "apoiado pelo nosso Rei.";
 		close;
 	}
 	if (getcharid(2) == .@GID) {
-		mes "[ Echoing Voice ]";
-		mes "Brave ones...";
-		mes "Do you wish to return to your honorable place?";
+		mes "[ Voz Ecoante ]";
+		mes "Bravo guerreiro......";
+		mes "Deseja retornar ao seu lugar de glória?";
 		next;
-		if(select("Return to the guild castle.:Quit.") == 1) {
+		if(select("Sim.:Não.") == 1) {
 			close2;
 			if (getcharid(2) == GetCastleData("prtg_cas01",1)) {
 				warp "prtg_cas01",96,173;
@@ -51,16 +53,17 @@
 		}
 		close;
 	}
-	mes "[ Edict of the Divine Rune-Midgarts Kingdom ]";
+	mes "[Decreto do Reino de Rune Midgard]";
 	mes " ";
-	mes "1. Follow the ordinance of The Divine Rune-Midgarts Kingdom, ";
-	mes "we approve that this place is in";
-	mes "the private prossession of ^ff0000"+GetGuildName(.@GID)+"^000000 Guild.";
+	mes "1. Conforme o Pacto do Reino de Rune Midgard";
+	mes "e o Feudo de Luina,";
+	mes "declaro que este Castelo";
+	mes "pertence ao Clã ^ff0000"+GetGuildName(.@GID)+"^000000.";
 	mes " ";
-	mes "2. The guild Master of ^ff0000"+GetGuildName(.@GID)+"^000000 Guild is";
+	mes "2. O líder do Clã ^ff0000"+GetGuildName(.@GID)+"^000000 se chama";
 	mes "^ff0000"+GetGuildMaster(.@GID)+"^000000";
-	mes "If there is anyone who objects to this,";
-	mes "prove your strength and honor with a steel blade in your hand.";
+	mes "Se alguém se opõe a este decreto";
+	mes "desembainhe sua espada para fazer valer sua vontade.";
 	close;
 
 OnRecvCastlePt01:
@@ -76,7 +79,36 @@ prt_gld,135,60,6	duplicate(OutsideFlagsPR1)	Kriemhild#4	722
 // Guild Flags (Inside Castle)
 //============================================================
 -	script	Kriemhild#5::InsideFlagsPR1	722,{
-	end;
+	
+	set .@GID, GetCastleData("prtg_cas01",1);
+
+	if (.@GID == 0) {
+		mes "[Decreto do Reino de Rune Midgard]";
+		mes " ";
+		mes "1. Conforme o Pacto do Reino de Rune Midgard";
+		mes "e o Feudo de Luina,";
+		mes "declaro que este Castelo";
+		mes "não possui um Senhor.";
+		mes " ";
+		mes "2. Ao Clã que for bravo o bastante";
+		mes "e, superarando os terríveis desafios,";
+		mes "quebrar o Emperium,";
+		mes "será dada a posse deste Castelo";
+		mes "apoiado pelo nosso Rei.";
+		close;
+	}
+	mes "[Decreto do Reino de Rune Midgard]";
+	mes " ";
+	mes "1. Conforme o Pacto do Reino de Rune Midgard";
+	mes "e o Feudo de Luina,";
+	mes "declaro que este Castelo";
+	mes "pertence ao Clã ^ff0000"+GetGuildName(.@GID)+"^000000.";
+	mes " ";
+	mes "2. O líder do Clã ^ff0000"+GetGuildName(.@GID)+"^000000 se chama";
+	mes "^ff0000"+GetGuildMaster(.@GID)+"^000000";
+	mes "Se alguém se opõe a este decreto";
+	mes "desembainhe sua espada para fazer valer sua vontade.";
+	close;
 
 OnRecvCastlePt01:
 	FlagEmblem GetCastleData("prtg_cas01",1);
@@ -104,16 +136,16 @@ prtg_cas01,96,173,0	duplicate(guildkafra)	Kafra Recep.#prtg_cas01	117
 
 // Steward
 //============================================================
-prtg_cas01,112,181,0	duplicate(cm)	Ahvray#prtg_cas01	55
+prtg_cas01,112,181,0	duplicate(cm)	Abray#prtg_cas01	55
 
 // Treasure Room Exit
 //============================================================
-prtg_cas01,15,208,0	script	#Lever_PR01	111,{
+prtg_cas01,7,205,0	script	#Lever_PR01	111,{
 
 	mes " ";
-	mes "There's a small lever. Will you pull it?";
+	mes "Há uma pequena alavanca, você deseja acioná-la?";
 	next;
-	if(select("Pull.:Do not.") == 1) {
+	if(select("Acionar.:Não acionar.") == 1) {
 		close2;
 		warp "prtg_cas01",112,183;
 		end;
