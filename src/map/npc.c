@@ -3853,13 +3853,13 @@ int do_init_npc(void)
 		ShowStatus("Loading NPC file: %s"CL_CLL"\r", file->name);
 		npc_parsesrcfile(file->name,false);
 	}
-	ShowInfo ("Done loading '"CL_WHITE"%d"CL_RESET"' NPCs:"CL_CLL"\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Warps\n"
+	ShowInfo ("Carregamento finalizado de "CL_WHITE"%d"CL_RESET" NPCs:"CL_CLL"\n"
+		"\t-'"CL_WHITE"%d"CL_RESET"' Portais\n"
 		"\t-'"CL_WHITE"%d"CL_RESET"' Shops\n"
 		"\t-'"CL_WHITE"%d"CL_RESET"' Scripts\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Spawn sets\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Mobs Cached\n"
-		"\t-'"CL_WHITE"%d"CL_RESET"' Mobs Not Cached\n",
+		"\t-'"CL_WHITE"%d"CL_RESET"' Spawns\n"
+		"\t-'"CL_WHITE"%d"CL_RESET"' Monstros em cache\n"
+		"\t-'"CL_WHITE"%d"CL_RESET"' Monstros sem cache\n",
 		npc_id - START_NPC_NUM, npc_warp, npc_shop, npc_script, npc_mob, npc_cache_mob, npc_delay_mob);
 
 	// set up the events cache
