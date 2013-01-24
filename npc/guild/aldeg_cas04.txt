@@ -135,7 +135,7 @@ aldebaran,131,97,4	duplicate(InsideFlagsA4)	Rigel#20	722
 
 // Kafra Employee
 //============================================================
-aldeg_cas04,45,88,0	duplicate(guildkafra)	Kafra Recep.#aldeg_cas04	117
+aldeg_cas04,45,88,0	duplicate(guildkafra)	Kafra Recepcionista#aldeg_cas04	117
 
 // Steward
 //============================================================

@@ -130,7 +130,7 @@ prontera,165,194,5	duplicate(InsideFlagsPR5)	Gondul#13	722
 
 // Kafra Employee
 //============================================================
-prtg_cas05,52,41,4	duplicate(guildkafra)	Kafra Recep.#prtg_cas05	117
+prtg_cas05,52,41,4	duplicate(guildkafra)	Kafra Recepcionista#prtg_cas05	117
 
 // Steward
 //============================================================

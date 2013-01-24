@@ -99,7 +99,7 @@ payon,166,169,3	duplicate(InsideFlagsPA3)	Palácio da Sombra#12	722
 
 // Kafra Employee
 //============================================================
-payg_cas03,9,263,5	duplicate(guildkafra)	Kafra Recep.#payg_cas03	117
+payg_cas03,9,263,5	duplicate(guildkafra)	Kafra Recepcionista#payg_cas03	117
 
 // Steward
 //============================================================

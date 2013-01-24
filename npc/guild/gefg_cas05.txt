@@ -126,7 +126,7 @@ geffen,131,123,6	duplicate(InsideFlagsG5)	Arima#11	722
 
 // Kafra Employee
 //============================================================
-gefg_cas05,61,52,5	duplicate(guildkafra)	Kafra Recep.#gefg_cas05	117
+gefg_cas05,61,52,5	duplicate(guildkafra)	Kafra Recepcionista#gefg_cas05	117
 
 // Steward
 //============================================================

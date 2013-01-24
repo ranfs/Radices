@@ -132,7 +132,7 @@ prontera,155,190,4	duplicate(InsideFlagsPR1)	Kriemhild#15	722
 
 // Kafra Employee
 //============================================================
-prtg_cas01,96,173,0	duplicate(guildkafra)	Kafra Recep.#prtg_cas01	117
+prtg_cas01,96,173,0	duplicate(guildkafra)	Kafra Recepcionista#prtg_cas01	117
 
 // Steward
 //============================================================

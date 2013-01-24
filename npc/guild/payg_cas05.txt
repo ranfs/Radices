@@ -128,7 +128,7 @@ payon,166,161,3	duplicate(InsideFlagsPA5)	Palácio da Colina#12	722
 
 // Kafra Employee
 //============================================================
-payg_cas05,276,227,1	duplicate(guildkafra)	Kafra Recep.#payg_cas05	117
+payg_cas05,276,227,1	duplicate(guildkafra)	Kafra Recepcionista#payg_cas05	117
 
 // Steward
 //============================================================

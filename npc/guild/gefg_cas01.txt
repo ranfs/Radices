@@ -126,7 +126,7 @@ geffen,109,123,2	duplicate(InsideFlagsG1)	Arsulf#11	722
 
 // Kafra Employee
 //============================================================
-gefg_cas01,83,47,3	duplicate(guildkafra)	Kafra Recep.#gefg_cas01	117
+gefg_cas01,83,47,3	duplicate(guildkafra)	Kafra Recepcionista#gefg_cas01	117
 
 // Steward
 //============================================================
