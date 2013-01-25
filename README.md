@@ -33,12 +33,12 @@ Equipe de Desenvolvimento
 
 ### Desenvolvedores
 - Axl
-- Holdur
+- Cainho
 - I am Cold
-- Leonardo Brito
 - MaminhA
 - Merakk
-- Matheus
-- Rafael
+- Meyk
 - Raizen
 - Sayros
+- Tywin Lannister
+- Yum
