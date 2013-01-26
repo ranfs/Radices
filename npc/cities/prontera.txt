@@ -130,9 +130,9 @@ prontera,216,70,2	script	George#pront	48,{
 			next;
 			set event_prt_nov_dreamtalk,2;
 			getitem 2501,1; //Hood
-			dialog "[George]";
-			dialog "Ei, não precisa me olhar com essa cara! É um presente... Parabéns!";
-			dialog "Continue assim!";
+			mes "[George]";
+			mes "Ei, não precisa me olhar com essa cara! É um presente... Parabéns!";
+			mes "Continue assim!";
 			close;
 		}
 		else if (event_prt_nov_dreamtalk == 2) {

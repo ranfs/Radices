@@ -113,7 +113,7 @@ geffen,119,107,4	duplicate(SmileHelper)	Dona Risadinha#gef	92
 moc_ruins,59,154,3	duplicate(SmileHelper)	Dona Risadinha#moc	92
 payon,186,104,5	duplicate(SmileHelper)	Dona Risadinha#pay	92
 prontera,157,187,4	duplicate(SmileHelper)	Dona Risadinha#prt	92
-izlude,129,118,4	duplicate(SmileHelper)	Dona Risadinha#izl
+izlude,129,118,4	duplicate(SmileHelper)	Dona Risadinha#izl	92
 
 //============================================================ 
 // Old changelog
