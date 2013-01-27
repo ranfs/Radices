@@ -16,14 +16,6 @@
 //============================================================ 
 
 -	script	Smile Assistance::SmileHelper	92,{
-	if( checkweight(1201,1) == 1) {
-		mes "- Espere um momento! -";
-		mes "- No momento, você está carregando -";
-		mes "- muitos itens. -";
-		mes "- Por favor, alivie a sua carga -";
-		mes "- e tente outra vez. -";
-		close;
-	}
 	mes "[Dona Risadinha]";
 	mes "Olá, bom dia!";
 	mes "Eu sou a Dona Risadinha, prazer em conhecê-lo!";
