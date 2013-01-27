@@ -329,6 +329,8 @@ int recv_to_fifo(int fd)
 	if( !session_isActive(fd) )
 		return -1;
 
+	// FIXME: Langtype 12 não funciona por causa desta função.
+	// Pelo visto, 'len' retorna '0' na langtype 12, equanto retorna '73' para langtype 1.
 	len = sRecv(fd, (char *) session[fd]->rdata + session[fd]->rdata_size, (int)RFIFOSPACE(fd), 0);
 
 	if( len == SOCKET_ERROR )
