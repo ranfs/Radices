@@ -1571,6 +1571,7 @@
 2547,Cheap_Running_Shirts,Cheap Undershirt,5,0,,0,,8,,0,0xFFFFFFFF,7,2,4,,0,1,0,{ bonus bDex,2; bonus bFlee,10; bonus2 bSubEle,Ele_Neutral,10; bonus bMdef,1; },{},{}
 2548,Muffler_C,Neo Muffler,5,0,,0,,5,,0,0xFFFFFFFE,2,2,4,,95,0,0,{ bonus2 bSubRace,RC_DemiHuman,10; bonus bMaxHPrate,10; bonus2 bSubEle,Ele_Water,5; bonus2 bSubEle,Ele_Fire,5; bonus2 bSubEle,Ele_Holy,5; bonus2 bSubEle,Ele_Dark,5; },{},{}
 2549,Krieger_Muffler1,Sobrepeliz Gloriosa,5,20,,0,,0,,0,0xFFFFFFFE,7,2,4,,81,1,0,{ bonus bMaxHPRate,5; bonus2 bSubRace,RC_DemiHuman,5; },{},{}
+//FIXME
 2550,Fisher's_Muffler,Sobrepeliz de Pescador,5,20,,200,,0,,0,0xFFFFFFFF,7,2,4,,0,1,0,{},{},{}
 2551,Rider_Insignia_M,Crest of the Rider,5,20,,500,,4,,1,0xFFFFFFFE,2,2,4,,55,1,0,{ bonus bAgi,2; },{},{}
 2552,Mithril_Magic_Cape_M,Mithril Magic Manteau,5,20,,400,,3,,1,0x00098B1C,2,2,4,,70,1,0,{ bonus bMdef,3; bonus5 bAutoSpellWhenHit,"NPC_ANTIMAGIC",1,200,BF_MAGIC,0; },{},{}
@@ -1788,6 +1789,7 @@
 2772,Krieger_Ring1,Anel Glorioso,5,20,,0,,0,,0,0xFFFFFFFE,7,2,136,,81,0,0,{ bonus bMaxHP,300; bonus2 bSubEle,Ele_Water,10; bonus2 bSubEle,Ele_Wind,10; bonus2 bSubEle,Ele_Earth,10; bonus2 bSubEle,Ele_Fire,10; bonus bAspdRate,5; bonus bVariableCastrate,-3; bonus bHealPower,5; },{},{}
 2773,Krieger_Ring2,Anel Glorioso Industrializado,5,20,,0,,0,,0,0xFFFFFFFE,7,2,136,,61,0,0,{ bonus bAllStats,2; },{},{}
 2774,Krieger_Ring3,Anel Glorioso Barato,5,20,,0,,0,,0,0xFFFFFFFE,7,2,136,,0,0,0,{ bonus bAllStats,1; },{},{}
+//FIXME
 2775,Lure,Isca,5,20,,100,,0,,0,0xFFFFFFFF,7,2,136,,0,0,0,{},{},{}
 2776,Cool_Towel,Adventurer's Trusty Towel,5,20,,100,,,,0,0xFFFFFFFF,7,2,136,,0,0,0,{},{ setoption Option_Summer,1; },{ setoption Option_Summer,0; }
 2777,Shaman_Ring,Shaman Ring,5,20,,100,,0,,1,0xFFFFFFFF,7,2,136,,30,0,0,{ bonus bUseSPrate,-5; },{},{}
@@ -5610,7 +5612,7 @@
 12527,E_Adrenaline_Scroll,E Adrenaline Scroll,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12528,E_Convex_Mirror,E Convex Mirror,2,2,,10,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12529,White_Slim_Potion_Box,White Slim Potion Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
-12530,Mastela_Fruit_Box,Caixa de Mastelas[200],2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
+12530,Mastela_Fruit_Box,Caixa de Mastelas[200],2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 522, 200;},{},{}
 12531,White_Potion_Box,White Potion Box,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12532,Royal_Jelly_Box2,Royal Jelly Box2,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 12533,Blue_Herb_Box2,Caixa de Ervas Azuis,2,0,,0,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
@@ -5771,6 +5773,7 @@
 //
 12775,Ancient_Spirit_Amulet,Ancient Spirit Amulet,2,20,,600,,,,,0xFFFFFFFF,7,2,,,,,,{},{},{}
 //
+12826,Ovo_do_Tornado,Ovo do Tornado,3,,,10,,,,,,,,,,,,,{},{},{}
 12848,Falcon_Flute,Falcon Flute,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ if(getskilllv("HT_FALCON")) { if(checkoption(Option_Wug)||checkoption(Option_Wugrider)) end; if(checkfalcon()==1) { setfalcon 0; } else { setfalcon 1; } } },{},{}
 12900,Battle_Manual_Box,Caixa de Manual de Combate,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12208,10; },{},{}
 12901,Insurance_Package,Caixa de Seguros,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12209,10; },{},{}
@@ -7298,7 +7301,13 @@
 //
 18620,Heart_Eye_Patch,Tapa-Olho Amoroso,5,5,,200,,2,,0,0xFFFFFFFF,7,2,512,,20,1,779,{},{},{}
 //
+18641,Cartola_de_Amatsu,Cartola de Amatsu,5,,,200,,2,,1,0xFFFFFFFF,0xF,2,256,,,1,771,{ bonus bInt,3; bonus bMatkRate,5; bonus bMaxSP,50;},{},{}
+//
 18656,Witch's_Pumpkin_Hat,Poderoso Chapéu de Bruxa,5,20,,300,,10,,0,0xFFFFFFFF,7,2,256,,20,1,717,{ bonus bMdef,10; bonus bStr,2; bonus bInt,2; bonus2 bMagicAddRace,RC_Undead,15; bonus2 bMagicAddRace,RC_Demon,15; },{},{}
+//
+18662,Cartola_do_Xóper,Cartola do Xóper,5,,,400,,3,,,0xFFFFFFFE,0xF,2,256,,,1,,{ bonus bInt,3;},{},{}
+//
+18680,Chapéu_de_Perereca,Chapéu de Perereca,5,,,200,,2,,,0xFFFFFFFF,0xF,2,256,,35,0,717,{ bonus bAgi,1; bonus2 bExpAddRace,4,5; },{},{}
 
 // Costume System
 19500,T_Mr_Smile,T Mr Smile,5,0,,0,,0,,0,0xFFFFFFFF,7,2,6144,,0,0,65,{ bonus bStr,2; },{},{}
