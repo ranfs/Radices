@@ -4,12 +4,13 @@
 #ifndef	_CORE_H_
 #define	_CORE_H_
 
+// Assim, desenvolvedores podem, usando o --enable-debug, adicionar chamadas à qualquer parte do código
+#ifdef DEBUG
+#include <signal.h>
+#endif
+
 extern int arg_c;
 extern char **arg_v;
-
-
-
-
 
 /// @see E_CORE_ST
 extern int runflag;
