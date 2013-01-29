@@ -2220,7 +2220,7 @@ int skill_attack (int attack_type, struct block_list* src, struct block_list *ds
 	if(skill_id == WZ_FROSTNOVA && dsrc->x == bl->x && dsrc->y == bl->y)
 		return 0;
 	 //Trick Dead protects you from damage, but not from buffs and the like, hence it's placed here.
-	if (sc && sc->data[SC_TRICKDEAD] && !(sstatus->mode&MD_BOSS))
+	if (sc && sc->data[SC_TRICKDEAD])
 		return 0;
 
 	dmg = battle_calc_attack(attack_type,src,bl,skill_id,skill_lv,flag&0xFFF);
@@ -3283,8 +3283,8 @@ static int skill_timerskill(int tid, unsigned int tick, int id, intptr_t data)
 					{
 						struct status_change* tsc = status_get_sc(target);
 						struct status_change* sc = status_get_sc(src);
-						if( tsc && tsc->option&OPTION_HIDE ||
-							sc && sc->option&OPTION_HIDE ){
+						if( ( tsc && tsc->option&OPTION_HIDE ) ||
+							( sc && sc->option&OPTION_HIDE ) ){
 							skill_blown(src,target,skill_get_blewcount(skl->skill_id, skl->skill_lv), -1, 0x0 );
 							break;
 						}
@@ -3730,7 +3730,7 @@ int skill_castend_damage_id (struct block_list* src, struct block_list *bl, uint
 			if( dir > 2 && dir < 6 ) y = -i;
 			else if( dir == 7 || dir < 2 ) y = i;
 			else y = 0;
-			if( (mbl == src || !map_flag_gvg(src->m) && !map[src->m].flag.battleground) && // only NJ_ISSEN don't have slide effect in GVG
+			if( (mbl == src || (!map_flag_gvg(src->m) && !map[src->m].flag.battleground) ) && // only NJ_ISSEN don't have slide effect in GVG
 				unit_movepos(src, mbl->x+x, mbl->y+y, 1, 1) ) {
 				clif_slide(src, src->x, src->y);
 				//uncomment this if you want to remove MO_EXTREMITYFIST glitchy walking effect. [malufett]
