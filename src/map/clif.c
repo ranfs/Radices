@@ -4109,6 +4109,8 @@ void clif_getareachar_unit(struct map_session_data* sd,struct block_list *bl)
 				clif_sendbgemblem_single(sd->fd,tsd);
 			if( tsd->sc.data[SC_CAMOUFLAGE] )
 				clif_status_load(bl,SI_CAMOUFLAGE,1);
+			if ( tsd->status.robe )
+				clif_refreshlook(&sd->bl,bl->id,LOOK_ROBE,tsd->status.robe,SELF);
 		}
 		break;
 	case BL_MER: // Devotion Effects

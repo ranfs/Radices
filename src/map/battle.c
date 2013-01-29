@@ -678,7 +678,7 @@ int battle_calc_cardfix(int attack_type, struct block_list *src, struct block_li
 				cardfix = cardfix * ( 100 - tsd->sc.data[SC_DEF_RATE]->val1 ) / 100;
 
 			if( cardfix != 1000 )
-				bccDAMAGE_RATE(cardfix)
+				damage = damage * cardfix / 1000;
 		}
 			break;
 		case BF_MISC:
@@ -5863,6 +5863,7 @@ static const struct _battle_data {
 	{ "homunculus_max_level",               &battle_config.hom_max_level,                   99,     0,      MAX_LEVEL,      },
 	{ "homunculus_S_max_level",             &battle_config.hom_S_max_level,                 150,    0,      MAX_LEVEL,      },
 	{ "mob_size_influence",					&battle_config.mob_size_influence,				0,		0,		1,				},
+	{ "skill_trap_type",                    &battle_config.skill_trap_type,                 0,      0,      1,              },
 };
 
 int battle_set_value(const char* w1, const char* w2)
