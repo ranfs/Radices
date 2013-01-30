@@ -6,6 +6,8 @@
 //= 20130115
 //===== Description: =========================================
 //= List of available atcommands and their functions.
+//= 30/01/2013
+//= - Iniciada tradução por Merakk
 //============================================================
 
 This file describes the usage of in-game commands and assumes that
