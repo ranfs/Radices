@@ -10,162 +10,162 @@
 //= - Iniciada tradução por Merakk
 //============================================================
 
-This file describes the usage of in-game commands and assumes that
-'conf/atcommand_athena.conf' has the following:
+Esse arquivo contém as descrições para comandos ultilizados no jogo.
+'conf/atcommand_athena.conf' segue de acordo:
 	atcommand_symbol : "@"
 	charcommand_symbol: "#"
 
-To search for a command, write "@" before the command name (ex. @commands).
-The format of this file is as follows:
-	1. System Commands
-	2. Database Commands
-	3. Player Information Commands
-	4. Action Commands
-	5. Administrative Commands
-	6. Party Commands
-	7. Guild Commands
-	8. Pet Commands
-	9. Homunculus Commands
+Para localizar um comando, digite "@" em seguida o nome do comando (ex. @commands).
+O formato deste arquivo procede na seguinte ordem:
+	1. Comandos do Sistema
+	2. Comandos da Database
+	3. Comandos sobre informações de Players
+	4. Comands de Ação
+	5. Comandos de Administração
+	6. Comandos de Grupo
+	7. Comandos de Clã
+	8. Comandos de Pet
+	9. Comandos de Homunculos
 
-======================
-| 1. System Commands |
-======================
+==========================
+| 1. Comandos do Sistema |
+==========================
 
 @version
 
-Displays SVN version of the server.
+Mostra a versão do SVN do servidor.
 
 ---------------------------------------
 
 @rates
 
-Displays the server rates.
+Mostra as rates do servidor.
 
-Output Example:
-Experience rates: Base 1.00x / Job 1.00x
-Normal Drop Rates: Common 1.00x / Healing 1.00x / Usable 1.00x Equipment 1.00x / Card 1.00x
-Boss Drop Rates:  Common 1.00x / Healing 1.00x / Usable 1.00x Equipment 1.00x / Card 1.00x
-Other Drop Rates: MvP 1.00x / Card-Based 1.00x / Treasure 1.00x
+Outros exemplos:
+Rate de Experiência: Base 1.00x / Classe 1.00x
+Rates de Drops Normais: Comum 1.00x / Curativos 1.00x / Usaveis 1.00x Equipamentos 1.00x / Cartas 1.00x
+Rates de Drops de MVPS:  Comum 1.00x / Curativos 1.00x / Usaveis 1.00x Equipamentos 1.00x / Cartas 1.00x
+Rates de outros Drops de MVPS: MvP 1.00x / Card-Based 1.00x / Tesouro 1.00x
 
 ---------------------------------------
 
 @time
 
-Displays the local server time, along with day/night information.
+Mostra o horario local do servidor, demonstra informações de dia/noite.
  
 ---------------------------------------
 
 @uptime
 
-Show server uptime since last map server restart.
+Mostra quanto tempo o servidor esta online desde o seu ultimo restart.
 
-Output Example:
-Server Uptime: 3 days, 8 hours, 6 minutes, 4 seconds.
+Outro Exemplo:
+Uptime: 3 dias, 8 horas, 6 minutos, 4 segundos.
 
 ---------------------------------------
 
 @refresh
 @refreshall
 
-Synchronizes the player's position on the client with the one stored on the server.
-Additionally, @refreshall will refresh all online players.
+Sincroniza a posição do player com a do client e servidor.
+Adicional, @refreshall ira dar refresh em todos os players do servidor.
 
 ---------------------------------------
 
 @showexp
 
-Toggles the display of experience gain messages.
+Mostra alertas sobre a exp ganha.
 
 ---------------------------------------
 
 @showzeny
 
-Toggles the display of Zeny gain messages.
-Configuration for zeny being dropped by mobs is in '/conf/battle/monster.conf':
+Mostra alertas sobre o Zeny ganho.
+A configuração para monstros dropar zenys se encontra em '/conf/battle/monster.conf':
 zeny_from_mobs: yes
 
 ---------------------------------------
 
 @showdelay
 
-Shows or hides the red "Cannot use the skills" message.
+Mostra ou esconde menssagens "Você não pode usar a habilidade.".
 
-Output Example:
-[Storm Gust] Cannot use the skills.
+Outro exemplo:
+[Nevasca] Você não pode usar habilidades.
 
 ---------------------------------------
 
 @noask
 
-Toggles automatic rejection of deals and invites.
+Alerta automatico para rejeição de qualquer convite.
 
 ---------------------------------------
 
 @noks
 
-Toggles Kill Steal Protection.
+Proteção contra KS.
 
 ---------------------------------------
 
 @font <0-9>
 
-Sets client font (0 is the default).
+Altera a font do client (0 é padrão).
 
 ---------------------------------------
 
 @agitstart
 @agitend
 
-Starts or ends War of Emperium [FE] by invoking scripts with the
-OnAgitStart/OnAgitEnd labels.
+Começa ou termina a WoE 1.0 seguindo a label script:
+OnAgitStart/OnAgitEnd labels
 
 ---------------------------------------
 
 @agitstart2
 @agitend2
 
-Starts or ends War of Emperium [SE] by invoking scripts with the
-OnAgitStart2/OnAgitEnd2 labels.
+Começa ou termina a WoE 2.0 seguindo a label script:
+OnAgitStart2/OnAgitEnd2 labels
 
 ---------------------------------------
 
 @pvpon
 @pvpoff
 
-Enables or disables PvP (Player vs. Player) mode on a map.
+Liga e desliga o modo PvP no mapa.
 
 ---------------------------------------
 
 @gvgon
 @gvgoff
 
-Enables or disables GvG (Guild vs. Guild) mode on a map.
+Liga e desliga o modo GvG no mapa.
 
 ---------------------------------------
 
 @skillon
 @skilloff
 
-Enables or disables skill usage on a map.
+Habilita ou desabilita o uso de habilidades no mapa.
 
 ---------------------------------------
 
 @allowks
 
-Toggles Kill Steal Protection on a map.
+Libera a pratica KS no mapa.
 
 ---------------------------------------
 
 @day
 @night
 
-Sets the server to day or night mode.
+Altera para moodo DIA ou Noite.
 
 ---------------------------------------
 
 @sound <filename>
 
-Plays the specified sound.
+Toca a música especificada.
 
 ---------------------------------------
 
@@ -177,26 +177,25 @@ Plays the specified sound.
 @sakura
 @leaves
 
-Toggles weather effects on your map.
+Altera estações no ano no mapa.
 
 ---------------------------------------
 
 @clearweather
 
-Stops all weather effects. May require a map change or @refresh
-for the effect to stop client-side.
+Acaba com todos os efeitos de água no mapa. É necessário sair e entrar no mapa novamente ou usar @refresh.
 
 ---------------------------------------
 
 @mapflag <flag> <value 0-1>
 
-Sets a mapflag for the current map (1 = On, 0 = Off).
+Seta mapflags no determinado mapa. (1 = On, 0 = Off).
 
 ---------------------------------------
 
 @addwarp <map> <x> <y> <npc name>
 
-Creates a warp portal on the character's current coordinates that lasts until the next reboot.
+Cria um portal nas coordernadas especificadas até que o map-server seja reiniciado.
 The name parameter is mandatory and if it already exists, the server will automagically assign a name,
 and it will be displayed only once in the chat window.
 
