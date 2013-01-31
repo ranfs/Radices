@@ -1,13 +1,13 @@
-//===== rAthena Script ======================================= 
-//= The Airship System Script
-//===== By: ================================================== 
+//===== Cronus Script ======================================== 
+//= Script do sistema de Aeroplanos
+//===== Por: ================================================= 
 //= rAthena Dev Team
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= The Airship System used in the official servers.
-//===== Additional Comments: ================================= 
-//= Official NPCs.
+//===== Compatível com: ====================================== 
+//= Cronus GIT
+//===== Descrição: =========================================== 
+//= O Sistema de Aeroplanos usado nos servidores oficiais.
+//===== Comentários Adicionais: ============================== 
+//= NPCs Oficiais.
 //============================================================ 
 
 //============================================================ 

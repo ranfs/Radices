@@ -1,13 +1,13 @@
-//===== rAthena Script ======================================= 
-//= Hugel Airport NPCs
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= NPCs do Aeroplano de Hugel
+//===== Por: ================================================= 
 //= rAthena Dev Team
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= Hugel Airport NPCs
-//===== Additional Comments: ================================= 
-//= Official NPCs.
+//===== Compatível com: ====================================== 
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= NPCs do Aeroplano de Hugel
+//===== Comentários Adicionais: ============================== 
+//= NPCs Oficiais.
 //============================================================ 
 
 hugel,178,142,0	script	toairplane#hugel	45,1,1,{

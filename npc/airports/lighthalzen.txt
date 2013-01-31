@@ -1,14 +1,14 @@
-//===== rAthena Script ======================================= 
-//= Lighthalzen Airport Staff
-//===== By: ================================================== 
+//===== Cronus Script ======================================== 
+//= Equipe do Aeroplano de Lighthalzen
+//===== Por: =================================================
 //= L0ne_W0lf, Muad_Dib
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= Lighthalzen Airport Staff
-//===== Additional Comments: ================================= 
-//= Official NPCs.
-//============================================================ 
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= Equipe do Aeroplano de Lighthalzen
+//===== Comentários Adicionais: ==============================
+//= NPCs Oficiais.
+//============================================================
 
 lhz_airport,143,43,5	script	Airport Staff#lhz_air1a::lhz_airport1	90,{
 	mes "[Airport Staff]";

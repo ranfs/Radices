@@ -1,13 +1,13 @@
-//===== rAthena Script ======================================= 
-//= Einbroch Airport Staff
-//===== By: ================================================== 
+//===== Cronus Script ======================================== 
+//= Equipe do Aeroplano de Einbroch
+//===== Por: ================================================= 
 //= L0ne_W0lf, Muad_Dib
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= Einbroch Airport Staff
-//===== Additional Comments: ================================= 
-//= Official NPCs.
+//===== Compatível com: ====================================== 
+//= Cronus GIT
+//===== Descrição: =========================================== 
+//= Equipe do Aeroplanos de Einbroch
+//===== Comentários Adicionais: ============================== 
+//= NPCs Oficiais.
 //============================================================ 
 
 airport,143,43,5	script	Airport Staff#airport1a::airport1	90,{
