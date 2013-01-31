@@ -1,13 +1,13 @@
-//===== rAthena Script ======================================= 
-//= Yuno Airport Staff
-//===== By: ================================================== 
+//===== Cronus Script ======================================== 
+//= Equipe do Aeroplano de Yuno
+//===== Por: =================================================
 //= L0ne_W0lf, Muad_Dib
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= Yuno Airport Staff
-//===== Additional Comments: ================================= 
-//= Official NPCs.
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= Equipe do Aeroplano de Yuno
+//===== Comentários Adicionais: ==============================
+//= NPCs Oficiais.
 //============================================================ 
 
 y_airport,143,43,5	script	Airport Staff#y_air1a::y_airport1	90,{
