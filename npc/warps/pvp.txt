@@ -1,18 +1,18 @@
-//===== rAthena Script =======================================
-//= Prontera Arena & PvP Warp Script
+//===== Cronus Script ========================================
+//= Arena de Prontera e Npc de Warp
 //===== By: ==================================================
-//= Athena (any)
-//===== Current Version: =====================================
+//= eAthena dev team
+//===== Versão atual: ========================================
 //= 1.3
-//===== Compatible With: =====================================
-//= Any Athena Version
-//===== Description: =========================================
-//= Warp Points for Prontera Arena and PvP Maps
-//===== Additional Comments: =================================
-//= Split off npc_warp.txt
-//= 1.1 Fixed Prontera Arena warp [Yor]
-//= 1.2 Added addition warps for PvP Nightmare Mode maps.
-//= 1.3 Fixed duplicate warp names [Timexy]
+//===== Compatível com: ======================================
+//= Cronus Radices
+//===== Descrição: ===========================================
+//= Pontos de Warp para arena de prontera e PvP
+//===== Comentários Adicionais: ==============================
+//= 1.0 Dividido npc_warp.txt
+//= 1.1 Consertado warp da Arena de Prontera [Yor]
+//= 1.2 Adicionado warps para Modo Pesadelo PvP
+//= 1.3 Consertados nomes repetidos de warps [Timexy]
 //============================================================
 
 //Battle Ordeal Mode

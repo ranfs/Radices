@@ -1,29 +1,36 @@
-//===== rAthena Script =======================================
-//= Guild Castles Warp Script
-//===== By: ==================================================
+//===== Cronus Script ========================================
+//= Script de Warp de Castelos de Clã
+//===== Por: =================================================
 //= Athena (1.0)
-//===== Current Version: =====================================
+//===== Versão Atual: ========================================
 //= 2.7
-//===== Compatible With: =====================================
-//= Any Athena Version
-//===== Description: =========================================
-//= Warp Points for Al de Baran, Payon, Prontera, Geffen,
-//= and Juno Guild Castles
-//===== Additional Comments: =================================
-//= Split off npc_warp.txt
-//= fixed aldg504-1 warp [Lupus]
-//= 2.0 Added Novice Guilds warps, optimized aldg408r warp [Lupus]
-//= 2.1 Fixed some warps positions [Yor]
-//= 2.2 Changed all breaks to end as per the new script engine. [Skotlex]
-//= 2.3 Removed 2nd entrance to Novice Castle Geffen [Lupus]
-//= 2.4 Added Warps between Juno and it's new Castle Satelite map. [L0ne_W0lf]
-//= 2.4a Added more warps between Juno Satellite and Castle Interiors. [L0ne_W0lf]
-//=	castle 1, 4 and 5 entrances are questionable, and will be updated
-//=	as I get more information.
-//= 2.4b Corrected Warp points for Juno castles 1, 4 and 5. [L0ne_W0lf]
-//= 2.5 Updated Schwaltzvalt warps and added Arunafeltz. [L0ne_W0lf]
-//= 2.6 Fixed warp position between Juno and Schwaltzvalt Realm. [Gepard]
-//= 2.7 Updated WoE:FE warps. [Masao]
+//===== Compatível com: ======================================
+//= Cronus Radices
+//===== Descrição: ===========================================
+//= Warps dos Castelos de Al De Baran, Payon, Prontera, Geffen
+//= e Juno.
+//===== Comentários Adicionais: ==============================
+//= Dividido de npc_warp.txt
+//= Consertado warp de aldg504-1 [Lupus]
+//= 2.0 Adicionados mapas de aprendizes, melhorado o warp
+//=     de aldg408r [Lupus]
+//= 2.1 Consertadas posições de alguns warps [Yor]
+//= 2.2 Alterados todos os breaks para ends para adaptar-se
+//=     a nova script engine. [Skotlex]
+//= 2.3 Removida segunda entrada para o castelo de aprendizes
+//=     em Geffen. [Lupus]
+//= 2.4 Adicionados Warps entre Juno e o mapa de seu novo
+//=     Castelo Satélite. [L0ne_W0lf]
+//= 2.4a Adicionados mais Warps entre o Satélite de Juno
+//=      e interiores do Castelo. As entradas do Castelo 1,
+//=      4 e 5 são questionáveis, e serão atualizadas assim
+//=      que forem adquiridas informações. [L0ne_W0lf]
+//= 2.4b Corrigitos warps dos Castelos de Juno 1, 4 e 5. [L0ne_W0lf]
+//= 2.5 Atualizados warps de Schwaltzvalt e adicionados
+//=     os de Arunafeltz. [L0ne_W0lf]
+//= 2.6 Consertadas posições de warps entre Juno e o
+//=     Reino de Schwaltzvalt. [Gepard]
+//= 2.7 Atualizados warps da GdE:1E. [Masao]
 //============================================================
 
 
