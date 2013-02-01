@@ -1,24 +1,24 @@
-//===== rAthena Script ======================================= 
-// BattleGround System - Common NPCs
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+// Sistema de Batalha Campalm - Common NPCs
+//===== Por: =================================================
 //= ????, L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.3
-//===== Compatible With: ===================================== 
-//= rAthena 1.0
-//===== Description: ========================================= 
-//= [AEGIS Conversion]
-//= Battleground NPCs:
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs da Batalha Campal:
 //= - Generals and Aides
 //= - Battleground Warper
 //= - Kafra and Repairman.
 //= - GM Management NPC (disabled by default)
 //= - Badge Exchanger (Tierra and Flavius)
-//===== Additional Comments: ================================= 
-//= 1.0 First Version.
-//= 1.1 Updated several NPCs to Official.
-//= 1.2 Updated Repairman NPC
-//= 1.3 Optimized "Erundek" NPC. [Euphy]
+//===== Comentários Adicionais: ==============================
+//= 1.0 Primeira versão.
+//= 1.1 Atualizado vários NPCs de acordo com os Oficiais.
+//= 1.2 Atualizado NPC Reparador.
+//= 1.3 NPC "Erundek" Otimizado. [Euphy]
 //============================================================
 
 // Generals

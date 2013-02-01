@@ -1,21 +1,21 @@
-//===== rAthena Script ======================================= 
-// BattleGround System - KvM Item Dealer
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+// Sistema de Batalha Campal - Negociador de Itens KvM
+//===== Por: =================================================
 //= L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.0
-//===== Compatible With: ===================================== 
-//= rAthena 1.0
-//===== Description: ========================================= 
-//= [AEGIS Conversion]
-//= Kreiger Von Midgard Battleground Point redemption NPC
-//= * NOTE * 
-//= KvM Does NOT use items, but a character variable to
-//= keep track of points. This NPC when talked to will
-//= convert already-given tokens and convert them to points.
-//= under the player variable kvm_point.
-//===== Additional Comments: ================================= 
-//= 1.0 First Version.
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= Trocador de pontos da batalha campal Kreiger von midgard 
+//= * NOTA * 
+//= KvM não usa itens, mas uma variavel de personagem
+//= para manter controle dos pontos. Quando clicado, esse npc
+//= fará a conversão de itens em quantidade de pontos, sobre
+//= a variavel de jogador kvm_point.
+//===== Comentários Adicionais: ==============================
+//= 1.0 Primeira versão.
 //============================================================
 
 bat_room,151,144,3	script	KVM Logistic Officer#a	734,{

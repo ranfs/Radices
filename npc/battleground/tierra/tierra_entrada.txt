@@ -1,5 +1,5 @@
 //===== Cronus Script ========================================
-//= BattleGround System - Tierra Gorge 2
+//= Sistema de Batalha Campal - NPCs de Entrada
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
@@ -7,12 +7,12 @@
 //===== Compatível com: ======================================
 //= Cronus GIT
 //===== Descrição: ===========================================
-//= [AEGIS Conversion]
-//= Tierra Gorge Battleground Entrance NPCs
+//= [Convertido do AEGIS]
+//= Sistema de Batalha Campal - NPCs de Entrada
 //===== Comentários Adicionais: ==============================
-//= 1.0 First Version.
+//= 1.0 Primeira versão.
 //= 1.1 Fixed silly copy paste errors. (bugreport:4401)
-//= 1.2 Pequena Otimização. [meyk]
+//= 1.2 Pequena Otimização. [mith]
 //============================================================
 
 // First Tierra Gorge Officers - Guillaume

@@ -1,5 +1,5 @@
 //===== Cronus Script ========================================
-//= BattleGround System - Flavius Entrance NPCs
+//= Sistema de Batalha Campal - NPCs de entrada de Flavius
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
@@ -7,10 +7,10 @@
 //===== Compatível com: ======================================
 //= Cronus GIT
 //===== Descrição: ===========================================
-//= Flavius Battleground Entrance NPCs
+//= NPCs da entrada da Batalha Campal de Flavius
 //===== Comentários Adicionais: ==============================
-//= 1.0 First Version.
-//= 1.1 Otimizações. [meyk]
+//= 1.0 Primeira versão.
+//= 1.1 Otimizações. [mith]
 //============================================================
 
 // Flavius Officer - Guillaume
