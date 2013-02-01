@@ -1,22 +1,22 @@
-//===== rAthena Script ======================================= 
-// BattleGround System - KvM 80-99
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+// Sistema de Batalha Campal - KvM 80-99
+//===== Por: =================================================
 //= ???, L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.2
-//===== Compatible With: ===================================== 
-//= rAthena 1.0
-//===== Description: ========================================= 
-//= [AEGIS Conversion]
-//= Kreiger Von Midgard Battleground for levels 80 to 99
-//= - Winning Team: 5 points
-//= - Losing Team: 1 point
-//===== Additional Comments: ================================= 
-//= 1.0 First Version.
-//= 1.1 Updated using official Aegis files. [L0ne_W0lf]
-//= 1.2 Upated some announces and dialogs from iRO.
-//=     Changed how the scoreboard works slightly.
-//=     Removed the areapercentheals, and minor things.
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= Battleground de Kreiger Von Midgard para níveis 80 a 99
+//= - Equipe Ganhador: 5 pontos
+//= - Equipe Perdedor: 1 ponto
+//===== Comentários Adicionais: ==============================
+//= 1.0 Primeira versão.
+//= 1.1 Atualizado usando os arquivos oficiais do Aegis. [L0ne_W0lf]
+//= 1.2 Atualizado anuncios e dialogos do iRO.
+//=     Alterada a maneira de como o ranking funciona.
+//=     Removidos os areapercentheal, e outras coisas minimas.
 //============================================================
 
 // Waiting Room NPCs

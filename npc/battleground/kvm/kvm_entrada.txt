@@ -1,20 +1,20 @@
-//===== rAthena Script ======================================= 
-// BattleGround System - KvM Entrance NPCs
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+// Sistema de Batalha Campal - NPCs da entrada de KvM
+//===== Por: =================================================
 //= L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.1
-//===== Compatible With: ===================================== 
-//= rAthena 1.0
-//===== Description: ========================================= 
-//= [AEGIS Conversion]
-//= Kreiger Von Midgard Battleground Entrance NPCs
-//= Original NPCs scrapped from bg_common.
-//===== Additional Comments: ================================= 
-//= 1.0 First Version.
-//= 1.1 Corrected some typos, and shifted messages around.
-//=     Corrected iRO style quest log entries, however it's
-//=     advisable that you not use them, as they conflict.
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs de entrada do Kreiger Von Midgard Battleground
+//= NPC original copiado de bg_common.
+//===== Comentários Adicionais: ==============================
+//= 1.0 Primeira versão.
+//= 1.1 Corrigidos alguns erros de digitação, e mensagens substituidas
+//=     corrigidos estilo iRO de entradas no log de quest
+//=     embora fosse conhecido que estes não fossem usados, por causar o conflito
 //============================================================
 
 // KvM Officer - Guillaume

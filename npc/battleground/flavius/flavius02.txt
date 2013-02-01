@@ -1,5 +1,5 @@
 //===== Cronus Script ========================================
-//= BattleGround System - Flavius Second
+//= Sistema de Batalha Campal - 2° Flavius
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
@@ -7,17 +7,17 @@
 //===== Compatível com: ======================================
 //= Cronus GIT
 //===== Descrição: ===========================================
-//= [AEGIS Conversion]
-//= Flavius Battleground.
-//= - Winning Team: 9 badges
-//= - Losing Team: 3 badge
+//= [Convertido do AEGIS]
+//= Batalha Campal de Flavius.
+//= - Equipe Ganhadora: 9 Insignias
+//= - Equipe Perdedora: 3 Insignias
 //===== Comentários Adicionais: ==============================
-//= 1.0 First Version.
+//= 1.0 Primeira versão.
 //= 1.1 Fixed NPCs being called for waiting rooms. (bugreport:4395)
-//= 1.2 Fixed pink crystal spawning as blue. [L0ne_W0lf]
-//= 1.3 Updated 'waitingroom' to support required zeny/lvl. [Kisuka]
-//= 1.4 Removed MaxLvl check in waitingrooms. Replaced setwall with setcell.
-//= 1.5 Pequena Otimização. [meyk]
+//= 1.2 Consertado cristal rosa nascendo como azul. [L0ne_W0lf]
+//= 1.3 Atualizando 'waitingroom' para aguentar zeny/nivel requeridos. [Kisuka]
+//= 1.4 Removida checagem de MaxLvl em salas de espera. Substituidos setwall com setcell.
+//= 1.5 Pequena Otimização. [mith]
 //============================================================
 
 // Waiting Room NPCs

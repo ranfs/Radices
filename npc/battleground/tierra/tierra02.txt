@@ -1,5 +1,5 @@
 //===== Cronus Script ========================================
-//= BattleGround System - Tierra Gorge 2
+//= Sistema de Batalha Campal - Tierra Gorge 2
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
@@ -7,15 +7,15 @@
 //===== Compatível com: ======================================
 //= Cronus GIT
 //===== Descrição: ===========================================
-//= [AEGIS Conversion]
-//= Second Tierra Gorge Battleground.
-//= - Winning Team: 3 badges
-//= - Losing Team: 1 badge
+//= [Convertido do AEGIS]
+//= Batalha Campal de Tierra Gorge.
+//= - Equipe Ganhadora: 3 Insignias
+//= - Equipe Perdedora: 1 Insignia
 //===== Comentários Adicionais: ==============================
-//= 1.0 First Version.
-//= 1.1 Updated 'waitingroom' to support required zeny/lvl. [Kisuka]
-//= 1.2 Removed MaxLvl check in waitingrooms.
-//= 1.3 Pequena Otimização. [meyk]
+//= 1.0 Primeira versão.
+//= 1.1 Atualizando 'waitingroom' para aguentar zeny/nivel requeridos. [Kisuka]
+//= 1.2 Removida checagem de MaxLvl em salas de espera. Substituidos setwall com setcell.
+//= 1.3 Pequena Otimização. [mith]
 //============================================================
 
 // Waiting Room NPCs
