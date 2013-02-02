@@ -196,64 +196,64 @@ Seta mapflags no determinado mapa. (1 = On, 0 = Off).
 @addwarp <map> <x> <y> <npc name>
 
 Cria um portal nas coordernadas especificadas até que o map-server seja reiniciado.
-The name parameter is mandatory and if it already exists, the server will automagically assign a name,
-and it will be displayed only once in the chat window.
+O parametro do nome é obrigatorio, caso o nome do portal ja exista o servidor irá atribuir automaticamente um outro nome
+e será exebido apenas uma vez na janela de chat.
 
-Example:
-@addwarp prontera 50 50 my_warp_sample
+Exemplo:
+@addwarp prontera 50 50 meu_mapa
 
-Output:
-New warp NPC 'my_warp_sample' created.
+Feito:
+Um NPC Portal foi criado em 'my_warp_sample.
 
 ---------------------------------------
 
 @effect <effect ID>
 
-Creates a visual effect on or around the character.
-A list of IDs can be found in '/db/const.txt'.
-Descriptions of the effects can be found in '/doc/effect_list.txt'.
+Cria um efeito visual no/ao redor do personagem.
+A lista com os ids podesem ser localizadas em '/db/const.txt'.
+Descrições dos efeitos podem ser localizados em '/doc/effect_list.txt'.
 
 ---------------------------------------
 
 @misceffect
 
-Does some visual effect on the character (more info needed).
+Fará um efeito visual no personagem. ( Informações adicionais serão solicitadas )
 
 ---------------------------------------
 
 @displayskill <skill ID> {<skill level>}
 
-Displays the animation of a skill without really using it (debug function).
+Exibe a animação de uma habilidade sem realmente ultiliza-la. (debug function).
 
 ---------------------------------------
 
 @option {<param 1> {<param 2> {<param 3>}}}
 
-Adds visual effects to the attached character.
-If no parameter is specified, a list of available options will be returned.
+Adiciona um efetio visual no personagem especificado.
+Se o parametro do efeito não for especificado, uma lista com as opções disponiveis será exibida.
 
 ---------------------------------------
 
 @displaystatus <status type> <flag> <tick> {<val1> {<val2> {<val3>}}}
 
-Displays a status change without really applying it (debug function).
+Aplica uma mudança de status visual sem realmente efetua-la. (debug function).
 
 ---------------------------------------
 
 @send <Hex Number> {<value>}
 
-Used for testing packet sends from the client (debug function).
-Value: <type=B(default),W,L><number> or S<length>"<string>"
+Usado para testar pacotes enviados do cliente. (debug function).
+Valor: <type=B(default),W,L><number> or S<length>"<string>"
 
 ---------------------------------------
 
 @mapinfo
 
-Displays information about the current map.
+Mostra informações do atual mapa.
 
-Output Example:
+Exemplo::
 ------ Map Info ------
-Map Name: prontera | Players In Map: 1 | NPCs In Map: 127 | Chats In Map: 0
+Nome do Mapa: prontera | Player no Mapa: 1 | Npcs no Mapa: 127 | Chats In Map: 0
 ------ Map Flags ------
 Town Map
 Autotrade Enabled
@@ -269,9 +269,9 @@ Other Flags:
 
 @gat
 
-Gives information about terrain/area (debug function).
+Mostra informações sobre uma determinada area.(debug function).
 
-Output Example: 
+Outro Exemplo: 
 prontera (x= 165, y= 202) 00 00 00 00 00
 prontera (x= 165, y= 201) 01 00 00 00 00
 prontera (x= 165, y= 200) 01 00 00 00 00
@@ -280,13 +280,13 @@ prontera (x= 165, y= 198) 01 00 00 00 00
 
 ---------------------------------------
 
-========================
-| 2. Database Commands |
-========================
+============================
+| 2. Comandos de Database |
+============================
 
 @mobinfo <mob name/ID>
 
-Displays monster information (rates, stats, drops, MVP data).
+Mostra informações sobre um monstro. (rates, stats, drops, MVP data).
 
 Example:
 @monsterinfo Poring
@@ -303,9 +303,9 @@ Drops:
 
 @iteminfo <item name/ID>
 
-Displays item information (type, price, weight, drops).
+Mostra informações sobre um item. (tipo, preço, peso, drops).
 
-Example:
+Exemplo:
 @iteminfo Jellopy
 
 Output:
