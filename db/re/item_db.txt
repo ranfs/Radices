@@ -7301,7 +7301,7 @@
 //
 18620,Heart_Eye_Patch,Tapa-Olho Amoroso,5,5,,200,,2,,0,0xFFFFFFFF,7,2,512,,20,1,779,{},{},{}
 //
-18641,Cartola_de_Amatsu,Cartola de Amatsu,5,,,200,,2,,1,0xFFFFFFFF,0xF,2,256,,,1,771,{ bonus bInt,3; bonus bMatkRate,5; bonus bMaxSP,50;},{},{}
+18641,Cartola_de_Amatsu,Cartola de Amatsu,5,,,200,,2,,1,0xFFFFFFFF,0xF,2,256,,,1,794,{ bonus bInt,3; bonus bMatkRate,5; bonus bMaxSP,50;},{},{}
 //
 18656,Witch's_Pumpkin_Hat,Poderoso Chapéu de Bruxa,5,20,,300,,10,,0,0xFFFFFFFF,7,2,256,,20,1,717,{ bonus bMdef,10; bonus bStr,2; bonus bInt,2; bonus2 bMagicAddRace,RC_Undead,15; bonus2 bMagicAddRace,RC_Demon,15; },{},{}
 //
