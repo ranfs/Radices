@@ -35,7 +35,6 @@ Equipe de Desenvolvimento
 - Axl
 - Cainho
 - I am Cold
-- MaminhA
 - Merakk
 - Meyk
 - Raizen
