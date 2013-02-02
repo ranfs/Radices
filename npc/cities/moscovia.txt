@@ -1,17 +1,17 @@
-//===== rAthena Script ======================================= 
-//= Moscovia Town
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Moscovia
+//===== Por: =================================================
 //= Kisuka
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.2
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= Moscovia Town Script
-//===== Additional Comments: ================================= 
-//= 1.0 First Version. [Kisuka]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= NPCs da cidade de Moscovia
+//===== Comentários Adicionais: ==============================
+//= 1.0 Primeira versão. [Kisuka]
 //= 1.1 Removed villagers (they are part of a quest). [Kisuka]
-//= 1.2 Moved Alberta NPC to pre-re/re paths. [Euphy]
+//= 1.2 Movido NPC de Alberta para as pastas pre-re/re. [Euphy]
 //============================================================
 
 // Moscovia Transportation

@@ -1,22 +1,22 @@
-//===== rAthena Script ======================================= 
-//= Alberta Town
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Alberta
+//===== Por: =================================================
 //= DZeroX
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.6
-//===== Compatible With: ===================================== 
-//= rAthena 1.0
-//===== Description: ========================================= 
-//= Town-specific Alberta NPCs
-//===== Additional Comments: ================================= 
-//= 1.0 Converted from Aegis 10.4 [DZeroX]
-//= 1.1 Optimized, missing next, REMOVED .GATs! again [Lupus]
-//= 1.2 Implemented progression fixes provided by $ephiroth. [L0ne_W0lf]
-//= 1.2b More pregression clean up provided by Barron-Monster. [L0ne_W0lf]
-//= 1.3 Removed npc "Tourist#al" as it's a quest NPC. [L0ne_W0lf]
-//= 1.4 Removed "Fastidious Old Man" duplicate. [L0ne_W0lf]
-//= 1.5 Updated to match AEGIS script. [Kisuka]
-//= 1.6 Added Izlude RE coordinates. [Euphy]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= NPCs da cidade de Alberta
+//===== Comentários Adicionais: ==============================
+//= 1.0 Convertido do Aegis 10.4 [DZeroX]
+//= 1.1 Otimizado, haviam textos ausentes, .gats removidos (de novo). [Lupus]
+//= 1.2 Implementada consertos na progressão, providos por $ephiroth. [L0ne_W0lf]
+//= 1.2b Mais limpezas de progressões, providos por Barron-Monster. [L0ne_W0lf]
+//= 1.3 Removido NPC "Turista#al", como um NPC de quest.
+//= 1.4 Removida duplicata do NPC "Velho homem cansado". [L0ne_W0lf]
+//= 1.5 Atualizado de acordo com o Script do Aegis. [Kisuka]
+//= 1.6 Adicionada coordenadas de Izlude RE. [Euphy]
 //============================================================
 
 alberta,97,51,0	script	Fabian	84,{

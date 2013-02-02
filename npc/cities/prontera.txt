@@ -1,26 +1,26 @@
-//===== rAthena Script ======================================= 
-//= Prontera Town
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Prontera
+//===== Por: =================================================
 //= kobra_k88
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 2.1
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= [Aegis Conversion]
-//= NPCs in Prontera
-//===== Additional Comments: ================================= 
-//= Fully working
-//= +AntiNovice exploit fix [Lupus] 1.2 added baby novice check
-//= Spellchecked [massdriller]
-//= 1.4 Optimized. Novices > 20 BaseJob can go to Culvert, too [Lupus]
-//= 1.5a Added a Jawaii related npc [MasterOfMuppets]
-//= 1.6 Replaced sewer_prt with (MISC_QUEST & 8) [Lupus]
-//= 1.7 Removed Duplicates [Silent]
-//= 1.8 Moved Culvert to quests/quests_prontera.txt
-//= 1.9 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
-//= 2.0 Removed "Hans Solo", as he is a Jawaii NPC. [L0ne_W0lf]
-//= 2.1 Disabled the Library Curator (bugreport:4105) [L0ne_W0lf]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs da cidade de Prontera
+//===== Comentários Adicionais: ==============================
+//= Funcionando completamente.
+//= Conserto no exploit Anti-Aprendiz [Lupus] 1.2 Adicionada checagem de aprendiz bebe.
+//= Gramática revisada. [massdriller]
+//= 1.4 Otimizado. Aprendiz > 20 nivel base podem ir para o esgoto também. [Lupus]
+//= 1.5a Adicionado um NPC relacionado a Jawaii. [MasterOfMuppets]
+//= 1.6 Substituida variavel sewer_prt por MISC_QUEST & 8. [Lupus]
+//= 1.7 Removidas duplicatas. [Silent]
+//= 1.8 Removido quest dos esgotos para quests/quests_prontera.txt
+//= 1.9 Re-scriptado para os padrões do Aegis 10.3 [L0ne_W0lf]
+//= 2.0 Removido "Hans Solo", como um NPC de jawaii. [L0ne_W0lf]
+//= 2.1 Desativado Curador da Biblioteca (bugreport:4105) [L0ne_W0lf]
 //============================================================
 
 // Prontera

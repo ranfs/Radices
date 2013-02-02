@@ -1,5 +1,5 @@
 //===== Cronus Script ========================================
-//= Manuk Town
+//= Cidade de Manuk
 //===== Por: =================================================
 //= L0ne_W0lf
 //===== Versão Atual: ========================================
@@ -7,14 +7,13 @@
 //===== Compatível com: ======================================
 //= Cronus GIT
 //===== Descrição: ===========================================
-//= [Aegis Conversion]
-//= Town-specific NPCs for Manuk.
+//= [Convertido do AEGIS]
+//= NPCs da cidade de Manuk.
 //===== Comentários Adicionais: ==============================
-//= 1.0 First Version.
-//= 1.1 Added more town NPCs
-//= 1.2 Added more town NPCs
-//= 1.3 Enabled an NPC
-//= 1.4 Pequena Otimização. [meyk]
+//= 1.0 Primeira versão.
+//= 1.1 Adicionado mais NPCs da cidade.
+//= 1.2 Habilitado um NPC
+//= 1.3 Pequena Otimização. [mith]
 //============================================================
 
 // cat_enhance

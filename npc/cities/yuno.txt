@@ -1,25 +1,25 @@
-//===== rAthena Script ======================================= 
-//= Juno City
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Juno
+//===== Por: =================================================
 //= KitsuneStarwind, kobra_k88, L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.4a
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
 //= [Aegis Conversion]
 //= NPCs for the City of Juno
-//===== Additional Comments: ================================= 
-//= Added additional npcs.  Added Metto quest. [kobra_k88]
-//= Moved item quest to quest folder. Re-edited a majority of the npcs. [kobra_k88]
-//=a Removed duplicate npcs already found in the sage quest.
-//= Fixed & Spellchecked [massdriller]
-//= 1.3 Started updating Juno NPCs based on iRO. 10% complete.
-//= 1.3.2 Started updating Juno NPCs based on iRO. 30% complete.
-//= 1.3.3 Removed Noyee	NPC (it's implemented in sleipnir_seal.txt)
-//= 1.4 Updated to Aegis 10.3 standards. [L0ne_W0lf]
-//=	Added Juno Airship Representative.
-//= 1.4a Corrected a Typo error (bugreport:716) [Samuray22]
+//===== Comentários Adicionais: ==============================
+//= Adicionados npcs adicionadis. Adicionada quest de Metto. [kobra_k88]
+//= Quest movida para a pasta de quests. Re-editada grande parte dos NPCs. [kobra_k88]
+//= Removidas duplicatas.
+//= Consertos e Revisões gramaticais. [massdriller]
+//= 1.3 Começando a atualizar os npcs de Juno baseando-se no iRO. 10% Completo.
+//= 1.3.2 Começando a atualizar os npcs de Juno baseando-se no iRO. 30% Completo.
+//= 1.3.3 Removido Noyee (implementado em sleipnir­_seal.txt)
+//= 1.4 Atualizado para os padrões do aegis 10.3 [L0ne_W0lf]
+//=	    Adicionado aeroplano de Juno.
+//= 1.4a Corrigido um erro de digitaçao. (bugreport:716) [Samuray22]
 //============================================================ 
 
 // Juno

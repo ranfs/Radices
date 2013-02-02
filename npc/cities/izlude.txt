@@ -1,34 +1,34 @@
-//===== rAthena Script ======================================= 
-//= Izlude Town
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Izlude
+//===== Por: =================================================
 //= kobra_k88
 //= L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.8a
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= [Aegis Conversion]
-//= Izlude town NPCs
-//===== Additional Comments: ================================= 
-//= Fully working
-//= 1.1 fixed 2 zeny bugs/checks [Lupus]
-//= 1.2 Fixed a lot of typos [Nexon]
-//= 1.3 Removed callfunc Is_####_Class in favor of baseClass [Silentdragon]
-//= 1.4 Added a Jawaii related npc. 1.4a Fixed a small bug to
-//=	the Jawaii warper, thanks to reddozen and Silent [MasterOfMuppets]
-//= 1.5 Replaced iz_move_alberta with MISC_QUEST & 16 [Lupus]
-//= 1.6 Removed Duplicates [Silent]
-//= 1.7 Split quest to quests/quests_izlude.txt [Evera]
-//= 1.71 Optimized. Also thanks to CAHTEXHuK [Lupus]
-//= 1.72 Small bugfix [Paradox924X]
-//= 1.8 Rescripted to Aegis 10.3 standard. [L0ne_W0lf]
-//=	Removed Honeymoon Helper, as she is a Jawaii NPC.
-//=	Moved Signs to the msg_boards file.
-//= 1.8a Made Red/Cebalis as a single NPC + duplicate [Lupus]
-//= 1.9 Fixed a small problem with Dega. (Ne default case) [L0ne_W0lf]
-//=	Re-added NPC dialog for Cebalis. The dialog differs
-//=	(even if slightly,) after the five or so lines.
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs da cidade de Izlude
+//===== Comentários Adicionais: ==============================
+//= Funcionando completamente.
+//= 1.1 Consertados 2 bugs/checagens de zeny. [Lupus]
+//= 1.2 Consertados vários erros. [Nexon]
+//= 1.3 Removida callfunc is_####_Class devido a implementaçao de baseClass. [Silentdragon]
+//= 1.4 Adicionado NPC relacionado a Jawaii 1.4a consertado pequeno bug para
+//=     o teleportador de jawaii, agradecimentos ao reddozen e ao Silent [MasterOfMuppets]
+//= 1.5 Substituido iz_move_alberta com MISC_QUEST & 16. [Lupus]
+//= 1.6 Removidas duplicatas. [Silent]
+//= 1.7 Divididas quests para quests/quests_izlude.txt. [Evera]
+//= 1.71 Otimizado. Agradecimentos a CAHTEXHuK. [Lupus]
+//= 1.72 Pequeno conserto. [Paradox924X]
+//= 1.8 Re-scriptado para os padrões do Aegis 10.3. [L0ne_W0lf]
+//=	    Removido Ajudante de Lua de Mel, como uma npc de Jawaii.
+//=	    Movidas placas para o arquivo msg_boards.txt
+//= 1.8a Red/Cebalis são um unico NPC+duplicata. [Lupus]
+//= 1.9 Consertado pequeno problema com Dega. (nenhum caso 'default' no switch) [L0ne_W0lf]
+//=	    Re-adicionados dialogos do npc Cebalist. O dialogo difere
+//=	    (embora pouco), depois das cinco ou mais linhas.
 //============================================================
 
 // Izlude
