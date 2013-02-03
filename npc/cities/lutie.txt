@@ -1,22 +1,21 @@
-//===== rAthena Script ======================================= 
+//===== Cronus Script ========================================
 //= Lutie Town
-//===== By: ================================================== 
+//===== Por: =================================================
 //= rAthena dev team
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.7
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= Lutie - City NPCs
-//===== Additional Comments: ================================= 
-//= 1.1 Edited some text and updated/enabled some triggers
-//= for the quest.[kobra_k88]
-//= 1.2 Fixed exploit. Checked for Bard Job Quest compatibility [Lupus]
-//= 1.3 Fixed typos [Nexon] 
-//= 1.4 Fixed exploit [Lupus]
-//= 1.5 Fixed a bug that could reset Lutie quest state [Lupus]
-//= 1.6 Heavy optimization to all the NPCs [DZeroX]
-//= 1.7 Updated to match AEGIS script. [Kisuka]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= NPCs da cidade de Lutie
+//===== Comentários Adicionais: ==============================
+//= 1.1 Editado algun texto e atualizados alguns gatilhos para a quest. [kobra_k88]
+//= 1.2 Consertado exploit. Checado para compatibilizar a quest de Bardo. [Lupus]
+//= 1.3 Consertados erros. [Nexon] 
+//= 1.4 Consertado exploit. [Lupus]
+//= 1.5 Consertado um erro que poderia resetar a quest de Lutie. [Lupus]
+//= 1.6 Grande otimização em todos os NPCs. [DZeroX]
+//= 1.7 Atualizado para o padrão Aegis. [Kisuka]
 //============================================================
 
 // Teleport to Lutie

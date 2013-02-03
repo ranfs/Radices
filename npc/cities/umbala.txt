@@ -1,27 +1,27 @@
-//===== rAthena Script =======================================
-//= Umbala Town script
-//===== By: ==================================================
+//===== Cronus Script ========================================
+//= Cidade de Umbala
+//===== Por: =================================================
 //= jAthena (1.0) Fusion Dev Team (1.1) Muad Dib (1.2) Darkchild (1.3)
-//===== Current Version: =====================================
+//===== Versão Atual: ========================================
 //= 2.1
-//===== Compatible With: =====================================
-//= rAthena SVN; RO Episode XX
-//===== Description: =========================================
-//- [Aegis Conversion]
-//= Umbala Town Npcs
-//===== Additional Comments: =================================
-//= 1.0 - Done By jAthena (dunno Who)
-//= 1.1 - Translated by Fusion Dev Team
-//= 1.2 - Fixed Something by Muad Dib
-//= 1.3 - Fixed up For eA by Darkchild
-//= 1.4 - Fixed some wrong item names [Lupus]
-//= 1.5 - Spell Checked [massdriller]
-//= 1.6 - Fixed item names, added a chance to get to Niflheim via Jumping Bungy Area [Lupus]
-//= 1.7 - Fixed bugs and exploits [Lupus]
-//= 1.8 - Warps you to Niff with 1HP [Lance]
-//= 1.9 - Moved Umbala Event, Create Essence/Dismantle Stone, and Skeletal Gate to npc/quests/quests_umbala.txt [Evera]
-//= 2.0 - Removed duplicates, max NPC name length is 23, so Utan Tribe Young Adult#1, the 1 is skipped [Toms]
-//= 2.1 - Updated to Aegis 10.3 standards. [L0ne_W0lf]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs da cidade de Umbala
+//===== Comentários Adicionais: ==============================
+//= 1.0 - Feito por jAthena (autor desconhecido)
+//= 1.1 - Traduzido pela Equipe de Desenvolvimento Fusion.
+//= 1.2 - Consertos por Muab_dib.
+//= 1.3 - Consertado por Darkchild (eA).
+//= 1.4 - Consertados nomes incorretos. [Lupus]
+//= 1.5 - Gramática Revisada. [massdriller]
+//= 1.6 - Consertados nomes de itens, adicionada chance de chegar a Niflheim via area de Bungy Jump. [Lupus]
+//= 1.7 - Consertados bugs e exploits. [Lupus]
+//= 1.8 - Warp para niflheim quando tem 1 de HP [Lance]
+//= 1.9 - Movido evento de umbala, Criador de Essencia/Desmantelador de Rochas, e Portal Esquelético para npc/quests/quests_umbala.txt [Evera]
+//= 2.0 - Removidas duplicatas, nome máximo de NPC é 23, então Utan Tribe Young Adult#1, o 1 foi removido [Toms]
+//= 2.1 - Atualizando para os padrões do Aegis 10.3. [L0ne_W0lf]
 //============================================================
 
 comodo,170,137,7	script	La Ed#um	84,{

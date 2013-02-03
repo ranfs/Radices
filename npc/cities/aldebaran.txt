@@ -1,34 +1,36 @@
-//===== rAthena Script ======================================= 
-//= Al De Baran Town
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Al De Baran
+//===== Por: =================================================
 //= rAthena dev team; L0ne_W0lf
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 2.3
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= [Aegis Conversion]
-//= Al De Baran Town NPCs
-//===== Additional Comments: ================================= 
-//= v1.1 Added RS125 NPC.  Added another Kafra Reserve points agent.
-//= The 2nd reserve points agent is not complete yet.
-//= 1.2 Lottery input number fix [Lupus], 1.2a - label typo fixed
-//= 1.3 Gatekeeper's bug fixed (wrong check and wrong item ID 
-//=     for underground), fixed some typos [Lupus]
-//= 1.4 Fixed Typos & Spellcheck [massdriller]
-//= 1.5 Finally added the Special Reserve 2 Lotto 8))
-//=  with official prizes (80% official, 4-5 entries are made up)
-//=  also changed typo Orange Potions -> Red Potions [Lupus]
-//= 1.6 Fixed bug (missing label), optimized all menus [Lupus]
-//= 1.7 Fixed exploits [Lupus] 1.8 Removed Duplicates [Silent]
-//= 1.9 Fixed a bunch of typos with information from Crono/Hollengrhen [Evera]
-//= 1.9a Now Pavianne doesn't sell Kafra Passes. She refunds them [Lupus]
-//= 2.0	Re-made all the dialog-only NPCs with official dialogs.
-//=		Kafra and Clock Tower NPCs pending remake. [DZeroX]
-//= 2.01 removed all .GATs [Lupus]
-//= 2.1 Rescripted most NPCs to Aegis 10.3 standards. [L0ne_W0lf]
-//= 2.2 Corrected NPC names to fall within proper resctrictions. [L0ne_W0lf]
-//= 2.3 Fixed exploit with kafra pass
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs da dicade de Al De Baran
+//===== Comentários Adicionais: ==============================
+//= v1.1 Adicionado npc RS123. Adicionada outra agente de Reservas Kafra.
+//=      A segunda agente de reserva de pontos ainda não é compatível
+//= 1.2 Consertado numero de dígito da loteria. [Lupus]
+//= 1.2a Erro de digitação em label consertada
+//= 1.3 Defeito no guardião do portão consertado
+//=     (checagem e ID de item incorretos), consertados alguns erros de digitação [Lupus]
+//= 1.4 Consertados erros de digitação e gramática. [massdriller]
+//= 1.5 Finalmente adicionada a Loteria de Reserva Especial 2
+//=     com premios aficiais (80% oficial, 4-5 entradas foram feitas)
+//=     também consertado erro de digitação Pontos Laranjas -> Poções vermelhas [Lupus]
+//= 1.6 Consertada label ausente [Lupus]
+//= 1.7 Fixed exploits [Lupus]
+//= 1.8 Duplicatas removidas [Silent]
+//= 1.9 Consertada uma grande quantidade de erros de digitação com informação de Crono/Holengrhen. [Evera]
+//= 1.9a Agora Pavianne não vende passes Kafra. Ela os ressarce. [Lupus]
+//= 2.0	Refeitos todos os npcs que possuem apenas diálogos com diálogos oficiais.
+//=		Kafra e NPC da Torre do Relógio ainda não foram refeitos, no entanto. [DZeroX]
+//= 2.01 Removidos todos os .GATs. [Lupus]
+//= 2.1 Re-scriptados maior parte dos NPCs com base nos padrões do Aegis 10.3 [L0ne_W0lf]
+//= 2.2 Corrigidos nomes de NPCs para não conflitar com as restrições. [L0ne_W0lf]
+//= 2.3 Consertado exploit com Passe Kafra.
 //============================================================
 
 // Al De Baran

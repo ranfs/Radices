@@ -1,18 +1,18 @@
-//===== rAthena Script ======================================= 
-//= Ayotaya Town
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Ayotaya
+//===== Por: =================================================
 //= MasterOfMuppets
-//===== Current Version: =====================================
+//===== Versão Atual: ========================================
 //= 1.8
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= [Aegis Conversion]
-//= Ayotaya Town Script
-//===== Additional Comments: ================================= 
-//= 1.6 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
-//= 1.7 Fixed character's anme bugs [Lupus]
-//= 1.8 Moved Alberta NPC to pre-re/re paths. [Euphy]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= Cidade de Ayotaya
+//===== Comentários Adicionais: ==============================
+//= 1.6 Re-scriptado de acordo com os padrões do Aegis 10.3. [L0ne_W0lf]
+//= 1.7 Consertados bugs na personagem Anme [Lupus]
+//= 1.8 Movido Npc de Alberta para diretórios pre-re/re. [Euphy]
 //============================================================ 
 
 // Ayothaya Transportation NPC

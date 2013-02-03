@@ -1,27 +1,27 @@
-//===== rAthena Script ======================================= 
-//= Geffen Town
-//===== By: ================================================== 
-//= Everybody mentioned in the comments
-//===== Current Version: ===================================== 
+//===== Cronus Script ========================================
+//= Cidade de Geffen
+//===== Por: =================================================
+//= Todo mundo mencionado nos comentários
+//===== Versão Atual: ========================================
 //= 1.9
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= [Aegis Conversion]
-//= Geffen Town NPCs
-//===== Additional Comments: ================================= 
-//= Fully working
-//= 1.1 - Spell Checked [massdriller]
-//= 1.2 Fixed more typos [Nexon]
-//= 1.3 added a Level 4 weapon quest related NPC [MasterOfMuppets]
-//= 1.4 Removed Duplicates [Silent]
-//= 1.5 Fixed some typos and coordinates [Musashiden]
-//= 1.5a Fixed a small typo [Evera]
-//= 1.6 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
-//= 1.6a Small bug fix. (end -> next) care of Lesbian. [L0ne_W0lf]
-//= 1.7 Fixed bad NPC header data to comply with rev. 11603. [L0ne_W0lf]
-//= 1.8 Fixed character's name and swapped gender dialogues [Lupus]
-//= 1.9 Replaced effect numerics with constants. [Samuray22]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs da cidade de Geffen
+//===== Comentários Adicionais: ==============================
+//= Funcionando completamente.
+//= 1.1 - Gramática revisada. [massdriller]
+//= 1.2 Consertados erros de digitação. [Nexon]
+//= 1.3 Adicionada uma quest de arma nivel 4 relacionada ao NPC. [MasterOfMuppets]
+//= 1.4 Removidas duplicatas. [Silent]
+//= 1.5 Consertados alguns erros de digitação e coordenada. [Musashiden]
+//= 1.5a Consertado pequeno erro de digitação. [Evera]
+//= 1.6 Re-scriptado de acordo com os padrões do Aegis 10.3 [L0ne_W0lf]
+//= 1.6a Pegueno bug consertado (end -> next) reportado por Lesbian. [L0ne_W0lf]
+//= 1.7 Consertado cabeçalho ruim de um npc para funcionar com a rev. 11603. [L0ne_W0lf]
+//= 1.8 Consertado nome de personagem e adicionados diálogos de gênero. [Lupus]
+//= 1.9 Substituidos efeitos numericos por suas constantes. [Samuray22]
 //============================================================
 
 geffen,59,143,0	script	Meera	91,{

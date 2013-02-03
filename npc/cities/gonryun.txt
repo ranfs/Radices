@@ -1,18 +1,18 @@
-//===== rAthena Script ======================================= 
-//= Kunlun Town
-//===== By: ================================================== 
+//===== Cronus Script ========================================
+//= Cidade de Kunlun
+//===== Por: =================================================
 //= x[tsk], KarLaeda
-//===== Current Version: ===================================== 
+//===== Versão Atual: ========================================
 //= 1.6
-//===== Compatible With: ===================================== 
-//= rAthena SVN
-//===== Description: ========================================= 
-//= [Aegis Conversion]
-//= Kunlun Town Script
-//===== Additional Comments: ================================= 
-//= 1.5 Rescripted to Aegis 10.3 standards. [L0ne_W0lf]
-//=	Moved Lost Knife mini-quest to quest file.
-//= 1.6 Moved Alberta NPC to pre-re/re paths. [Euphy]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido do AEGIS]
+//= NPCs da cidade de Kunlun
+//===== Comentários Adicionais: ==============================
+//= 1.5 Re-scriptado para os padrões do Aegis 10.3 [L0ne_W0lf]
+//=     Movida miniquest Adaga Perdida para arquivo de quest.
+//= 1.6 Movido npc de alberta para diretórios pre-re/re. [Euphy]
 //============================================================
 
 // Kunlun Transportation

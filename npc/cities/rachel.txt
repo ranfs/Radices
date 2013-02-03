@@ -1,22 +1,22 @@
-//===== rAthena Script =======================================
-//= Rachel City NPCs
-//===== By: ==================================================
-//= First Version: Tsuyuki and Harp
+//===== Cronus Script ========================================
+//= Cidade de Rachel
+//===== Por: =================================================
+//= Primeira versão: Tsuyuki and Harp
 //= iRO Version: L0ne_W0lf
-//===== Current Version: =====================================
+//===== Versão Atual: ========================================
 //= 0.9
-//===== Compatible With: =====================================
-//= rAthena SVN
-//===== Description: =========================================
-//= [Partial Aegis Conversion]
-//= Arunafeltz NPCs
-//===== Additional Comments: =================================
-//= 0.5 Text translated from Korean > English, incomplete, 
-//= possibly missing some NPCs and missing all quests.
-//= 0.6 Removed Inn Keeper (it's in inn.txt), name duplicates [Lupus]
-//= 0.7 Total update of most if not all NPCs. [L0ne_W0lf]
-//= 0.8 Updated "Frozen Boy" dialog. (euRO) [L0ne_W0lf]
-//= 0.9 Replaced effect numerics with constants. [L0ne_W0lf]
+//===== Compatível com: ======================================
+//= Cronus GIT
+//===== Descrição: ===========================================
+//= [Convertido parcialmente do AEGIS]
+//= NPCs da cidade de Rachel
+//===== Comentários Adicionais: ==============================
+//= 0.5 Texto traduzido de Coreano para inglês, incompleto
+//= possivelmente alguns NPCs estão ausentes.
+//= 0.6 Removido Mantedor da Estalagem (inn.txt), nomes duplicados. [Lupus]
+//= 0.7 Otimizações em grande parte dos npcs, se não todos. [L0ne_W0lf]
+//= 0.8 Atualizado diálogo do Garoto Congelado. [L0ne_W0lf]
+//= 0.9 Substituidos efeitos numericos por suas constantes. [L0ne_W0lf]
 //============================================================
 
 //===== Set 1 ================================================
