@@ -1,2 +1,0 @@
-izlude,171,133,3	duplicate(bdt)	Bullet Dealer Tony#iz	86
-izlude,171,127,3	duplicate(mdk)	Magazine Dealer Kenny	83
