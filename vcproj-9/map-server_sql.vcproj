@@ -646,6 +646,10 @@
 				RelativePath="..\src\map\vending.h"
 				>
 			</File>
+			<File
+				RelativePath="..\src\config\cronus_config.h"
+				>
+			</File>
 		</Filter>
 	</Files>
 	<Globals>

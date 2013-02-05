@@ -183,6 +183,7 @@
     <ClInclude Include="..\src\map\trade.h" />
     <ClInclude Include="..\src\map\unit.h" />
     <ClInclude Include="..\src\map\vending.h" />
+	<ClCompile Include="..\src\config\cronus_config.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\3rdparty\mt19937ar\mt19937ar.c" />

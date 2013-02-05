@@ -44,6 +44,7 @@ else
 	SQL_DEPENDS=needs_mysql
 endif
 TXT_DEPENDS=map-server
+SQL_DEPENDS=map-server_sql
 
 HAVE_PCRE=@HAVE_PCRE@
 ifeq ($(HAVE_PCRE),yes)
