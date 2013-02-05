@@ -2,15 +2,15 @@
 
 HAVE_MYSQL=@HAVE_MYSQL@
 ifeq ($(HAVE_MYSQL),yes)
-	ALL_DEPENDS=mt19937ar common common_sql login login_sql char char_sql map map_sql tools import save
-	SQL_DEPENDS=mt19937ar common_sql login_sql char_sql map_sql import save
+	ALL_DEPENDS=mt19937ar common common_sql login login_sql char char_sql map map_sql tools import
+	SQL_DEPENDS=mt19937ar common_sql login_sql char_sql map_sql import
 	COMMON_SQL_DEPENDS=mt19937ar
 	LOGIN_SQL_DEPENDS=mt19937ar common_sql
 	CHAR_SQL_DEPENDS=mt19937ar common_sql
 	MAP_SQL_DEPENDS=mt19937ar common_sql
 	CONVERTERS_DEPENDS=common_sql
 else
-	ALL_DEPENDS=mt19937ar common login char map tools import save
+	ALL_DEPENDS=mt19937ar common login char map tools import
 	SQL_DEPENDS=needs_mysql
 	COMMON_SQL_DEPENDS=needs_mysql
 	LOGIN_SQL_DEPENDS=needs_mysql
@@ -69,7 +69,7 @@ char: $(CHAR_TXT_DEPENDS)
 	@$(MAKE) -C src/char
 
 char_sql: $(CHAR_SQL_DEPENDS)
-	@$(MAKE) -C src/char_sql
+	@$(MAKE) -C src/char
 
 map: $(MAP_TXT_DEPENDS)
 	@$(MAKE) -C src/map txt
@@ -92,21 +92,11 @@ import:
 	@for f in $$(ls conf/import-tmpl) ; do if test ! -e conf/import/$$f ; then cp conf/import-tmpl/$$f conf/import ; fi ; done
 	@rm -rf conf/import/.svn
 
-save:
-# 1) create save folder
-# 2) add missing files
-# 3) remove remaining .svn folder
-	@echo "building save folder..."
-	@if test ! -d save ; then mkdir save ; fi
-	@for f in $$(ls save-tmpl) ; do if test ! -e save/$$f ; then cp save-tmpl/$$f save ; fi ; done
-	@rm -rf save/.svn
-
 clean:
 	@$(MAKE) -C src/common $@
 	@$(MAKE) -C 3rdparty/mt19937ar $@
 	@$(MAKE) -C src/login $@
 	@$(MAKE) -C src/char $@
-	@$(MAKE) -C src/char_sql $@
 	@$(MAKE) -C src/map $@
 	@$(MAKE) -C src/plugins $@
 	@$(MAKE) -C src/tool $@
