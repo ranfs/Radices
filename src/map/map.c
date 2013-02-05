@@ -76,7 +76,7 @@ char log_db_ip[32] = "127.0.0.1";
 int log_db_port = 3306;
 char log_db_id[32] = "ragnarok";
 char log_db_pw[32] = "ragnarok";
-char log_db_db[32] = "log";
+char log_db_db[32] = "ragnarok";
 Sql* logmysql_handle;
 
 #endif /* not TXT_ONLY */
@@ -3230,6 +3230,58 @@ int map_config_read(char *cfgName)
 	return 0;
 }
 
+void map_reloadnpc_sub(char *cfgName)
+{
+	char line[1024], w1[1024], w2[1024];
+	FILE *fp;
+
+	fp = fopen(cfgName,"r");
+	if( fp == NULL )
+	{
+		ShowError("Arquivo de configuração de mapa não existe: %s\n", cfgName);
+		return;
+	}
+
+	while( fgets(line, sizeof(line), fp) )
+	{
+		char* ptr;
+
+		if( line[0] == '/' && line[1] == '/' )
+			continue;
+		if( (ptr = strstr(line, "//")) != NULL )
+			*ptr = '\n'; //Strip comments
+		if( sscanf(line, "%[^:]: %[^\t\r\n]", w1, w2) < 2 )
+			continue;
+
+		//Strip trailing spaces
+		ptr = w2 + strlen(w2);
+		while (--ptr >= w2 && *ptr == ' ');
+		ptr++;
+		*ptr = '\0';
+
+		if (strcmpi(w1, "npc") == 0)
+			npc_addsrcfile(w2);
+		else if (strcmpi(w1, "import") == 0)
+			map_reloadnpc_sub(w2);
+		else
+			ShowWarning("Configuração desconhecida '%s' no arquivo %s\n", w1, cfgName);
+	}
+
+	fclose(fp);
+}
+
+void map_reloadnpc(bool clear)
+{
+	if (clear)
+		npc_addsrcfile("clear"); // isto irá limpar a atual lista de scripts
+
+#ifdef RENEWAL
+	map_reloadnpc_sub("npc/re/scripts_principais.conf");
+#else
+	map_reloadnpc_sub("npc/pre-re/scripts_principais.conf");
+#endif
+}
+
 int inter_config_read(char *cfgName)
 {
 	char line[1024],w1[1024],w2[1024];
@@ -3651,7 +3703,11 @@ int do_init(int argc, char *argv[])
 	}
 
 	map_config_read(MAP_CONF_NAME);
-	chrif_checkdefaultlogin();
+	
+	//Não reiniciar o arquivo de configuração de NPC quando isto ocorrer.
+    map_reloadnpc(false);
+	
+    chrif_checkdefaultlogin();
 
 	if (!map_ip_set || !char_ip_set) {
 		char ip_str[16];

@@ -33,7 +33,7 @@ MAP_H = map.h chrif.h clif.h pc.h status.h npc.h \
 	storage.h skill.h atcommand.h battle.h battleground.h \
 	intif.h trade.h party.h vending.h guild.h pet.h \
 	log.h mail.h date.h unit.h homunculus.h mercenary.h quest.h instance.h mapreg.h \
-	buyingstore.h searchstore.h duel.h ..\config\renewal.h
+	buyingstore.h searchstore.h duel.h ../config/cronus_config.h
 
 HAVE_MYSQL=@HAVE_MYSQL@
 ifeq ($(HAVE_MYSQL),yes)
@@ -59,8 +59,6 @@ endif
 
 all: $(ALL_DEPENDS)
 
-txt: $(TXT_DEPENDS)
-
 sql: $(SQL_DEPENDS)
 
 clean:
@@ -68,12 +66,11 @@ clean:
 
 help:
 ifeq ($(HAVE_MYSQL),yes)
-	@echo "possible targets are 'sql' 'txt' 'all' 'clean' 'help'"
+	@echo "possible targets are 'sql' 'all' 'clean' 'help'"
 	@echo "'sql'   - map server (SQL version)"
 else
 	@echo "possible targets are 'txt' 'all' 'clean' 'help'"
 endif
-	@echo "'txt'   - map server (TXT version)"
 	@echo "'all'   - builds all above targets"
 	@echo "'clean' - cleans builds and objects"
 	@echo "'help'  - outputs this message"
@@ -84,17 +81,10 @@ needs_mysql:
 	@echo "MySQL not found or disabled by the configure script"
 	@exit 1
 
-# object directories
-obj_txt:
-	-mkdir obj_txt
-
 obj_sql:
 	-mkdir obj_sql
 
 # executables
-map-server: obj_txt $(MAP_TXT_OBJ) $(COMMON_OBJ)
-	@CC@ @LDFLAGS@ -o ../../map-server@EXEEXT@ $(MAP_TXT_OBJ) $(COMMON_OBJ) $(MT19937AR_OBJ) @LIBS@ @PCRE_LIBS@
-
 map-server_sql: obj_sql $(MAP_SQL_OBJ) $(COMMON_OBJ) $(COMMON_SQL_OBJ)
 	@CC@ @LDFLAGS@ -o ../../map-server_sql@EXEEXT@ $(MAP_SQL_OBJ) $(COMMON_OBJ) $(COMMON_SQL_OBJ) $(MT19937AR_OBJ) @LIBS@ @PCRE_LIBS@ @MYSQL_LIBS@
 
@@ -106,9 +96,6 @@ obj_sql/%.o: %.c $(MAP_H) $(COMMON_H) $(COMMON_SQL_H) $(MT19937AR_H)
 	@CC@ @CFLAGS@ $(MT19937AR_INCLUDE) $(PCRE_CFLAGS) @MYSQL_CFLAGS@ @CPPFLAGS@ -c $(OUTPUT_OPTION) $<
 
 # missing object files
-../common/obj_all/%.o:
-	@$(MAKE) -C ../common txt
-
 ../common/obj_sql/%.o:
 	@$(MAKE) -C ../common sql
 

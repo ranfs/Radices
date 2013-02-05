@@ -4294,6 +4294,7 @@ ACMD_FUNC(reloadscript)
 	//atcommand_broadcast( fd, sd, "@broadcast", "Reloading NPCs..." );
 
 	flush_fifos();
+	map_reloadnpc(true); //zera e reinicia a leitura do arquivo de configuração de NPCs
 	script_reload();
 	npc_reload();
 
