@@ -33,11 +33,11 @@ Equipe de Desenvolvimento
 
 ### Desenvolvedores
 - Axl
-- Cainho
 - I am Cold
 - Merakk
 - Meyk
 - Raizen
+- Ryuzaki Aiko
 - Sayros
 - Tywin Lannister
 - Yum
