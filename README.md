@@ -36,8 +36,7 @@ Equipe de Desenvolvimento
 - I am Cold
 - Merakk
 - Meyk
+- Otonii
 - Raizen
 - Ryuzaki Aiko
-- Sayros
-- Tywin Lannister
 - Yum
