@@ -15016,9 +15016,10 @@ BUILDIN_FUNC(check_re)
 #ifdef RENEWAL
 	script_pushint(st, 1);
 	return 0;
-#endif
+#else
 	script_pushint(st, 0);
 	return 0;
+#endif
 }
 
 // declarations that were supposed to be exported from npc_chat.c
@@ -15041,9 +15042,6 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(menu,"sl*"),
 	BUILDIN_DEF(select,"s*"), //for future jA script compatibility
 	BUILDIN_DEF(prompt,"s*"),
-
-	// Checagem e Renewal
-	BUILDIN_DEF(check_re,""),
 
 	BUILDIN_DEF(goto,"l"),
 	BUILDIN_DEF(callsub,"l*"),
@@ -15439,5 +15437,7 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF2(callshop,"callcashshop","s*"),
 	BUILDIN_DEF(makehomun,"i"),		//[SoulBlaker]
 	BUILDIN_DEF(healhomun,"ii"),	//[SoulBlaker]
+	// Checagem e Renewal
+	BUILDIN_DEF(check_re,""),
 	{NULL,NULL,NULL},
 };
