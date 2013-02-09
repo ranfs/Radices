@@ -164,10 +164,7 @@ alberta,189,151,5	script	Marinheiro#alb1	100,{
 				close;
 			}
 			set Zeny,Zeny - 500;
-			if(checkre(0))
-				warp "izlude",195,212;
-			else
-				warp "izlude",176,182;
+			warp "izlude",176,182;
 			end;
 		case 3:
 			mes "[Marinheiro]";
