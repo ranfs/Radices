@@ -32,7 +32,6 @@ Equipe de Desenvolvimento
 - GreenBox
 
 ### Desenvolvedores
-- Axl
 - I am Cold
 - Merakk
 - Meyk
