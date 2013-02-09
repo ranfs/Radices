@@ -16,6 +16,7 @@
 #include "../common/strlib.h"
 #include "../common/timer.h"
 #include "../common/utils.h"
+#include "../config/cronus_config.h"
 
 #include "map.h"
 #include "path.h"
@@ -15007,6 +15008,18 @@ BUILDIN_FUNC(healhomun)
 	return 0;
 }
 
+/*==============================================*\
+ * [Schrwaizer] checkre();
+\*----------------------------------------------*/
+BUILDIN_FUNC(check_re)
+{
+#ifdef RENEWAL
+	script_pushint(st, 1);
+	return 0;
+#endif
+	script_pushint(st, 0);
+	return 0;
+}
 
 // declarations that were supposed to be exported from npc_chat.c
 #ifdef PCRE_SUPPORT
@@ -15015,6 +15028,7 @@ BUILDIN_FUNC(activatepset);
 BUILDIN_FUNC(deactivatepset);
 BUILDIN_FUNC(deletepset);
 #endif
+
 
 /// script command definitions
 /// for an explanation on args, see add_buildin_func
@@ -15027,7 +15041,10 @@ struct script_function buildin_func[] = {
 	BUILDIN_DEF(menu,"sl*"),
 	BUILDIN_DEF(select,"s*"), //for future jA script compatibility
 	BUILDIN_DEF(prompt,"s*"),
-	//
+
+	// Checagem e Renewal
+	BUILDIN_DEF(check_re,""),
+
 	BUILDIN_DEF(goto,"l"),
 	BUILDIN_DEF(callsub,"l*"),
 	BUILDIN_DEF(callfunc,"s*"),
