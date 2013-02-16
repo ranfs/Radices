@@ -1455,7 +1455,7 @@ echo "$as_me: error: invalid argument --enable-64bit=$enableval... stopping" >&2
 		esac
 
 else
-  enable_64bit="no"
+  enable_64bit="yes"
 
 fi;
 
